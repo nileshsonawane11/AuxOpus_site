@@ -6,6 +6,8 @@ import Contact from "./pages/Contact.jsx"
 import Services from "./pages/Services.jsx";
 import Solutions from "./pages/Solutions.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
+import WebDevelopment from "./pages/WebDevelopment.jsx";
+import AppDevelopment from "./pages/AppDevelopment.jsx";
 
 export default function App() {
   return (
@@ -19,6 +21,11 @@ export default function App() {
         <Route path="/Contact" element={<Contact />} />
 
         <Route path="/Services" element={<Services />} />
+
+        <Route path="/Services" >
+          <Route path="Web-Development" element={<WebDevelopment />} />
+          <Route path="App-Development" element={<AppDevelopment />} />
+        </Route>
 
         <Route path="/Our-Solutions" element={<Solutions />} />
 

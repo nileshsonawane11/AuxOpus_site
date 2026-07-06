@@ -11,7 +11,7 @@ export default function AboutHero() {
       <div className="absolute top-1/2 left-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400/10 blur-[100px]" /> */}
 
       {/* Grid Pattern */}
-      <div className="absolute inset-0 opacity-50 bg-cover bg-left md:bg-center bg-no-repeat" style={{backgroundImage: `url(${BG})`}} />
+      <div className="absolute inset-0 opacity-70 bg-cover bg-left md:bg-center bg-no-repeat" style={{backgroundImage: `url(${BG})`}} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 w-full">
 
