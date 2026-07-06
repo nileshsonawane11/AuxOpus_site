@@ -43,10 +43,10 @@ export default [
     },
     {
         page: "Portfolio",
-        path: "Portfolio"
+        path: "/Portfolio"
     },
     {
         page: "Our Solutions",
-        path: "Our-Solutions"
+        path: "/Our-Solutions"
     }
 ];

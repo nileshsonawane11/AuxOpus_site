@@ -13,6 +13,7 @@ import Technologies from "../components/About/Technologies";
 import TeamSection from "../components/About/TeamSection";
 import CTASection from "../components/About/CTASection";
 import Navbar from "../components/NavBar/Navbar";
+import Footer from "../section/Footer";
 
 export default function About() {
   return (
@@ -38,6 +39,8 @@ export default function About() {
       <TeamSection />
 
       <CTASection />
+
+      <Footer />
     </>
   );
 }

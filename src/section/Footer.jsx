@@ -16,7 +16,7 @@ export default function Footer() {
     <footer className="bg-gray-200/30 text-black">
       {/* CTA */}
       <div className="border-b border-white/10 p-10">
-        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-gray-200/30 rounded-2xl max-w-7xl mx-auto px-6 md:px-10 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="rounded-[40px] bg-gradient-to-r from-blue-600 via-indigo-600 to-slate-900 p-10 md:p-16 text-white shadow-2xl mx-auto px-6 md:px-10 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
             <p className="text-sm uppercase tracking-widest text-white">
               Let's Build Together

@@ -44,7 +44,7 @@ export default function AboutHero() {
             {/* Buttons */}
             <div className="mt-10 flex flex-wrap gap-5">
 
-              <button className="cursor-pointer group flex items-center gap-3 rounded-xl bg-black px-8 py-4 font-semibold text-white transition hover:bg-blue-600">
+              <button className="cursor-pointer group flex items-center gap-3 rounded-xl bg-blue-600 px-8 py-4 font-semibold text-white transition hover:bg-blue-600">
                 Explore Services
                 <FaArrowRight className="transition group-hover:translate-x-1" />
               </button>

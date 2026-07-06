@@ -38,7 +38,7 @@ export default function Hero() {
 
             {/* Badge */}
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 backdrop-blur-xl px-5 py-2 shadow-lg">
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-medium text-blue-600">
 
               <FaStar className="text-blue-700" />
 
