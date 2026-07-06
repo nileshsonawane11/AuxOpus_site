@@ -1,6 +1,11 @@
 import React from "react";
 import Img from "../assets/AuxOpus.png";
 
+import {
+  FaQuoteLeft,
+  FaStar,
+} from "react-icons/fa6";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -10,28 +15,28 @@ import "swiper/css/pagination";
 const testimonials = [
   {
     name: "Nilesh Sonawane",
-    designation: "Managing Director - AuxOpus",
+    designation: "Managing Director • AuxOpus",
     image: Img,
     review:
       "Helping organizations maximize their impact with efficient digital tools, collaboration platforms, and streamlined operations.",
   },
   {
     name: "Rahul Patil",
-    designation: "CEO - TechNova",
+    designation: "CEO • TechNova",
     image: Img,
     review:
       "AuxOpus delivered exactly what we needed. Their team was professional, responsive, and committed throughout the project.",
   },
   {
     name: "Priya Sharma",
-    designation: "Founder - EduSpark",
+    designation: "Founder • EduSpark",
     image: Img,
     review:
       "Excellent communication and outstanding technical expertise. They transformed our ideas into a scalable solution.",
   },
   {
     name: "Amit Kulkarni",
-    designation: "Director - FinEdge",
+    designation: "Director • FinEdge",
     image: Img,
     review:
       "The quality of work exceeded our expectations. We highly recommend AuxOpus for reliable software development services.",
@@ -40,17 +45,41 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="mx-auto px-5 md:px-10 w-full">
-        <h2 className="text-3xl md:text-5xl font-bold mb-12">
-          Testimonials
-        </h2>
+    <section className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white py-24">
+
+      {/* Background Blur */}
+
+      <div className="absolute -top-20 left-0 h-96 w-96 rounded-full bg-blue-500/10 blur-[140px]" />
+
+      <div className="absolute bottom-0 right-0 h-[450px] w-[450px] rounded-full bg-cyan-400/10 blur-[150px]" />
+
+      <div className="relative max-w-7xl mx-auto px-5">
+
+        {/* Heading */}
+
+        <div className="text-center mb-20">
+
+          <span className="inline-flex rounded-full bg-blue-50 px-5 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+            Testimonials
+          </span>
+
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold">
+            What Our Clients Say
+          </h2>
+
+          <div className="mx-auto mt-5 h-1 w-24 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400"></div>
+
+          <p className="mt-8 max-w-3xl mx-auto text-lg leading-8 text-gray-600">
+            Trusted by businesses that value quality, innovation, and
+            long-term partnerships.
+          </p>
+
+        </div>
 
         <Swiper
           modules={[Pagination, Autoplay]}
-          spaceBetween={25}
-          slidesPerView={1}
-          loop={true}
+          loop
+          spaceBetween={30}
           autoplay={{
             delay: 3500,
             disableOnInteraction: false,
@@ -59,6 +88,9 @@ export default function Testimonials() {
             clickable: true,
           }}
           breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
             768: {
               slidesPerView: 2,
             },
@@ -66,36 +98,67 @@ export default function Testimonials() {
               slidesPerView: 3,
             },
           }}
-          className="pb-14 w-full"
+          className="testimonialSwiperh pb-16"
         >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index} className="w-full">
-              <div className="bg-gray-50 w-full rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 h-full">
-                <div className="flex items-center gap-4 mb-5">
+          {testimonials.map((item, index) => (
+            <SwiperSlide key={index}>
+
+              <div className="group relative h-full overflow-hidden rounded-[30px] border border-gray-200 bg-white p-8 shadow-lg transition-all duration-500 hover:-translate-y-3 hover:border-blue-500 hover:shadow-2xl">
+
+                {/* Top Hover Border */}
+
+                <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-blue-600 to-cyan-400 transition-all duration-500 group-hover:w-full"></div>
+
+                {/* Quote */}
+
+                <FaQuoteLeft className="text-4xl text-blue-100" />
+
+                {/* Review */}
+
+                <p className="mt-6 leading-8 text-gray-600">
+                  {item.review}
+                </p>
+
+                {/* Rating */}
+
+                <div className="mt-8 flex gap-1 text-yellow-400">
+
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <FaStar key={star} />
+                  ))}
+
+                </div>
+
+                {/* User */}
+
+                <div className="mt-8 flex items-center gap-4">
+
                   <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-20 h-20 rounded-full object-contain"
+                    src={item.image}
+                    alt={item.name}
+                    className="h-16 w-16 rounded-full border-2 border-blue-100 object-cover"
                   />
 
                   <div>
-                    <h3 className="text-xl font-semibold">
-                      {testimonial.name}
+
+                    <h3 className="font-bold text-lg">
+                      {item.name}
                     </h3>
 
-                    <p className="text-gray-500 text-sm">
-                      {testimonial.designation}
+                    <p className="text-sm text-gray-500">
+                      {item.designation}
                     </p>
+
                   </div>
+
                 </div>
 
-                <p className="text-gray-700 leading-7">
-                  "{testimonial.review}"
-                </p>
               </div>
+
             </SwiperSlide>
           ))}
         </Swiper>
+
       </div>
     </section>
   );

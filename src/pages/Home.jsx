@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/NavBar/Navbar.jsx'
 import Hero from '../section/Hero.jsx'
 import Overview from '../section/Overview.jsx'
+import MissionVision from "../components/About/MissionVision";
 import WhyToChoose from '../section/WhyToChoose.jsx'
 import Industries from '../section/Industries.jsx'
 import ContactHome from '../section/ContactHome.jsx'
@@ -16,6 +17,8 @@ export default function Home() {
         <Hero />
 
         <Overview />
+
+        <MissionVision />
 
         <WhyToChoose />
 

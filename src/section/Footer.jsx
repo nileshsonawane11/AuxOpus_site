@@ -15,20 +15,20 @@ export default function Footer() {
   return (
     <footer className="bg-gray-200/30 text-black">
       {/* CTA */}
-      <div className="border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div className="border-b border-white/10 p-10">
+        <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-gray-200/30 rounded-2xl max-w-7xl mx-auto px-6 md:px-10 py-12 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div>
-            <p className="text-sm uppercase tracking-widest text-blue-400">
+            <p className="text-sm uppercase tracking-widest text-white">
               Let's Build Together
             </p>
 
-            <h2 className="text-3xl md:text-5xl font-bold text-black mt-2">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mt-2">
               Empower Your Business
               <br />
               With Innovative Technology
             </h2>
 
-            <p className="mt-4 text-gray-400 max-w-2xl">
+            <p className="mt-4 text-gray-300 max-w-2xl">
               We design, develop, and deliver reliable digital solutions that
               help businesses grow faster, operate smarter, and stay ahead of
               the competition.
@@ -64,13 +64,13 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3">
-                <li className="hover:text-gray-400 cursor-pointer transition">Home</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">About Us</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">Services</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">Portfolio</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">Industries</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">Careers</li>
-                <li className="hover:text-gray-400 cursor-pointer transition">Contact</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Home</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">About Us</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Services</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Portfolio</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Industries</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Careers</li>
+                <li className="hover:text-blue-400 cursor-pointer transition">Contact</li>
             </ul>
             </div>
 
