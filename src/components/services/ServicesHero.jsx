@@ -93,13 +93,13 @@ export default function ServicesHero() {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full">
               <Link
                 to="/contact"
-                className="group relative px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 transition-all duration-300 hover:scale-105"
+                className="group relative px-8 py-4 rounded-2xl font-semibold flex items-center justify-center gap-3 transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl shadow-[0_10px_40px_rgba(37,99,235,0.4)] group-hover:shadow-[0_15px_50px_rgba(37,99,235,0.6)] transition-shadow" />
-                <span className="relative text-white flex items-center gap-3">
+                <span className="relative text-white flex items-center gap-3 justify-center">
                   Start Project
                   <FaArrowRight className="group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
                 </span>
@@ -107,10 +107,10 @@ export default function ServicesHero() {
 
               <Link
                 to="/portfolio"
-                className="group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 border border-gray-300 hover:border-blue-400/50"
+                className="group relative px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 border border-gray-300 hover:border-blue-400/50 w-full sm:w-auto flex items-center justify-center"
               >
                 <div className="absolute inset-0 bg-white/5 rounded-2xl backdrop-blur-sm group-hover:bg-white/10 transition-colors" />
-                <span className="relative text-gray-800 flex items-center gap-3">
+                <span className="relative text-gray-800 flex items-center gap-3 justify-center">
                   View Portfolio
                   <FaArrowRight className="opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300" />
                 </span>
@@ -118,7 +118,7 @@ export default function ServicesHero() {
             </div>
 
             {/* Statistics */}
-            <div className="grid grid-cols-4 gap-4 pt-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
               {[
                 ["10+", "Years Experience"],
                 ["250+", "Projects"],
