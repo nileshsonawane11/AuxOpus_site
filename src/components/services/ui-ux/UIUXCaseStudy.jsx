@@ -8,6 +8,7 @@ import {
   BarChart3,
   ArrowRight,
 } from "lucide-react";
+import Counter from "../../Counter.jsx";
 
 const challenges = [
   "High bounce rate due to confusing navigation",
@@ -170,7 +171,7 @@ export default function UIUXCaseStudy() {
                 className="rounded-2xl bg-white/10 p-6 backdrop-blur"
               >
                 <h4 className="text-5xl font-bold">
-                  {item.value}
+                  <Counter value={item.value} />
                 </h4>
 
                 <p className="mt-3 text-blue-100">

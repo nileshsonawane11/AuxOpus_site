@@ -14,6 +14,7 @@ import {
   Zap,
   Users,
 } from "lucide-react";
+import Counter from "../../Counter"
 
 const stats = [
   { value: "250M+", label: "Ad Impressions" },
@@ -96,7 +97,7 @@ export default function DigitalMarketingHero() {
                   className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:shadow-md"
                 >
                   <h2 className="text-3xl font-bold text-slate-900">
-                    {item.value}
+                   <Counter value={item.value} />
                   </h2>
 
                   <p className="mt-2 text-sm text-slate-600">
@@ -150,7 +151,7 @@ export default function DigitalMarketingHero() {
                         <Icon className={`text-${metric.color}-600`} size={18} />
                       </div>
                       <p className="mt-3 text-2xl font-bold text-slate-900">
-                        {metric.value}
+                        <Counter value={metric.value} />
                       </p>
                       <div className="mt-1 flex items-center justify-between">
                         <span className="text-xs text-slate-500">{metric.label}</span>
@@ -172,7 +173,7 @@ export default function DigitalMarketingHero() {
                     <p className="text-sm text-slate-500">Last 30 days</p>
                   </div>
                   <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-semibold text-green-700">
-                    +28.5%
+                    <Counter value="+28.5%" />
                   </span>
                 </div>
 

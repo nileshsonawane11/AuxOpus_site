@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "../Counter.jsx";
 
 const stats = [
   {
@@ -36,7 +37,7 @@ export default function ServiceStats() {
 
               <div className="text-5xl font-bold text-blue-600">
 
-                {item.number}
+                <Counter value={item.number} />
 
               </div>
 

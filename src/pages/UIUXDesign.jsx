@@ -10,19 +10,20 @@ import UIUXCaseStudy from "../components/services/ui-ux/UIUXCaseStudy";
 import UIUXFAQ from "../components/services/ui-ux/UIUXFAQ";
 import Footer from "../section/Footer";
 import Navbar from "../components/NavBar/Navbar";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function UIUXDesign() {
   return (
     <>
         <Navbar />
-        <UIUXHero />
-        <UIUXOverview />
-        <UIUXOffer />
-        <UIUXTools />
-        <UIUXIndustries />
-        <UIUXPortfolio />
-        <UIUXCaseStudy />
-        <UIUXFAQ />
+        <ScrollReveal><UIUXHero /></ScrollReveal>
+        <ScrollReveal><UIUXOverview /></ScrollReveal>
+        <ScrollReveal><UIUXOffer /></ScrollReveal>
+        <ScrollReveal><UIUXTools /></ScrollReveal>
+        <ScrollReveal><UIUXIndustries /></ScrollReveal>
+        <ScrollReveal><UIUXPortfolio /></ScrollReveal>
+        <ScrollReveal><UIUXCaseStudy /></ScrollReveal>
+        <ScrollReveal><UIUXFAQ /></ScrollReveal>
         <Footer />
     </>
   );

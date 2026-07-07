@@ -10,19 +10,20 @@ import DigitalMarketingCaseStudy from "../components/services/digital-marketing/
 import DigitalMarketingFAQ from "../components/services/digital-marketing/DigitalMarketingFAQ";
 import Navbar from "../components/NavBar/Navbar.jsx";
 import Footer from "../section/Footer.jsx";
+import ScrollReveal from "../components/ScrollReveal.jsx";
 
 export default function DigitalMarketing() {
   return (
     <>
         <Navbar />
-        <DigitalMarketingHero />
-        <DigitalMarketingOverview />
-        <DigitalMarketingOffer />
-        <DigitalMarketingTechnologies />
-        <DigitalMarketingIndustries />
-        <DigitalMarketingPortfolio />
-        <DigitalMarketingCaseStudy />
-        <DigitalMarketingFAQ />
+        <ScrollReveal><DigitalMarketingHero /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingOverview /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingOffer /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingTechnologies /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingIndustries /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingPortfolio /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingCaseStudy /></ScrollReveal>
+        <ScrollReveal><DigitalMarketingFAQ /></ScrollReveal>
         <Footer />
     </>
   );

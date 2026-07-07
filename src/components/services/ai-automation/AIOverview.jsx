@@ -10,6 +10,7 @@ import {
   Cpu,
   ArrowRight,
 } from "lucide-react";
+import Counter from "../../Counter.jsx";
 
 const highlights = [
   {
@@ -190,7 +191,7 @@ export default function AIOverview() {
                   className="rounded-2xl border border-white/10 bg-white/5 p-6"
                 >
                   <h4 className="text-4xl font-bold text-blue-400">
-                    {item.value}
+                   <Counter value={item.value} />
                   </h4>
 
                   <p className="mt-2 text-slate-300">

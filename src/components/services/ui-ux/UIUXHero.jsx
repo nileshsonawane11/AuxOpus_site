@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Counter from "../../Counter.jsx"
 import {
   Palette,
   PenTool,
@@ -120,7 +121,7 @@ export default function UIUXHero() {
                   className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
                 >
                   <h2 className="text-3xl font-bold text-slate-900">
-                    {item.value}
+                    <Counter value={item.value} />
                   </h2>
 
                   <p className="mt-2 text-sm text-slate-600">

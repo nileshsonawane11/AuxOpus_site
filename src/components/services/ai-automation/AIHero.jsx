@@ -1,6 +1,7 @@
 // src/components/services/ai-automation/AIHero.jsx
 
 import { motion } from "framer-motion";
+import Counter from "../../Counter.jsx";
 import {
   Bot,
   BrainCircuit,
@@ -118,7 +119,7 @@ export default function AIHero() {
                   className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
                 >
                   <h2 className="text-3xl font-bold text-slate-900">
-                    {item.value}
+                    <Counter value={item.value} />
                   </h2>
 
                   <p className="mt-2 text-sm text-slate-600">
@@ -210,11 +211,11 @@ export default function AIHero() {
 
                 <div className="mt-3 flex items-end justify-between">
                   <h2 className="text-5xl font-bold text-white">
-                    96%
+                    <Counter value="96%" />
                   </h2>
 
                   <span className="rounded-full bg-white/20 px-4 py-2 font-medium text-white">
-                    +18%
+                    <Counter value="+18%" />
                   </span>
                 </div>
 

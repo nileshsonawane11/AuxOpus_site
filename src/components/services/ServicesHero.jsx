@@ -15,6 +15,7 @@ import {
   FaGear,
   FaRocket,
 } from "react-icons/fa6";
+import Counter from "../Counter.jsx";
 
 export default function ServicesHero() {
   return (
@@ -130,7 +131,7 @@ export default function ServicesHero() {
                   className="backdrop-blur-sm bg-white/70 p-4 rounded-2xl border border-gray-200 text-center hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-sm"
                 >
                   <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                    {value}
+                    <Counter value={value}/>
                   </div>
                   <div className="text-xs text-gray-600 mt-1">{label}</div>
                 </div>

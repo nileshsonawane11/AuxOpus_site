@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Counter from "../Counter.jsx";
 import {
   FaArrowRight,
   FaCloud,
@@ -79,7 +80,7 @@ export default function SolutionsHero() {
                   className="rounded-2xl bg-white shadow-lg border border-slate-100 p-5 hover:-translate-y-1 transition"
                 >
                   <div className="text-3xl font-black text-slate-900">
-                    {item[0]}
+                    <Counter value={item[0]} />
                   </div>
                   <div className="mt-2 text-slate-500">{item[1]}</div>
                 </div>
@@ -192,22 +193,22 @@ export default function SolutionsHero() {
                   <div className="grid grid-cols-4 gap-3 mt-5">
                     <div className="rounded-2xl bg-white shadow-lg p-3">
                       <div className="text-[10px] text-slate-500">Revenue</div>
-                      <div className="mt-1 text-xl font-black text-slate-900">₹8.5M</div>
-                      <div className="text-green-500 text-xs mt-0.5">+18%</div>
+                      <div className="mt-1 text-xl font-black text-slate-900"><Counter value="₹8.5M" /></div>
+                      <div className="text-green-500 text-xs mt-0.5"><Counter value="+18%" /></div>
                     </div>
                     <div className="rounded-2xl bg-white shadow-lg p-3">
                       <div className="text-[10px] text-slate-500">Users</div>
-                      <div className="mt-1 text-xl font-black text-slate-900">12.8K</div>
-                      <div className="text-blue-500 text-xs mt-0.5">+240</div>
+                      <div className="mt-1 text-xl font-black text-slate-900"><Counter value="12.8K" /></div>
+                      <div className="text-blue-500 text-xs mt-0.5"><Counter value="+240" /></div>
                     </div>
                     <div className="rounded-2xl bg-white shadow-lg p-3">
                       <div className="text-[10px] text-slate-500">Projects</div>
-                      <div className="mt-1 text-xl font-black text-slate-900">264</div>
+                      <div className="mt-1 text-xl font-black text-slate-900"><Counter value="264" /></div>
                       <div className="text-cyan-500 text-xs mt-0.5">Active</div>
                     </div>
                     <div className="rounded-2xl bg-white shadow-lg p-3">
                       <div className="text-[10px] text-slate-500">Support</div>
-                      <div className="mt-1 text-xl font-black text-slate-900">99%</div>
+                      <div className="mt-1 text-xl font-black text-slate-900"><Counter value="99%" /></div>
                       <div className="text-green-500 text-xs mt-0.5">SLA</div>
                     </div>
                   </div>
@@ -219,7 +220,7 @@ export default function SolutionsHero() {
                       <div className="flex justify-between">
                         <div>
                           <div className="font-bold text-sm">Revenue Analytics</div>
-                          <div className="text-[10px] text-slate-500">Last 12 Months</div>
+                          <div className="text-[10px] text-slate-500">Last <Counter value="12" /> Months</div>
                         </div>
                         <FaChartLine className="text-blue-500" size={22} />
                       </div>
@@ -277,7 +278,7 @@ export default function SolutionsHero() {
                           <div key={index}>
                             <div className="flex justify-between text-[10px] mb-1">
                               <span>{name}</span>
-                              <span>{value}%</span>
+                              <span><Counter value={value} />%</span>
                             </div>
                             <div className="h-1.5 rounded-full bg-slate-200">
                               <div
@@ -302,7 +303,7 @@ export default function SolutionsHero() {
                       </div>
                       <div className="mt-4 flex items-center gap-2">
                         <FaUsers className="text-blue-500" size={14} />
-                        <span className="text-xs text-slate-600">48 Active Members</span>
+                        <span className="text-xs text-slate-600"><Counter value="48" /> Active Members</span>
                       </div>
                     </div>
                   </div>
@@ -349,7 +350,7 @@ export default function SolutionsHero() {
                 </div>
                 <div className="mt-6 rounded-xl bg-blue-50 p-3">
                   <div className="text-[10px] text-slate-500">Revenue</div>
-                  <div className="text-xl font-black mt-1">₹2.4M</div>
+                  <div className="text-xl font-black mt-1"><Counter value="₹2.4M" /></div>
                 </div>
                 <div className="mt-4 space-y-2">
                   {[70, 90, 55].map((value, i) => (
@@ -402,7 +403,7 @@ export default function SolutionsHero() {
               <div className="mt-2 h-1.5 rounded-full bg-slate-200">
                 <div className="h-full w-[96%] rounded-full bg-gradient-to-r from-blue-500 to-cyan-400"></div>
               </div>
-              <div className="mt-1 text-xs text-slate-500">99.98% Uptime</div>
+              <div className="mt-1 text-xs text-slate-500"><Counter value="99.98%" /> Uptime</div>
             </div>
 
             {/* Revenue Widget - Bottom Left */}
@@ -410,7 +411,7 @@ export default function SolutionsHero() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-xs text-slate-500">Monthly Revenue</div>
-                  <div className="mt-1 text-2xl font-black text-slate-900">₹8.5M</div>
+                  <div className="mt-1 text-2xl font-black text-slate-900"><Counter value="₹8.5M" /></div>
                 </div>
                 <div className="rounded-xl bg-green-100 p-3">
                   <FaChartLine className="text-green-600" size={20} />
@@ -447,7 +448,7 @@ export default function SolutionsHero() {
                   <div key={i}>
                     <div className="flex justify-between text-[10px] mb-0.5">
                       <span>{item[0]}</span>
-                      <span>{item[1]}</span>
+                      <span><Counter value={item[1]} /></span>
                     </div>
                     <div className="h-1.5 rounded-full bg-slate-200">
                       <div
@@ -466,7 +467,7 @@ export default function SolutionsHero() {
                 <FaCode size={20} />
                 <div>
                   <div className="font-bold text-sm">Automation</div>
-                  <div className="text-xs opacity-90">1,245 Tasks Completed</div>
+                  <div className="text-xs opacity-90"><Counter value="1,245" /> Tasks Completed</div>
                 </div>
               </div>
             </div>

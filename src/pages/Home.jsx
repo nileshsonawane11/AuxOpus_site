@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from "../components/ScrollReveal"; 
 import Navbar from '../components/NavBar/Navbar.jsx';
 import Hero from '../section/Hero.jsx';
 import Overview from '../section/Overview.jsx';
@@ -12,21 +13,34 @@ import Footer from '../section/Footer.jsx';
 export default function Home() {
   return (
     <>
+      
         <Navbar />
 
         <Hero />
 
-        <Overview />
+        <ScrollReveal delay={200}>
+          <Overview />
+        </ScrollReveal>
 
-        <MissionVision />
+        <ScrollReveal delay={200}>
+          <MissionVision />
+        </ScrollReveal>
+        
+        <ScrollReveal delay={200}>
+          <WhyToChoose />
+        </ScrollReveal>
+        
+        <ScrollReveal delay={200}>
+          <Industries />
+        </ScrollReveal>
 
-        <WhyToChoose />
+        <ScrollReveal delay={200}>
+          <ContactHome />
+        </ScrollReveal>
 
-        <Industries />
-
-        <ContactHome />
-
-        <Testimonials />
+        <ScrollReveal delay={200}>
+          <Testimonials />
+        </ScrollReveal>
 
         <Footer />
     </>

@@ -15,6 +15,7 @@ import {
   Clock,
   TrendingUp,
 } from "lucide-react";
+import Counter from "../../Counter"
 
 const stats = [
   { 
@@ -156,7 +157,7 @@ export default function CorporateTrainingHero() {
                       <Icon className={`text-${item.color}-600`} size={20} />
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">
-                      {item.value}
+                      <Counter value={item.value} />
                     </h2>
                     <p className="mt-2 text-sm text-slate-600">
                       {item.label}
@@ -220,7 +221,7 @@ export default function CorporateTrainingHero() {
                           <div className="flex items-center gap-3 mt-1">
                             <span className="flex items-center gap-1 text-xs text-slate-500">
                               <Clock size={12} />
-                              {course.duration}
+                              <Counter value={course.duration} />
                             </span>
                             <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium">
                               {course.level}
@@ -230,7 +231,7 @@ export default function CorporateTrainingHero() {
                       </div>
                       <div className="text-right">
                         <p className="text-sm font-semibold text-slate-700">
-                          {course.enrolled}
+                          <Counter value={course.enrolled} />
                         </p>
                         <p className="text-xs text-slate-400">Enrolled</p>
                       </div>
@@ -252,8 +253,8 @@ export default function CorporateTrainingHero() {
                 </div>
                 <div className="flex items-end justify-between">
                   <div>
-                    <span className="text-4xl font-bold text-slate-900">78%</span>
-                    <span className="ml-2 text-sm font-semibold text-green-600">+12%</span>
+                    <span className="text-4xl font-bold text-slate-900"><Counter value="78%" /></span>
+                    <span className="ml-2 text-sm font-semibold text-green-600"><Counter value="+12%" /></span>
                   </div>
                   <div className="w-48 h-3 rounded-full bg-white overflow-hidden">
                     <motion.div
@@ -282,7 +283,7 @@ export default function CorporateTrainingHero() {
                 </div>
                 <div>
                   <p className="font-bold text-slate-900">Industry Certified</p>
-                  <p className="text-sm text-slate-500">50+ Programs</p>
+                  <p className="text-sm text-slate-500"><Counter value="50+" /> Programs</p>
                 </div>
               </div>
             </motion.div>
@@ -297,7 +298,7 @@ export default function CorporateTrainingHero() {
             >
               <div className="flex items-center gap-2">
                 <Users className="text-blue-600" size={20} />
-                <span className="font-bold text-slate-900">2.4K+</span>
+                <span className="font-bold text-slate-900"><Counter value="2.4K+" /></span>
               </div>
               <p className="text-xs text-slate-500 mt-1">Active Learners</p>
             </motion.div>

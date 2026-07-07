@@ -8,19 +8,20 @@ import AICaseStudy from "../components/services/ai-automation/AICaseStudy";
 import AIFAQ from "../components/services/ai-automation/AIFAQ";
 import Footer from "../section/Footer";
 import Navbar from "../components/NavBar/Navbar";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function AIAutomation() {
   return (
     <>
         <Navbar />
-        <AIHero />
-        <AIOverview />
-        <AIOffer />
-        <AITechnologies />
-        <AIIndustries />
-        <AIPortfolio />
-        <AICaseStudy />
-        <AIFAQ />
+        <ScrollReveal><AIHero /></ScrollReveal>
+        <ScrollReveal><AIOverview /></ScrollReveal>
+        <ScrollReveal><AIOffer /></ScrollReveal>
+        <ScrollReveal><AITechnologies /></ScrollReveal>
+        <ScrollReveal><AIIndustries /></ScrollReveal>
+        <ScrollReveal><AIPortfolio /></ScrollReveal>
+        <ScrollReveal><AICaseStudy /></ScrollReveal>
+        <ScrollReveal><AIFAQ /></ScrollReveal>
         <Footer />
     </>
   );

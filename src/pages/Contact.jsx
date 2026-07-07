@@ -10,6 +10,7 @@ import ContactCTA from "../components/contact/ContactCTA";
 import ContactSocial from "../components/contact/ContactSocial";
 import Footer from "../section/Footer";
 import Navbar from "../components/NavBar/Navbar";
+import ScrollReveal from "../components/ScrollReveal"
 
 export default function Contact() {
   return (
@@ -24,25 +25,37 @@ export default function Contact() {
         <div className="grid lg:grid-cols-5 gap-10">
 
           <div className="lg:col-span-2">
-            <ContactInfo />
+            <ScrollReveal>
+              <ContactInfo />
+            </ScrollReveal>
           </div>
 
           <div className="lg:col-span-3">
-            <ContactForm />
+            <ScrollReveal>
+              <ContactForm />
+            </ScrollReveal>
           </div>
 
         </div>
 
       </section>
 
-      <ContactCards />
+      <ScrollReveal>
+        <ContactCards />
+      </ScrollReveal>
 
-      <ContactMap />
-
-      <ContactFAQ />
-
-      <ContactSocial />
-
+      <ScrollReveal>
+        <ContactMap />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <ContactFAQ />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <ContactSocial />
+      </ScrollReveal>
+      
       <Footer />
     </main>
   );

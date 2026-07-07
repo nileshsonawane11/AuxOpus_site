@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import BG from "../assets/BG.png";
 import {motion} from "framer-motion"
+import ScrollReveal from "../components/ScrollReveal";
+import Counter from "../components/Counter.jsx";
 
 import {
   FaArrowRight,
@@ -243,7 +245,7 @@ export default function Hero() {
                         transition={{ delay: 0.8, duration: 0.5 }}
                         className="mt-2 text-4xl font-bold"
                       >
-                        +128%
+                        <Counter value="+128%" />
                       </motion.h2>
                     </div>
                     <motion.div
@@ -290,7 +292,7 @@ export default function Hero() {
                       transition={{ delay: 1.4 }}
                       className="mt-5 text-3xl font-bold"
                     >
-                      48
+                      <Counter value="48" />
                     </motion.h3>
                     <div className="mt-3 h-2 rounded-full bg-slate-200">
                       <motion.div
@@ -321,7 +323,7 @@ export default function Hero() {
                       transition={{ delay: 1.8 }}
                       className="mt-5 text-3xl font-bold"
                     >
-                      25+
+                      <Counter value="25+" />
                     </motion.h3>
                     <div className="mt-3 h-2 rounded-full bg-slate-200">
                       <motion.div
@@ -335,29 +337,32 @@ export default function Hero() {
                 </div>
 
                 {/* Satisfaction */}
-                <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  className="flex items-center justify-between rounded-2xl bg-slate-100 p-5 cursor-pointer"
-                >
-                  <div>
-                    <p className="text-slate-500">Customer Satisfaction</p>
-                    <motion.h3
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 2.2 }}
-                      className="mt-1 text-3xl font-bold"
-                    >
-                      99.8%
-                    </motion.h3>
-                  </div>
+                <ScrollReveal animation="up">
                   <motion.div
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                    className="rounded-full bg-green-100 p-5"
+                    whileHover={{ scale: 1.03 }}
+                    className="flex items-center justify-between rounded-2xl bg-slate-100 p-5 cursor-pointer"
                   >
-                    <FaUsers size={28} className="text-green-600" />
+                    <div>
+                      <p className="text-slate-500">Customer Satisfaction</p>
+                      <motion.h3
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 2.2 }}
+                        className="mt-1 text-3xl font-bold"
+                      >
+                        
+                        <Counter value="99.8%" />
+                      </motion.h3>
+                    </div>
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="rounded-full bg-green-100 p-5"
+                    >
+                      <FaUsers size={28} className="text-green-600" />
+                    </motion.div>
                   </motion.div>
-                </motion.div>
+                </ScrollReveal>
               </div>
             </motion.div>
 
@@ -484,7 +489,8 @@ export default function Hero() {
               {/* Number */}
 
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-                {item.value}
+                
+                <Counter value={item.value} />
               </h2>
 
               {/* Title */}

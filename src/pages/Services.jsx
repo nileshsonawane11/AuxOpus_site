@@ -25,6 +25,7 @@ import NumbersSection from "../components/services/NumbersSection";
 import FAQ from "../components/services/FAQ";
 import Navbar from "../components/NavBar/Navbar";
 import Footer from "../section/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function Services() {
   return (
@@ -36,36 +37,47 @@ export default function Services() {
       <ServicesHero />
 
       {/* Company Highlights */}
-      <ServiceStats />
-      <TrustedBy />
+      <ScrollReveal>
+        <ServiceStats />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <TrustedBy />
+      </ScrollReveal>
 
       {/* Core Services */}
-      <WebDevelopment />
-      <AppDevelopment />
-      <AIAutomation />
-      <UIUXDesign />
-      <DigitalMarketing />
-      <MaintenanceSupport />
-      <CorporateTraining />
+      <ScrollReveal><WebDevelopment /></ScrollReveal>
+      
+      <ScrollReveal><AppDevelopment /></ScrollReveal>
+      
+      <ScrollReveal><AIAutomation /></ScrollReveal>
+      
+      <ScrollReveal><UIUXDesign /></ScrollReveal>
+      
+      <ScrollReveal><DigitalMarketing /></ScrollReveal>
+      
+      <ScrollReveal><MaintenanceSupport /></ScrollReveal>
+      
+      <ScrollReveal><CorporateTraining /></ScrollReveal>
 
       {/* Technologies & Process */}
-      <TechnologyStack />
-      <DevelopmentProcess />
+      <ScrollReveal><TechnologyStack /></ScrollReveal>
+      <ScrollReveal><DevelopmentProcess /></ScrollReveal>
 
       {/* Business Value */}
-      <IndustriesServed />
-      <ClientBenefits />
-      <WhyChooseServices />
+      <ScrollReveal><IndustriesServed /></ScrollReveal>
+      <ScrollReveal><ClientBenefits /></ScrollReveal>
+      <ScrollReveal><WhyChooseServices /></ScrollReveal>
 
       {/* Portfolio & Packages */}
-      <CaseStudyPreview />
-      <ServiceComparison />
+      <ScrollReveal><CaseStudyPreview /></ScrollReveal>
+      <ScrollReveal><ServiceComparison /></ScrollReveal>
 
       {/* Company Numbers */}
-      <NumbersSection />
+      <ScrollReveal><NumbersSection /></ScrollReveal>
 
       {/* FAQs */}
-      <FAQ />
+      <ScrollReveal><FAQ /></ScrollReveal>
 
       <Footer />
 

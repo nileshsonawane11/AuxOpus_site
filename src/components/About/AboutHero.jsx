@@ -1,6 +1,7 @@
 import React from "react";
 import { FaArrowRight, FaPlay } from "react-icons/fa6";
 import BG from "../../assets/Company_BG.jpeg"
+import Counter from "../Counter.jsx";
 
 export default function AboutHero() {
   return (
@@ -60,21 +61,21 @@ export default function AboutHero() {
             <div className="mt-16 grid grid-cols-3 gap-8">
 
               <div>
-                <h2 className="text-4xl font-bold text-blue-600">100+</h2>
+                <h2 className="text-4xl font-bold text-blue-600"><Counter value="100+" /></h2>
                 <p className="mt-2 text-gray-500">
                   Projects Delivered
                 </p>
               </div>
 
               <div>
-                <h2 className="text-4xl font-bold text-blue-600">25+</h2>
+                <h2 className="text-4xl font-bold text-blue-600"><Counter value="25+" /></h2>
                 <p className="mt-2 text-gray-500">
                   Happy Clients
                 </p>
               </div>
 
               <div>
-                <h2 className="text-4xl font-bold text-blue-600">5+</h2>
+                <h2 className="text-4xl font-bold text-blue-600"><Counter value="5+" /></h2>
                 <p className="mt-2 text-gray-500">
                   Years Experience
                 </p>

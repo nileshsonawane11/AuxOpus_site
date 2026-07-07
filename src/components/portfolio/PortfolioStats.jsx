@@ -1,4 +1,5 @@
 import React from "react";
+import Counter from "../Counter.jsx"
 
 const stats = [
   {
@@ -33,7 +34,7 @@ export default function PortfolioStats() {
               className="text-center text-white"
             >
               <div className="text-5xl md:text-6xl font-black">
-                {item.number}
+                <Counter value={item.number} />
               </div>
 
               <div className="mt-4 text-lg">

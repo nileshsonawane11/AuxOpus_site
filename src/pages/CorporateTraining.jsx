@@ -10,19 +10,20 @@ import CorporateTrainingCaseStudy from "../components/services/corporate-trainin
 import CorporateTrainingFAQ from "../components/services/corporate-training/CorporateTrainingFAQ";
 import Navbar from "../components/NavBar/Navbar";
 import Footer from "../section/Footer";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function CorporateTraining() {
   return (
     <>
         <Navbar />
-        <CorporateTrainingHero />
-        <CorporateTrainingOverview />
-        <CorporateTrainingOffer />
-        <CorporateTrainingTechnologies />
-        <CorporateTrainingIndustries />
-        <CorporateTrainingPortfolio />
-        <CorporateTrainingCaseStudy />
-        <CorporateTrainingFAQ />
+        <ScrollReveal><CorporateTrainingHero /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingOverview /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingOffer /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingTechnologies /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingIndustries /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingPortfolio /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingCaseStudy /></ScrollReveal>
+        <ScrollReveal><CorporateTrainingFAQ /></ScrollReveal>
         <Footer />
     </>
   );

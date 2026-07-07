@@ -14,31 +14,51 @@ import TeamSection from "../components/About/TeamSection";
 import CTASection from "../components/About/CTASection";
 import Navbar from "../components/NavBar/Navbar";
 import Footer from "../section/Footer";
+import ScrollReveal from "../components/ScrollReveal"
 
 export default function About() {
   return (
     <>
       <Navbar />
 
+
       <AboutHero />
 
-      <WhoWeAre />
+      <ScrollReveal>
+        <WhoWeAre />
+      </ScrollReveal>
 
-      <CompanyStats />
-
-      <MissionVision />
-
-      <CoreValues />
-
-      <WhyChooseUs />
-
-      <DevelopmentProcess />
-
-      <Technologies />
-
-      <TeamSection />
-
-      <CTASection />
+      <ScrollReveal>
+        <CompanyStats />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <MissionVision />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <CoreValues />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <WhyChooseUs />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <DevelopmentProcess />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <Technologies />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <TeamSection />
+      </ScrollReveal>
+      
+      <ScrollReveal>
+        <CTASection />
+      </ScrollReveal>
 
       <Footer />
     </>

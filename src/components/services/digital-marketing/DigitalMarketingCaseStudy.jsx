@@ -8,6 +8,7 @@ import {
   ArrowRight,
   BarChart3,
 } from "lucide-react";
+import Counter from "../../Counter"
 
 const challenges = [
   "Low organic search visibility",
@@ -170,7 +171,7 @@ export default function DigitalMarketingCaseStudy() {
                 className="rounded-2xl bg-white/10 p-6 backdrop-blur"
               >
                 <h4 className="text-5xl font-bold">
-                  {item.value}
+                  <Counter value={item.value} />
                 </h4>
 
                 <p className="mt-3 text-blue-100">

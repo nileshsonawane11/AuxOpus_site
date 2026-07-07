@@ -23,6 +23,7 @@ import OurProducts from "../components/solutions/OurProducts.jsx";
 import ProductAdvantages from "../components/solutions/ProductAdvantages.jsx";
 import Navbar from "../components/NavBar/Navbar.jsx";
 import Footer from "../section/Footer.jsx";
+import ScrollReveal from "../components/ScrollReveal.jsx";
 
 export default function Solutions() {
   return (
@@ -31,48 +32,48 @@ export default function Solutions() {
         <Navbar />
 
         {/* Hero */}
-        <SolutionsHero />
+        <ScrollReveal><SolutionsHero /></ScrollReveal>
 
         {/* Overview */}
-        <SolutionsOverview />
+        <ScrollReveal><SolutionsOverview /></ScrollReveal>
 
         {/* Categories */}
-        <SolutionCategories />
+        <ScrollReveal><SolutionCategories /></ScrollReveal>
 
         {/* Core Solutions */}
-        <BusinessSolutions />
+        <ScrollReveal><BusinessSolutions /></ScrollReveal>
 
-        <OurProducts />
-        <ProductAdvantages />
+        <ScrollReveal><OurProducts /></ScrollReveal>
+        <ScrollReveal><ProductAdvantages /></ScrollReveal>
 
-        <AISolutions />
-        <CloudSolutions />
-        <DataAnalytics />
-        <AutomationSolutions />
+        <ScrollReveal><AISolutions /></ScrollReveal>
+        <ScrollReveal><CloudSolutions /></ScrollReveal>
+        <ScrollReveal><DataAnalytics /></ScrollReveal>
+        <ScrollReveal><AutomationSolutions /></ScrollReveal>
 
         {/* Enterprise */}
-        <EnterpriseSolutions />
+        <ScrollReveal><EnterpriseSolutions /></ScrollReveal>
 
         {/* Industries */}
-        <IndustrySolutions />
+        <ScrollReveal><IndustrySolutions /></ScrollReveal>
 
         {/* Benefits */}
-        <BenefitsSection />
+        <ScrollReveal><BenefitsSection /></ScrollReveal>
 
         {/* Technologies */}
-        <TechnologyIntegration />
+        <ScrollReveal><TechnologyIntegration /></ScrollReveal>
 
         {/* Process */}
-        <SolutionProcess />
+        <ScrollReveal><SolutionProcess /></ScrollReveal>
 
         {/* Portfolio */}
-        <SuccessStories />
+        <ScrollReveal><SuccessStories /></ScrollReveal>
 
         {/* Statistics */}
-        <SolutionStats />
+        <ScrollReveal><SolutionStats /></ScrollReveal>
 
         {/* FAQ */}
-        <SolutionsFAQ />
+        <ScrollReveal><SolutionsFAQ /></ScrollReveal>
 
         <Footer />
 

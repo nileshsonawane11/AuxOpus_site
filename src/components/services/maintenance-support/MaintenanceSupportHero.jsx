@@ -11,6 +11,7 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import Counter from "../../Counter"
 
 const metrics = [
   {
@@ -81,7 +82,7 @@ export default function MaintenanceSupportHero() {
                 className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm backdrop-blur transition hover:shadow-md"
               >
                 <h2 className="text-4xl font-bold text-slate-900">
-                  {item.value}
+                  <Counter value={item.value} />
                 </h2>
 
                 <p className="mt-2 text-slate-600">

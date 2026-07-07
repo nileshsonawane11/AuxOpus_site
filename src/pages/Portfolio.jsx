@@ -12,6 +12,7 @@ import TechnologiesUsed from "../components/portfolio/TechnologiesUsed";
 import ClientTestimonials from "../components/portfolio/ClientTestimonials";
 import Footer from "../section/Footer";
 import Navbar from "../components/NavBar/Navbar";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function Portfolio() {
   return (
@@ -20,21 +21,45 @@ export default function Portfolio() {
 
       <PortfolioHero />
 
-      <PortfolioOverview />
 
-      <PortfolioStats />
+      <ScrollReveal>
+        <PortfolioOverview />
+      </ScrollReveal>
 
-      <ProjectCategories />
+      <ScrollReveal>
+        <PortfolioStats />
+      </ScrollReveal>
+      
 
-      <FeaturedProjects />
+      <ScrollReveal>
+        <ProjectCategories />
+      </ScrollReveal>
+      
 
-      <CaseStudies />
+      <ScrollReveal>
+        <FeaturedProjects />
+      </ScrollReveal>
+      
 
-      <DevelopmentProcess />
+      <ScrollReveal>
+        <CaseStudies />
+      </ScrollReveal>
+      
 
-      <TechnologiesUsed />
+      <ScrollReveal>
+        <DevelopmentProcess />
+      </ScrollReveal>
+      
 
-      <ClientTestimonials />
+      <ScrollReveal>
+        <TechnologiesUsed />
+      </ScrollReveal>
+      
+
+      <ScrollReveal>
+        <ClientTestimonials />
+      </ScrollReveal>
+      
 
       <Footer />
     </main>
