@@ -9,21 +9,27 @@ export default function Counter({
   const [count, setCount] = useState(0);
   const [started, setStarted] = useState(false);
 
-  // Extract first number from the string
-  const match = String(value).match(/\d+/);
-  const endValue = match ? parseInt(match[0], 10) : 0;
+  const str = String(value);
 
-  const prefix = String(value).split(match?.[0] || "")[0];
-  const suffix = String(value).split(match?.[0] || "")[1];
+  // Find the first decimal/integer number
+  const match = str.match(/(\d+(\.\d+)?)/);
+
+  const endValue = match ? parseFloat(match[0]) : 0;
+
+  const prefix = match ? str.slice(0, match.index) : "";
+  const suffix = match
+    ? str.slice(match.index + match[0].length)
+    : "";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !started) {
           setStarted(true);
+          observer.disconnect();
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.4 }
     );
 
     if (ref.current) observer.observe(ref.current);
@@ -34,27 +40,32 @@ export default function Counter({
   useEffect(() => {
     if (!started) return;
 
-    let start = 0;
-    const increment = endValue / (duration / 16);
+    let startTime;
 
-    const timer = setInterval(() => {
-      start += increment;
+    const animate = (time) => {
+      if (!startTime) startTime = time;
 
-      if (start >= endValue) {
-        setCount(endValue);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(start));
+      const progress = Math.min((time - startTime) / duration, 1);
+
+      setCount(endValue * progress);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
+    requestAnimationFrame(animate);
   }, [started, endValue, duration]);
+
+  // Preserve decimal places
+  const decimals = match?.[0].includes(".")
+    ? match[0].split(".")[1].length
+    : 0;
 
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {count.toLocaleString()}
+      {count.toFixed(decimals)}
       {suffix}
     </span>
   );

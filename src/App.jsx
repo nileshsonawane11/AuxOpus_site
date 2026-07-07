@@ -13,10 +13,13 @@ import UIUXDesign from "./pages/UIUXDesign.jsx";
 import DigitalMarketing from "./pages/DigitalMarketing.jsx";
 import MaintenanceSupport from "./pages/MaintenanceSupport.jsx";
 import CorporateTraining from "./pages/CorporateTraining.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 export default function App() {
   return (
     <>
+      <ScrollToTop />
+
       <Routes>
 
         <Route path="/" element={<Home />} />

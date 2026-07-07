@@ -22,7 +22,7 @@ export default function FloatingButtons() {
 
   return (
 
-    <div className="fixed w-screen px-10 bottom-6 z-[9999] flex justify-between items-center gap-4">
+    <div className="fixed w-screen px-10 bottom-6 z-[9999] flex justify-between items-center gap-4  pointer-events-none">
 
         {/* AI Assistant */}
 
@@ -68,7 +68,7 @@ export default function FloatingButtons() {
             </button> */}
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex gap-8 pointer-events-auto">
             {/* WhatsApp */}
 
             <a
@@ -76,6 +76,7 @@ export default function FloatingButtons() {
                 target="_blank"
                 rel="noreferrer"
                 className="
+                cursor-pointer
                 relative
                 flex
                 h-14

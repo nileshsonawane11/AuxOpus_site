@@ -12,6 +12,7 @@ import {
   Cpu,
   Database,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const floatingIcons = [
   { icon: Bot, top: "8%", left: "10%" },
@@ -98,18 +99,18 @@ export default function AIHero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="group flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
+              <Link to="/Contact" className="cursor-pointer group flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
                 Get Started
                 <ArrowRight
                   size={18}
                   className="transition group-hover:translate-x-1"
                 />
-              </button>
+              </Link>
 
-              <button className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
+              <Link to="/Portfolio" className="cursor-pointer flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
                 <Play size={18} />
                 Watch Demo
-              </button>
+              </Link>
             </div>
 
             <div className="mt-16 grid gap-6 sm:grid-cols-3">

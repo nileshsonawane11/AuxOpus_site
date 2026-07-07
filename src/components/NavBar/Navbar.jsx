@@ -7,9 +7,39 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
    const [Mobilemenu, setMobilemenu] = useState(true);
    const [openMenu, setOpenMenu] = useState(null);
+   const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY < 50) {
+        setShowNavbar(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
    
   return (
-    <div className='fixed w-full left-0 right-0 z-50'>
+    <div
+      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+        showNavbar
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-full opacity-0"
+      }`}
+    >
       <div className="relative w-full">
         {/* Main navbar */}
         <div className="flex items-center justify-between h-16 px-6 lg:px-10 

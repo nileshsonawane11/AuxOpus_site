@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import BG from "../assets/BG.png";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import ScrollReveal from "../components/ScrollReveal";
 import Counter from "../components/Counter.jsx";
+import { heroContent } from "../constants/Home.js";
 
 import {
   FaArrowRight,
@@ -46,33 +47,29 @@ const floatingAnimation = {
 };
 
 export default function Hero() {
+  const { left, right, heroStats } = heroContent;
+
   return (
     <section
       className="relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${BG})` }}
     >
       {/* Overlay */}
-
       <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/25"></div>
 
-      {/* Blur */}
-
+      {/* Blur Orbs */}
       <div className="absolute -left-32 top-20 h-96 w-96 rounded-full bg-blue-500/20 blur-[150px]" />
-
       <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-cyan-400/15 blur-[180px]" />
 
       <div className="relative mx-auto px-5 md:px-10 pt-20 pb-10 backdrop-blur-xl">
-
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-
-          {/* LEFT */}
-
+          {/* LEFT CONTENT */}
           <div>
-
             {/* Badge */}
-
             <motion.div
               variants={fadeInUp}
+              initial="initial"
+              animate="animate"
               className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 backdrop-blur-sm px-5 py-2 text-sm font-medium text-blue-600"
             >
               <motion.span
@@ -82,17 +79,18 @@ export default function Hero() {
                 <FaStar className="text-blue-700" />
               </motion.span>
               <span className="text-blue-700 font-semibold text-sm tracking-wide">
-                Technology • Innovation • Growth
+                {left.badge.text}
               </span>
             </motion.div>
 
             {/* Heading */}
-
             <motion.h1
               variants={fadeInUp}
+              initial="initial"
+              animate="animate"
               className="mt-8 text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight"
             >
-              Empowering Businesses Through{" "}
+              {left.heading.line1}{" "}
               <motion.span
                 animate={{
                   backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -105,56 +103,42 @@ export default function Hero() {
                 className="bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 bg-[size:200%] bg-clip-text text-transparent"
                 style={{ backgroundSize: "200% auto" }}
               >
-                Technology & Innovation
+                {left.heading.highlightedText}
               </motion.span>
             </motion.h1>
 
             {/* Description */}
-
             <motion.p
               variants={fadeInUp}
+              initial="initial"
+              animate="animate"
               className="mt-8 text-lg leading-8 text-slate-600 max-w-2xl"
             >
-              Delivering innovative software solutions, digital transformation,
-              AI-powered automation, and strategic consulting that help
-              businesses scale faster, operate smarter, and stay ahead in an
-              ever-changing digital world.
+              {left.description}
             </motion.p>
 
             {/* Buttons */}
-
             <div className="mt-10 flex flex-wrap gap-5">
-
               <Link
                 to="/Services"
                 className="group flex items-center gap-3 rounded-2xl bg-blue-600 px-8 py-4 font-semibold text-white shadow-xl transition-all duration-300 hover:-translate-y-1 hover:bg-slate-900"
               >
-
                 Our Services
-
                 <FaArrowRight className="transition group-hover:translate-x-1" />
-
               </Link>
 
               <Link
                 to="/Contact"
                 className="rounded-2xl border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-800 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-slate-100"
               >
-
                 Talk To An Expert
-
               </Link>
-
             </div>
 
-            {/* Trusted */}
-
+            {/* Trusted By */}
             <div className="mt-12">
-
               <p className="text-sm uppercase tracking-[0.25em] text-slate-500">
-
                 Trusted By
-
               </p>
 
               <motion.div
@@ -163,12 +147,7 @@ export default function Hero() {
                 animate="animate"
                 className="mt-5 flex flex-wrap gap-5"
               >
-                {[
-                  "Startups",
-                  "SMEs",
-                  "Enterprises",
-                  "Educational Institutes",
-                ].map((item, index) => (
+                {left.trusted_by.map((item, index) => (
                   <motion.div
                     key={item}
                     variants={{
@@ -179,19 +158,15 @@ export default function Hero() {
                     whileHover={{ scale: 1.1, y: -3 }}
                     className="group relative cursor-pointer rounded-full border border-slate-200 bg-white px-5 py-2 font-medium shadow-sm transition-all hover:border-blue-300 hover:shadow-md"
                   >
-                    <motion.span
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 transition-opacity group-hover:opacity-10"
-                    />
+                    <motion.span className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 opacity-0 transition-opacity group-hover:opacity-10" />
                     {item}
                   </motion.div>
                 ))}
               </motion.div>
-
             </div>
-
           </div>
-                    {/* RIGHT */}
 
+          {/* RIGHT CONTENT - DASHBOARD */}
           <motion.div
             variants={scaleIn}
             initial="initial"
@@ -208,24 +183,15 @@ export default function Hero() {
               {/* Header */}
               <div className="flex items-center justify-between border-b border-slate-200 px-8 py-5">
                 <div>
-                  <p className="text-sm text-slate-500">Business Dashboard</p>
+                  <p className="text-sm text-slate-500">{right.title}</p>
                   <h3 className="text-2xl font-bold text-slate-900">
-                    AuxOpus Analytics
+                    {right.companyName}
                   </h3>
                 </div>
                 <div className="flex gap-2">
-                  <motion.div
-                    whileHover={{ scale: 1.3 }}
-                    className="h-3 w-3 rounded-full bg-red-400 cursor-pointer"
-                  ></motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.3 }}
-                    className="h-3 w-3 rounded-full bg-yellow-400 cursor-pointer"
-                  ></motion.div>
-                  <motion.div
-                    whileHover={{ scale: 1.3 }}
-                    className="h-3 w-3 rounded-full bg-green-400 cursor-pointer"
-                  ></motion.div>
+                  <motion.div whileHover={{ scale: 1.3 }} className="h-3 w-3 rounded-full bg-red-400 cursor-pointer"></motion.div>
+                  <motion.div whileHover={{ scale: 1.3 }} className="h-3 w-3 rounded-full bg-yellow-400 cursor-pointer"></motion.div>
+                  <motion.div whileHover={{ scale: 1.3 }} className="h-3 w-3 rounded-full bg-green-400 cursor-pointer"></motion.div>
                 </div>
               </div>
 
@@ -238,14 +204,14 @@ export default function Hero() {
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-blue-100">Business Growth</p>
+                      <p className="text-blue-100">{right.revenueCard.label}</p>
                       <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.5 }}
                         className="mt-2 text-4xl font-bold"
                       >
-                        <Counter value="+128%" />
+                        <Counter value={right.revenueCard.value} />
                       </motion.h2>
                     </div>
                     <motion.div
@@ -264,7 +230,7 @@ export default function Hero() {
                   >
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: "85%" }}
+                      animate={{ width: `${right.revenueCard.progressBar.current}%` }}
                       transition={{ delay: 1.2, duration: 0.8 }}
                       className="h-full rounded-full bg-white"
                     />
@@ -278,7 +244,7 @@ export default function Hero() {
                     className="rounded-2xl bg-slate-50 p-5 shadow cursor-pointer"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500">Active Projects</span>
+                      <span className="text-slate-500">{right.statsCards[0].label}</span>
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.5 }}
@@ -292,12 +258,12 @@ export default function Hero() {
                       transition={{ delay: 1.4 }}
                       className="mt-5 text-3xl font-bold"
                     >
-                      <Counter value="48" />
+                      <Counter value={right.statsCards[0].value} />
                     </motion.h3>
                     <div className="mt-3 h-2 rounded-full bg-slate-200">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={{ width: "80%" }}
+                        animate={{ width: `${right.statsCards[0].progress}%` }}
                         transition={{ delay: 1.6, duration: 0.8 }}
                         className="h-full rounded-full bg-blue-600"
                       ></motion.div>
@@ -309,7 +275,7 @@ export default function Hero() {
                     className="rounded-2xl bg-slate-50 p-5 shadow cursor-pointer"
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-slate-500">AI Solutions</span>
+                      <span className="text-slate-500">{right.statsCards[1].label}</span>
                       <motion.div
                         animate={{ scale: [1, 1.2, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
@@ -323,12 +289,12 @@ export default function Hero() {
                       transition={{ delay: 1.8 }}
                       className="mt-5 text-3xl font-bold"
                     >
-                      <Counter value="25+" />
+                      <Counter value={right.statsCards[1].value} />
                     </motion.h3>
                     <div className="mt-3 h-2 rounded-full bg-slate-200">
                       <motion.div
                         initial={{ width: 0 }}
-                        animate={{ width: "75%" }}
+                        animate={{ width: `${right.statsCards[1].progress}%` }}
                         transition={{ delay: 2, duration: 0.8 }}
                         className="h-full rounded-full bg-cyan-500"
                       ></motion.div>
@@ -336,22 +302,21 @@ export default function Hero() {
                   </motion.div>
                 </div>
 
-                {/* Satisfaction */}
+                {/* Satisfaction Card */}
                 <ScrollReveal animation="up">
                   <motion.div
                     whileHover={{ scale: 1.03 }}
                     className="flex items-center justify-between rounded-2xl bg-slate-100 p-5 cursor-pointer"
                   >
                     <div>
-                      <p className="text-slate-500">Customer Satisfaction</p>
+                      <p className="text-slate-500">{right.satisfactionCard.label}</p>
                       <motion.h3
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 2.2 }}
                         className="mt-1 text-3xl font-bold"
                       >
-                        
-                        <Counter value="99.8%" />
+                        <Counter value={right.satisfactionCard.value} />
                       </motion.h3>
                     </div>
                     <motion.div
@@ -366,143 +331,97 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Floating Cards with Animation */}
-            <motion.div
-              variants={floatingAnimation}
-              animate="animate"
-              className="absolute left-0 top-20"
-            >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-3">
-                  <motion.div
-                    animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="rounded-xl bg-blue-100 p-3"
-                  >
-                    <FaBrain className="text-blue-600" />
-                  </motion.div>
-                  <div>
-                    <p className="font-semibold">AI Automation</p>
-                    <span className="text-sm text-slate-500">Smart Workflows</span>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
+            {/* Floating Cards */}
+            {right.floatingCards.map((card, index) => {
+              const positions = [
+                "absolute left-0 top-20",
+                "absolute -right-5 top-48",
+                "absolute bottom-16 left-12",
+              ];
+              const delays = [0, 0.5, 1];
 
-            <motion.div
-              variants={floatingAnimation}
-              animate="animate"
-              transition={{ delay: 0.5 }}
-              className="absolute -right-5 top-48"
-            >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-3">
-                  <motion.div
-                    animate={{ y: [0, -5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="rounded-xl bg-cyan-100 p-3"
-                  >
-                    <FaCloud className="text-cyan-600" />
-                  </motion.div>
-                  <div>
-                    <p className="font-semibold">Cloud Ready</p>
-                    <span className="text-sm text-slate-500">Secure Infrastructure</span>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
+              const animations = [
+                { rotate: [0, 360] },
+                { y: [0, -5, 0] },
+                { rotate: [0, -10, 10, 0] },
+              ];
+              const durations = [20, 2, 3];
+              const iconColors = [
+                "rounded-xl bg-blue-100 p-3",
+                "rounded-xl bg-cyan-100 p-3",
+                "rounded-xl bg-green-100 p-3",
+              ];
+              const iconComponents = [FaBrain, FaCloud, FaShieldHalved];
+              const IconComponent = iconComponents[index];
 
-            <motion.div
-              variants={floatingAnimation}
-              animate="animate"
-              transition={{ delay: 1 }}
-              className="absolute bottom-16 left-12"
-            >
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 backdrop-blur-sm"
-              >
-                <div className="flex items-center gap-3">
+              return (
+                <motion.div
+                  key={index}
+                  variants={floatingAnimation}
+                  animate="animate"
+                  transition={{ delay: delays[index] }}
+                  className={positions[index]}
+                >
                   <motion.div
-                    animate={{ rotate: [0, -10, 10, 0] }}
-                    transition={{ duration: 3, repeat: Infinity }}
-                    className="rounded-xl bg-green-100 p-3"
+                    whileHover={{ scale: 1.1 }}
+                    className="rounded-2xl bg-white p-5 shadow-2xl border border-slate-200 backdrop-blur-sm"
                   >
-                    <FaShieldHalved className="text-green-600" />
+                    <div className="flex items-center gap-3">
+                      <motion.div
+                        animate={animations[index]}
+                        transition={{
+                          duration: durations[index],
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className={iconColors[index]}
+                      >
+                        <IconComponent className={index === 0 ? "text-blue-600" : index === 1 ? "text-cyan-600" : "text-green-600"} />
+                      </motion.div>
+                      <div>
+                        <p className="font-semibold">{card.title}</p>
+                        <span className="text-sm text-slate-500">{card.subtitle}</span>
+                      </div>
+                    </div>
                   </motion.div>
-                  <div>
-                    <p className="font-semibold">Enterprise Security</p>
-                    <span className="text-sm text-slate-500">Protected Systems</span>
-                  </div>
-                </div>
-              </motion.div>
-            </motion.div>
+                </motion.div>
+              );
+            })}
           </motion.div>
-
         </div>
-                {/* Stats */}
 
+        {/* Hero Stats Section */}
         <div className="mt-24 grid grid-cols-2 gap-6 lg:grid-cols-4">
+          {heroStats.map((item, index) => {
+            const icons = [FaCloud, FaBrain, FaUsers, FaShieldHalved];
+            const IconComponent = icons[index];
 
-          {[
-            {
-              value: "10+",
-              title: "Industry Services",
-              icon: <FaCloud />,
-            },
-            {
-              value: "5+",
-              title: "Technology Domains",
-              icon: <FaBrain />,
-            },
-            {
-              value: "100%",
-              title: "Client-Focused Approach",
-              icon: <FaUsers />,
-            },
-            {
-              value: "24/7",
-              title: "Support & Assistance",
-              icon: <FaShieldHalved />,
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/50 backdrop-blur-2xl p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-            >
-              {/* Hover Gradient */}
+            return (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-3xl border border-white/40 bg-white/50 backdrop-blur-2xl p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              >
+                {/* Hover Gradient */}
+                <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-blue-600 to-cyan-400 transition-all duration-500 group-hover:w-full"></div>
 
-              <div className="absolute left-0 top-0 h-1 w-0 bg-gradient-to-r from-blue-600 to-cyan-400 transition-all duration-500 group-hover:w-full"></div>
+                {/* Icon */}
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg">
+                  <IconComponent />
+                </div>
 
-              {/* Icon */}
+                {/* Number */}
+                <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+                  <Counter value={item.value} />
+                </h2>
 
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg">
-                {item.icon}
+                {/* Title */}
+                <p className="mt-3 text-slate-600 leading-7">
+                  {item.title}
+                </p>
               </div>
-
-              {/* Number */}
-
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-                
-                <Counter value={item.value} />
-              </h2>
-
-              {/* Title */}
-
-              <p className="mt-3 text-slate-600 leading-7">
-                {item.title}
-              </p>
-            </div>
-          ))}
-
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

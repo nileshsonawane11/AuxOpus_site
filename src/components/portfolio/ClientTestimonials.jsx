@@ -1,41 +1,24 @@
 import React from "react";
 import { FaQuoteLeft } from "react-icons/fa6";
-
-const testimonials = [
-  {
-    name: "Rahul Patil",
-    company: "TechNova",
-    review:
-      "AuxOpus delivered a high-quality solution with exceptional communication throughout the project.",
-  },
-  {
-    name: "Priya Sharma",
-    company: "EduSpark",
-    review:
-      "Professional team, innovative ideas, and excellent execution. Highly recommended.",
-  },
-];
+import { clientTestimonialsContent } from "../../constants/Portfolio.js";
 
 export default function ClientTestimonials() {
+  const { badge, heading, testimonials } = clientTestimonialsContent;
+
   return (
     <section className="py-24 bg-white">
-
       <div className="max-w-7xl mx-auto px-5 md:px-10">
-
         <div className="text-center">
-
           <span className="uppercase tracking-[0.3em] text-blue-600 font-semibold">
-            Testimonials
+            {badge}
           </span>
 
           <h2 className="mt-5 text-5xl font-bold">
-            What Our Clients Say
+            {heading}
           </h2>
-
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 mt-20">
-
           {testimonials.map((item, index) => (
             <div
               key={index}
@@ -56,14 +39,10 @@ export default function ClientTestimonials() {
                   {item.company}
                 </p>
               </div>
-
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

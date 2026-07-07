@@ -10,6 +10,7 @@ import {
   LayoutGrid,
 } from "lucide-react";
 import { FaFigma } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const stats = [
   {
@@ -103,15 +104,15 @@ export default function UIUXHero() {
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <button className="flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
+              <Link to="/Contact" className="flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
                 Start Design Project
                 <ArrowRight size={18} />
-              </button>
+              </Link>
 
-              <button className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
+              <Link to="/Portfolio" className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
                 <Play size={18} />
                 View Portfolio
-              </button>
+              </Link>
             </div>
 
             <div className="mt-16 grid gap-5 sm:grid-cols-3">

@@ -12,6 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Counter from "../../Counter"
+import { Link } from "react-router-dom";
 
 const metrics = [
   {
@@ -38,7 +39,7 @@ const services = [
 export default function MaintenanceSupportHero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-28">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,#3b82f620,transparent_45%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,#3b82f620,transparent_45%)] -z-10" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-[1.2fr_.8fr]">
         <motion.div
@@ -65,14 +66,14 @@ export default function MaintenanceSupportHero() {
           </p>
 
           <div className="mt-10 flex gap-4">
-            <button className="rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
+            <Link to="/Contact" className="cursor-pointer rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
               Get Support
-            </button>
+            </Link>
 
-            <button className="flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
+            <Link to="/Portfolio" className="cursor-pointer flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
               View SLA
               <ArrowRight size={18} />
-            </button>
+            </Link>
           </div>
 
           <div className="mt-16 grid gap-5 md:grid-cols-3">
