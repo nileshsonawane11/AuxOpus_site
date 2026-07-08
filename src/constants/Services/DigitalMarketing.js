@@ -1,4 +1,5 @@
 import {companyStats} from "../Stats.js"
+import {digitalMarketingPortfolio} from "../Projects.js"
 
 export const digitalMarketingHeroContent = {
   badge: {
@@ -287,43 +288,7 @@ export const digitalMarketingPortfolioContent = {
   viewCaseStudyButton: {
     text: "View Case Study",
   },
-  projects: [
-    {
-      title: "E-Commerce Growth Campaign",
-      category: "SEO + PPC",
-      description:
-        "Executed a full-funnel SEO and paid advertising strategy to increase online sales and reduce acquisition costs.",
-      result: "+310% Organic Traffic",
-    },
-    {
-      title: "University Lead Generation",
-      category: "Education Marketing",
-      description:
-        "Designed multi-channel campaigns that significantly increased admission inquiries and enrollment applications.",
-      result: "+180% Student Leads",
-    },
-    {
-      title: "Healthcare Digital Presence",
-      category: "Local SEO",
-      description:
-        "Improved search visibility, online reputation, and appointment bookings for a healthcare provider.",
-      result: "+240% Appointment Requests",
-    },
-    {
-      title: "B2B SaaS Marketing",
-      category: "Performance Marketing",
-      description:
-        "Generated qualified enterprise leads using LinkedIn Ads, content marketing, and landing page optimization.",
-      result: "4.9X Marketing ROI",
-    },
-    {
-      title: "Brand Awareness Campaign",
-      category: "Social Media",
-      description:
-        "Built a strong digital presence through strategic content creation, influencer partnerships, and social campaigns.",
-      result: "12M+ Reach",
-    },
-  ],
+  projects: digitalMarketingPortfolio,
 };
 
 export const digitalMarketingCaseStudyContent = {

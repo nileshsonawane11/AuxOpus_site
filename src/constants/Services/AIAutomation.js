@@ -1,4 +1,5 @@
-import {companyStats} from "../Stats.js"
+import {companyStats} from "../Stats.js";
+import {aiPortfolio} from "../Projects.js";
 
 export const aiHeroContent = {
     badge: {
@@ -428,86 +429,7 @@ export const aiPortfolioContent = {
     viewDetailsButton: {
         text: "View Details",
     },
-    projects: [
-        {
-        title: "Enterprise AI Customer Support",
-        industry: "SaaS Platform",
-        description:
-            "Built an AI-powered multilingual support assistant capable of resolving customer queries, creating tickets, and integrating directly with CRM systems.",
-        technologies: [
-            "OpenAI",
-            "LangChain",
-            "Node.js",
-            "MongoDB",
-        ],
-        outcome: "65% Faster Response Time",
-        },
-        {
-        title: "Smart Invoice Processing",
-        industry: "Finance",
-        description:
-            "Developed an OCR-powered document intelligence platform that extracts invoice data, validates information, and syncs with ERP software.",
-        technologies: [
-            "Python",
-            "FastAPI",
-            "OCR",
-            "PostgreSQL",
-        ],
-        outcome: "99% Extraction Accuracy",
-        },
-        {
-        title: "Enterprise Knowledge Assistant",
-        industry: "IT Services",
-        description:
-            "Created a Retrieval-Augmented Generation (RAG) assistant trained on internal company documents, SOPs, and knowledge bases.",
-        technologies: [
-            "GPT-4o",
-            "Pinecone",
-            "LangChain",
-            "React",
-        ],
-        outcome: "80% Faster Knowledge Retrieval",
-        },
-        {
-        title: "Sales Prediction Dashboard",
-        industry: "Retail",
-        description:
-            "Implemented machine learning models to forecast sales, optimize inventory planning, and improve demand prediction.",
-        technologies: [
-            "TensorFlow",
-            "Python",
-            "Power BI",
-            "PostgreSQL",
-        ],
-        outcome: "30% Better Forecast Accuracy",
-        },
-        {
-        title: "Manufacturing Defect Detection",
-        industry: "Manufacturing",
-        description:
-            "Built a computer vision system to identify product defects in real-time, reducing manual inspection and improving production quality.",
-        technologies: [
-            "YOLO",
-            "OpenCV",
-            "Python",
-            "Docker",
-        ],
-        outcome: "92% Detection Accuracy",
-        },
-        {
-        title: "HR Recruitment Assistant",
-        industry: "Human Resources",
-        description:
-            "Designed an AI assistant that screens resumes, ranks candidates, schedules interviews, and answers recruitment-related queries.",
-        technologies: [
-            "OpenAI",
-            "FastAPI",
-            "React",
-            "MongoDB",
-        ],
-        outcome: "75% Faster Hiring Process",
-        },
-    ],
+    projects: aiPortfolio,
 };
 
 export const aiCaseStudyContent = {

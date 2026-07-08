@@ -95,36 +95,42 @@ export const contactFormContent = {
     fields: [
         {
         type: "text",
+        name: "fullName",
         placeholder: "Full Name",
         required: true,
         grid: "md:grid-cols-2",
         },
         {
         type: "email",
+        name: "email",
         placeholder: "Email Address",
         required: true,
         grid: "md:grid-cols-2",
         },
         {
         type: "text",
+        name: "phone",
         placeholder: "Phone Number",
         required: false,
         grid: "md:grid-cols-2",
         },
         {
         type: "text",
+        name: "company",
         placeholder: "Company Name",
         required: false,
         grid: "md:grid-cols-2",
         },
         {
         type: "text",
+        name: "subject",
         placeholder: "Subject",
         required: true,
         grid: null,
         },
         {
         type: "textarea",
+        name: "message",
         placeholder: "Tell us about your project...",
         rows: 6,
         required: true,

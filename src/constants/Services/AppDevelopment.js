@@ -1,3 +1,5 @@
+import {appPortfolio} from "../Projects.js";
+
 export const appHeroContent = {
     badge: {
         text: "App Development",
@@ -191,36 +193,7 @@ export const appPortfolioContent = {
         text: "View Portfolio",
         link: "/portfolio",
     },
-    projects: [
-        {
-        image: "https://placehold.co/700x900",
-        title: "Healthcare App",
-        description:
-            "Doctor appointment booking, prescriptions, online consultation and patient management.",
-        technologies: ["Flutter", "Firebase", "Node.js"],
-        },
-        {
-        image: "https://placehold.co/700x900",
-        title: "Food Delivery App",
-        description:
-            "Complete delivery ecosystem with customer, delivery partner and admin applications.",
-        technologies: ["React Native", "Laravel", "MySQL"],
-        },
-        {
-        image: "https://placehold.co/700x900",
-        title: "Education Platform",
-        description:
-            "Online learning platform with video lectures, quizzes and progress tracking.",
-        technologies: ["Flutter", "Spring Boot", "MongoDB"],
-        },
-        {
-        image: "https://placehold.co/700x900",
-        title: "Finance Application",
-        description:
-            "Secure fintech application with analytics and digital payment integration.",
-        technologies: ["Flutter", "Node.js", "PostgreSQL"],
-        },
-    ],
+    projects: appPortfolio,
     swiper: {
         delay: 3500,
         spaceBetween: 30,

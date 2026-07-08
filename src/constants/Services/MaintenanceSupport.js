@@ -1,4 +1,5 @@
 import {companyStats} from "../Stats.js"
+import {maintenanceSupportPortfolio} from "../Projects.js"
 
 export const maintenanceSupportHeroContent = {
   badge: {
@@ -213,28 +214,7 @@ export const maintenanceSupportIndustriesContent = {
 export const maintenanceSupportPortfolioContent = {
   badge: "Success Stories",
   heading: "Proven Maintenance Excellence",
-  projects: [
-    {
-      title: "Cloud Infrastructure Monitoring",
-      company: "Enterprise SaaS",
-      result: "99.99% Uptime",
-    },
-    {
-      title: "Database Optimization",
-      company: "Healthcare Platform",
-      result: "65% Faster Queries",
-    },
-    {
-      title: "Security Maintenance",
-      company: "FinTech Company",
-      result: "Zero Critical Vulnerabilities",
-    },
-    {
-      title: "24×7 Production Monitoring",
-      company: "Manufacturing ERP",
-      result: "70% Faster Incident Resolution",
-    },
-  ],
+  projects: maintenanceSupportPortfolio,
 };
 
 export const maintenanceSupportCaseStudyContent = {

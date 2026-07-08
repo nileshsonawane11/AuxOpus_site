@@ -1,3 +1,5 @@
+import {webPortfolio} from '../Projects.js';
+
 export const webHeroContent = {
   badge: {
     text: "Web Design & Development",
@@ -203,36 +205,7 @@ export const webPortfolioContent = {
     text: "View All",
     link: "/portfolio",
   },
-  projects: [
-    {
-      name: "Corporate Website",
-      category: "Business Website",
-      image: "https://placehold.co/800x500",
-      desc: "Modern corporate website built with responsive UI and SEO optimization.",
-      tech: ["React", "Laravel", "MySQL"],
-    },
-    {
-      name: "ERP Management System",
-      category: "Enterprise Software",
-      image: "https://placehold.co/800x500",
-      desc: "Complete ERP platform for inventory, HR, finance and reporting.",
-      tech: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      name: "E-Commerce Platform",
-      category: "Online Store",
-      image: "https://placehold.co/800x500",
-      desc: "High-performance shopping platform with secure payments.",
-      tech: ["React", "Laravel", "MySQL"],
-    },
-    {
-      name: "CRM Dashboard",
-      category: "Business Automation",
-      image: "https://placehold.co/800x500",
-      desc: "Lead management and customer relationship platform.",
-      tech: ["React", "Node.js", "MongoDB"],
-    },
-  ],
+  projects: webPortfolio,
   swiper: {
     delay: 3500,
     spaceBetween: 30,

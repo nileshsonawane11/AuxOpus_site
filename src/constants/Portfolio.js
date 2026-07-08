@@ -1,5 +1,6 @@
 import {companyStats} from "./Stats.js"
-
+import {featuredProjects} from "./Projects.js";
+import {caseStudies} from "./Projects.js";
 
 export const portfolioHeroContent = {
     badge: {
@@ -149,26 +150,7 @@ export const projectCategoriesContent = {
 export const featuredProjectsContent = {
     badge: "Featured",
     heading: "Selected Projects",
-    projects: [
-        {
-        title: "LiveStrike",
-        category: "Sports Technology",
-        gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
-        },
-        {
-        title: "Exam Supervision",
-        category: "Education",
-        gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
-        },
-        {
-        title: "Hospital ERP",
-        category: "Healthcare",
-        gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
-        },
-    ],
+    projects: featuredProjects,
     viewButton: {
         text: "View Case Study",
     },
@@ -180,26 +162,7 @@ export const caseStudiesContent = {
     readMoreButton: {
         text: "Read More",
     },
-    studies: [
-        {
-        title: "LiveStrike",
-        industry: "Sports Technology",
-        challenge:
-            "Managing live scoring, tournaments, and player statistics on a single platform.",
-        solution:
-            "Developed a cloud-based real-time cricket scoring ecosystem with analytics and tournament management.",
-        result: "40% faster match management and seamless live score delivery.",
-        },
-        {
-        title: "Exam Supervision System",
-        industry: "Education",
-        challenge:
-            "Manual supervision allocation caused scheduling conflicts and inefficiencies.",
-        solution:
-            "Created an automated allocation platform with intelligent scheduling and reporting.",
-        result: "Reduced manual effort by over 80% while improving transparency.",
-        },
-    ],
+    studies: caseStudies,
 };
 
 export const developmentProcessContent = {

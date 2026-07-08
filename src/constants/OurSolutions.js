@@ -1,4 +1,5 @@
-import {companyStats} from "./Stats.js"
+import {companyStats} from "./Stats.js";
+import {ourProducts, successStories} from "./Projects.js";
 
 export const solutionsHeroContent = {
     badge: {
@@ -190,56 +191,7 @@ export const ourProductsContent = {
     heading: "Our Software Products",
     description:
         "Along with custom software development, we offer industry-ready products that can be deployed quickly and customized according to your business needs.",
-    products: [
-        {
-        icon: "FaBaseballBall",
-        library: "fa",
-        title: "LiveStrike",
-        category: "Sports Management",
-        description:
-            "Real-time cricket scoring platform with tournaments, analytics, live streaming and player statistics.",
-        },
-        {
-        icon: "FaGraduationCap",
-        library: "fa6",
-        title: "Exam Supervision",
-        category: "Education",
-        description:
-            "Automated invigilation allocation, duty scheduling and examination management system.",
-        },
-        {
-        icon: "FaBuilding",
-        library: "fa6",
-        title: "Business ERP",
-        category: "Enterprise",
-        description:
-            "Complete ERP for HR, Finance, Inventory, Projects and Operations.",
-        },
-        {
-        icon: "FaUserCheck",
-        library: "fa6",
-        title: "HRMS",
-        category: "Human Resources",
-        description:
-            "Attendance, payroll, leave management and employee lifecycle automation.",
-        },
-        {
-        icon: "FaHospital",
-        library: "fa6",
-        title: "Hospital Management",
-        category: "Healthcare",
-        description:
-            "Manage appointments, doctors, billing, pharmacy and patient records.",
-        },
-        {
-        icon: "FaCartShopping",
-        library: "fa6",
-        title: "Retail POS",
-        category: "Retail",
-        description:
-            "Billing, inventory, GST, barcode and sales reporting solution.",
-        },
-    ],
+    products: ourProducts,
 };
 
 export const productAdvantagesContent = {
@@ -539,29 +491,7 @@ export const successStoriesContent = {
         text: "View All",
         link: "/portfolio",
     },
-    stories: [
-        {
-        title: "Digital ERP Platform",
-        industry: "Manufacturing",
-        description:
-            "Complete business transformation with scalable, secure, and intelligent software.",
-        gradient: "from-blue-500 to-cyan-500",
-        },
-        {
-        title: "Hospital Management",
-        industry: "Healthcare",
-        description:
-            "Complete business transformation with scalable, secure, and intelligent software.",
-        gradient: "from-blue-500 to-cyan-500",
-        },
-        {
-        title: "Learning Management",
-        industry: "Education",
-        description:
-            "Complete business transformation with scalable, secure, and intelligent software.",
-        gradient: "from-blue-500 to-cyan-500",
-        },
-    ],
+    stories: successStories,
 };
 
 export const solutionStatsContent = {

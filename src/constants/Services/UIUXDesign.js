@@ -1,4 +1,5 @@
-import {companyStats} from "../Stats.js"
+import {companyStats} from "../Stats.js";
+import {uiuxPortfolio} from "../Projects.js";
 
 export const uiuxHeroContent = {
   badge: {
@@ -286,43 +287,7 @@ export const uiuxPortfolioContent = {
   viewProjectButton: {
     text: "View Project",
   },
-  projects: [
-    {
-      title: "E-Commerce Platform",
-      category: "Web Design",
-      description:
-        "Redesigned an online shopping platform to improve product discovery, checkout experience, and mobile usability.",
-      result: "+42% Conversion Rate",
-    },
-    {
-      title: "Banking Mobile App",
-      category: "Mobile UI",
-      description:
-        "Designed a modern fintech application focused on accessibility, security, and intuitive financial management.",
-      result: "4.9★ User Rating",
-    },
-    {
-      title: "Enterprise CRM Dashboard",
-      category: "Dashboard",
-      description:
-        "Built a scalable design system and analytics dashboard for enterprise sales and operations teams.",
-      result: "35% Productivity Increase",
-    },
-    {
-      title: "Learning Management System",
-      category: "Education",
-      description:
-        "Created engaging learning experiences with interactive dashboards, course management, and assessments.",
-      result: "+60% User Engagement",
-    },
-    {
-      title: "Healthcare Portal",
-      category: "Healthcare",
-      description:
-        "Designed a patient-centric healthcare portal with appointment booking, reports, and teleconsultation.",
-      result: "90% Positive Feedback",
-    },
-  ],
+  projects: uiuxPortfolio,
 };
 
 export const uiuxCaseStudyContent = {

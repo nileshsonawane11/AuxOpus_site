@@ -1,4 +1,5 @@
 import {companyStats} from "../Stats.js"
+import {corporateTrainingPortfolio} from "../Projects.js"
 
 export const corporateTrainingHeroContent = {
     badge: {
@@ -263,32 +264,7 @@ export const corporateTrainingIndustriesContent = {
 export const corporateTrainingPortfolioContent = {
     badge: "Success Programs",
     heading: "Corporate Training Portfolio",
-    portfolio: [
-        {
-        title: "Enterprise AI Bootcamp",
-        duration: "6 Weeks",
-        participants: "180 Employees",
-        outcome: "AI Adoption Across Teams",
-        },
-        {
-        title: "Full Stack Developer Program",
-        duration: "12 Weeks",
-        participants: "85 Engineers",
-        outcome: "Production-Ready Developers",
-        },
-        {
-        title: "Cloud Migration Workshop",
-        duration: "5 Days",
-        participants: "120 Professionals",
-        outcome: "AWS Certified Teams",
-        },
-        {
-        title: "Cyber Security Awareness",
-        duration: "3 Days",
-        participants: "600 Employees",
-        outcome: "Reduced Security Risks",
-        },
-    ],
+    portfolio: corporateTrainingPortfolio,
 };
 
 export const corporateTrainingCaseStudyContent = {
