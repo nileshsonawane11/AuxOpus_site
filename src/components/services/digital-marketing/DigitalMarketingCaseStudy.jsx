@@ -8,69 +8,26 @@ import {
   ArrowRight,
   BarChart3,
 } from "lucide-react";
-import Counter from "../../Counter"
-
-const challenges = [
-  "Low organic search visibility",
-  "High customer acquisition cost",
-  "Poor conversion rate on landing pages",
-  "Minimal brand awareness in target market",
-];
-
-const solutions = [
-  "Comprehensive SEO optimization",
-  "Google Ads & Meta Ads campaigns",
-  "Landing page redesign and CRO",
-  "Content marketing strategy",
-  "Email automation campaigns",
-  "Weekly analytics and campaign optimization",
-];
-
-const results = [
-  {
-    value: "320%",
-    label: "Organic Traffic Growth",
-  },
-  {
-    value: "5.1X",
-    label: "Marketing ROI",
-  },
-  {
-    value: "48%",
-    label: "Lower Cost Per Lead",
-  },
-  {
-    value: "210%",
-    label: "Lead Generation",
-  },
-];
-
-const tools = [
-  "Google Analytics 4",
-  "Google Ads",
-  "Meta Ads",
-  "Search Console",
-  "SEMrush",
-  "Looker Studio",
-];
+import Counter from "../../Counter";
+import { digitalMarketingCaseStudyContent } from "../../../constants/Services/DigitalMarketing.js";
 
 export default function DigitalMarketingCaseStudy() {
+  const { badge, heading, description, client, solution, results, tools } = digitalMarketingCaseStudyContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Case Study
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Scaling an E-Commerce Brand with Digital Marketing
+            {heading}
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            Learn how our integrated SEO, paid advertising, and conversion
-            optimization strategy transformed an online business into a
-            high-performing digital brand.
+            {description}
           </p>
         </div>
 
@@ -83,11 +40,11 @@ export default function DigitalMarketingCaseStudy() {
 
               <div>
                 <h3 className="text-2xl font-bold text-slate-900">
-                  Client Overview
+                  {client.title}
                 </h3>
 
                 <p className="text-slate-500">
-                  E-Commerce Retail Company
+                  {client.subtitle}
                 </p>
               </div>
             </div>
@@ -101,7 +58,7 @@ export default function DigitalMarketingCaseStudy() {
               </div>
 
               <div className="mt-6 space-y-4">
-                {challenges.map((item) => (
+                {client.challenges.map((item) => (
                   <div
                     key={item}
                     className="flex items-start gap-3"
@@ -128,17 +85,17 @@ export default function DigitalMarketingCaseStudy() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  Marketing Strategy
+                  {solution.title}
                 </h3>
 
                 <p className="text-slate-400">
-                  Performance-Driven Campaigns
+                  {solution.subtitle}
                 </p>
               </div>
             </div>
 
             <div className="mt-10 space-y-4">
-              {solutions.map((item) => (
+              {solution.solutions.map((item) => (
                 <div
                   key={item}
                   className="flex items-center gap-3 rounded-xl bg-white/5 p-4"
@@ -160,12 +117,12 @@ export default function DigitalMarketingCaseStudy() {
             <BarChart3 size={32} />
 
             <h3 className="text-3xl font-bold">
-              Campaign Results
+              {results.title}
             </h3>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {results.map((item) => (
+            {results.stats.map((item) => (
               <div
                 key={item.label}
                 className="rounded-2xl bg-white/10 p-6 backdrop-blur"
@@ -184,11 +141,11 @@ export default function DigitalMarketingCaseStudy() {
 
         <div className="mt-20 rounded-3xl border border-slate-200 bg-white p-8">
           <h3 className="text-3xl font-bold text-slate-900">
-            Platforms & Tools
+            {tools.title}
           </h3>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            {tools.map((tool) => (
+            {tools.items.map((tool) => (
               <span
                 key={tool}
                 className="rounded-full border border-slate-200 bg-slate-50 px-5 py-3 font-medium text-slate-700"

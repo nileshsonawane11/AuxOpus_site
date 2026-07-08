@@ -1,4 +1,16 @@
 import Logo from "../assets/AuxOpus.png";
+import {contactInfoContent} from "./Contact.js"
+import {contactSocialContent} from "./Contact.js"
+import NavItems from "./NavItems.js";
+
+const social = contactSocialContent.social;
+const Menu = NavItems.map((item)=>{
+            return {text: item.page, link: item.path}
+        });
+
+const SubMenuPages = NavItems.flatMap(item =>
+  item.items ? item.items.map(sub => sub.page) : []
+);
 
 export const footerContent = {
     cta: {
@@ -22,47 +34,28 @@ export const footerContent = {
     },
     companyLinks: {
         title: "Company",
-        links: [
-        { text: "Home", link: "/" },
-        { text: "About Us", link: "/about" },
-        { text: "Services", link: "/services" },
-        { text: "Portfolio", link: "/portfolio" },
-        // { text: "Industries", link: "/industries" },
-        // { text: "Careers", link: "/careers" },
-        { text: "Contact", link: "/contact" },
-        ],
+        links: Menu,
     },
     servicesLinks: {
         title: "Our Services",
-        links: [
-        "Web Development",
-        "Mobile App Development",
-        "Custom Software",
-        "UI / UX Design",
-        "Cloud Solutions",
-        "Artificial Intelligence",
-        "Digital Marketing",
-        "IT Consulting",
-        ],
+        links: SubMenuPages,
     },
     contact: {
         title: "Contact Us",
         address: {
         lines: [
-            "Office No. XX,",
-            "Your Business Address,",
-            "Maharashtra, India",
+            contactInfoContent.contactMethods[0].value,
         ],
         },
-        phone: "+91 XXXXX XXXXX",
-        email: "info@auxopus.com",
+        phone: contactInfoContent.contactMethods[1].value,
+        email: contactInfoContent.contactMethods[2].value,
         social: {
         title: "Follow Us",
         links: [
-            { icon: "FaLinkedinIn", link: "#", hoverColor: "hover:bg-blue-500" },
-            { icon: "FaInstagram", link: "#", hoverColor: "hover:bg-pink-500" },
-            { icon: "FaFacebookF", link: "#", hoverColor: "hover:bg-blue-700" },
-            { icon: "FaXTwitter", link: "#", hoverColor: "hover:bg-black hover:text-white" },
+            { icon: social[0].icon, link: social[0].url, hoverColor: social[0].color },
+            { icon: social[1].icon, link: social[1].url, hoverColor: social[1].color },
+            { icon: social[2].icon, link: social[2].url, hoverColor: social[2].color },
+            { icon: social[3].icon, link: social[3].url, hoverColor: social[3].color },
         ],
         },
     },

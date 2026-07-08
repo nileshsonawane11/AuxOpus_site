@@ -2,39 +2,18 @@
 
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-
-const faqs = [
-  {
-    q: "Do you provide 24×7 technical support?",
-    a: "Yes. Our support team continuously monitors your infrastructure and responds quickly to critical incidents.",
-  },
-  {
-    q: "Do you support cloud infrastructure?",
-    a: "Yes. We maintain AWS, Azure, Google Cloud, DigitalOcean, and hybrid cloud environments.",
-  },
-  {
-    q: "Can you maintain software developed by another company?",
-    a: "Absolutely. We perform audits, understand the architecture, and provide ongoing maintenance regardless of the original developer.",
-  },
-  {
-    q: "Do you provide SLA-based support?",
-    a: "Yes. We offer customizable Service Level Agreements based on your business requirements.",
-  },
-  {
-    q: "What is included in maintenance?",
-    a: "Bug fixes, monitoring, backups, security updates, performance optimization, infrastructure management, and technical support.",
-  },
-];
+import { maintenanceSupportFAQContent } from "../../../constants/Services/MaintenanceSupport.js";
 
 export default function MaintenanceSupportFAQ() {
   const [open, setOpen] = useState(0);
+  const { heading, faqs } = maintenanceSupportFAQContent;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <h2 className="text-5xl font-bold">
-            Frequently Asked Questions
+            {heading}
           </h2>
         </div>
 

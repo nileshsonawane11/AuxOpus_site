@@ -6,48 +6,29 @@ import {
   Gauge,
   CircleCheckBig,
 } from "lucide-react";
+import { maintenanceSupportCaseStudyContent } from "../../../constants/Services/MaintenanceSupport.js";
 
-const timeline = [
-  {
-    phase: "Challenge",
-    icon: ServerCrash,
-    text: "Frequent outages, slow response times, and unplanned downtime affecting business operations.",
-  },
-  {
-    phase: "Assessment",
-    icon: Gauge,
-    text: "Infrastructure audit, performance profiling, security assessment, and monitoring implementation.",
-  },
-  {
-    phase: "Solution",
-    icon: ShieldCheck,
-    text: "Implemented proactive monitoring, automated backups, server optimization, and security hardening.",
-  },
-  {
-    phase: "Outcome",
-    icon: CircleCheckBig,
-    text: "99.99% uptime, 70% faster incident resolution, and significant reduction in operational risks.",
-  },
-];
+const timelineIcons = [ServerCrash, Gauge, ShieldCheck, CircleCheckBig];
 
 export default function MaintenanceSupportCaseStudy() {
+  const { badge, heading, timeline } = maintenanceSupportCaseStudyContent;
+
   return (
     <section className="bg-slate-100 py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-5 py-2 text-blue-700">
-            Case Study
+            {badge}
           </span>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
-            Enterprise Infrastructure Transformation
+            {heading}
           </h2>
         </div>
 
         <div className="relative mt-20 border-l-2 border-blue-200 pl-12">
-          {timeline.map((item) => {
-            const Icon = item.icon;
-
+          {timeline.map((item, index) => {
+            const Icon = timelineIcons[index];
             return (
               <div
                 key={item.phase}

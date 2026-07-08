@@ -2,44 +2,18 @@
 
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-
-const faqs = [
-  {
-    question: "Can the training be customized for our company?",
-    answer:
-      "Yes. Every training program is customized based on your team's skills, technologies, business goals, and project requirements.",
-  },
-  {
-    question: "Do you provide online and onsite training?",
-    answer:
-      "Yes. We offer classroom training, virtual instructor-led sessions, hybrid learning, and self-paced programs.",
-  },
-  {
-    question: "Will participants receive certificates?",
-    answer:
-      "Yes. Participants receive industry-recognized completion certificates after successfully completing the training.",
-  },
-  {
-    question: "Do you include hands-on projects?",
-    answer:
-      "Absolutely. Every program includes practical assignments, real-world projects, coding exercises, and assessments.",
-  },
-  {
-    question: "Which technologies do you cover?",
-    answer:
-      "We cover Web Development, Mobile Apps, AI, Machine Learning, Cloud, DevOps, Cyber Security, UI/UX, Databases, and Enterprise Software.",
-  },
-];
+import { corporateTrainingFAQContent } from "../../../constants/Services/CorporateTraining.js";
 
 export default function CorporateTrainingFAQ() {
   const [active, setActive] = useState(0);
+  const { heading, faqs } = corporateTrainingFAQContent;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-5xl px-6">
         <div className="mb-16 text-center">
           <h2 className="text-5xl font-bold">
-            Frequently Asked Questions
+            {heading}
           </h2>
         </div>
 

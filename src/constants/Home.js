@@ -1,3 +1,5 @@
+import {companyStats} from "./Stats.js";
+
 export const heroContent = {
     
     left:{
@@ -62,20 +64,20 @@ export const heroContent = {
 
     heroStats : [
         {
-            value: "10+",
-            title: "Industry Services",
+            value: companyStats.overview[7].value,
+            title: companyStats.overview[7].label,
         },
         {
-            value: "5+",
-            title: "Technology Domains",
+            value: companyStats.overview[2].value,
+            title: companyStats.overview[2].label,
         },
         {
-            value: "100%",
-            title: "Client-Focused Approach",
+            value: companyStats.overview[3].value,
+            title: companyStats.overview[3].label,
         },
         {
-            value: "24/7",
-            title: "Support & Assistance",
+            value: companyStats.overview[5].value,
+            title: companyStats.overview[5].label,
         },
     ]
 };

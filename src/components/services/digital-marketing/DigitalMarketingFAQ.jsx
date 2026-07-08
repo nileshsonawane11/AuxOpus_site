@@ -2,57 +2,26 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "How long does SEO take to show results?",
-    answer:
-      "SEO is a long-term strategy. Depending on competition and website authority, noticeable improvements typically begin within 3–6 months.",
-  },
-  {
-    question: "Do you manage Google Ads and Meta Ads?",
-    answer:
-      "Yes. We create, manage, optimize, and monitor campaigns across Google Ads, Facebook, Instagram, LinkedIn, and YouTube.",
-  },
-  {
-    question: "Can you help generate more leads for my business?",
-    answer:
-      "Absolutely. Our strategies focus on attracting qualified traffic, improving conversion rates, and maximizing lead generation.",
-  },
-  {
-    question: "Will I receive campaign reports?",
-    answer:
-      "Yes. We provide detailed performance reports including traffic, conversions, ROI, ad spend, and actionable recommendations.",
-  },
-  {
-    question: "Do you offer social media management?",
-    answer:
-      "Yes. We create content calendars, manage social platforms, run paid campaigns, and analyze engagement metrics.",
-  },
-  {
-    question: "Can digital marketing help local businesses?",
-    answer:
-      "Definitely. Local SEO, Google Business Profile optimization, and targeted advertising are highly effective for local businesses.",
-  },
-];
+import { digitalMarketingFAQContent } from "../../../constants/Services/DigitalMarketing.js";
 
 export default function DigitalMarketingFAQ() {
   const [active, setActive] = useState(0);
+  const { badge, heading, description, faqs } = digitalMarketingFAQContent;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            FAQ
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900">
-            Frequently Asked Questions
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            Answers to common questions about our Digital Marketing services.
+            {description}
           </p>
         </div>
 

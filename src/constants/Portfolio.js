@@ -1,3 +1,5 @@
+import {companyStats} from "./Stats.js"
+
 
 export const portfolioHeroContent = {
     badge: {
@@ -95,20 +97,20 @@ export const portfolioOverviewContent = {
 export const portfolioStatsContent = {
     stats: [
         {
-        number: "50+",
-        label: "Projects Delivered",
+        number: companyStats.overview[1].value,
+        label: companyStats.overview[1].label,
         },
         {
-        number: "12+",
-        label: "Industries Served",
+        number: companyStats.overview[7].value,
+        label: companyStats.overview[7].label,
         },
         {
-        number: "20+",
-        label: "Technologies",
+        number: companyStats.overview[2].value,
+        label: companyStats.overview[2].label,
         },
         {
-        number: "100%",
-        label: "Client-Focused",
+        number: companyStats.overview[3].value,
+        label: companyStats.overview[3].label,
         },
     ],
 };

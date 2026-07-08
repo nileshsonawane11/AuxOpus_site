@@ -16,14 +16,14 @@ export default function MaintenanceSupport() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><MaintenanceSupportHero /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportOverview /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportOffer /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportTechnologies /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportIndustries /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportPortfolio /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportCaseStudy /></ScrollReveal>
-        <ScrollReveal><MaintenanceSupportFAQ /></ScrollReveal>
+        <MaintenanceSupportHero />
+        <MaintenanceSupportOverview />
+        <MaintenanceSupportOffer />
+        <MaintenanceSupportTechnologies />
+        <MaintenanceSupportIndustries />
+        <MaintenanceSupportPortfolio />
+        <MaintenanceSupportCaseStudy />
+        <MaintenanceSupportFAQ />
         <Footer />
     </>
   );

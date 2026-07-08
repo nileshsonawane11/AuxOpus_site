@@ -10,82 +10,33 @@ import {
   Target,
   ArrowUpRight,
 } from "lucide-react";
+import { digitalMarketingOfferContent } from "../../../constants/Services/DigitalMarketing.js";
 
-const services = [
-  {
-    icon: Search,
-    title: "Search Engine Optimization",
-    description:
-      "Improve rankings, increase organic traffic, optimize technical SEO, and enhance website visibility.",
-  },
-  {
-    icon: Megaphone,
-    title: "Google & Meta Ads",
-    description:
-      "Launch ROI-focused advertising campaigns across Google, Facebook, Instagram, LinkedIn, and YouTube.",
-  },
-  {
-    icon: Share2,
-    title: "Social Media Marketing",
-    description:
-      "Grow your audience through engaging content, campaigns, and consistent brand communication.",
-  },
-  {
-    icon: FileText,
-    title: "Content Marketing",
-    description:
-      "Create blogs, landing pages, case studies, and SEO content that attracts and converts customers.",
-  },
-  {
-    icon: Mail,
-    title: "Email Marketing",
-    description:
-      "Automated email campaigns, newsletters, customer nurturing, and lead engagement strategies.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & Reporting",
-    description:
-      "Monitor KPIs, campaign performance, conversions, and customer behavior with detailed reports.",
-  },
-  {
-    icon: Target,
-    title: "Conversion Rate Optimization",
-    description:
-      "Optimize landing pages, CTAs, funnels, and user journeys to maximize conversions.",
-  },
-  {
-    icon: Target,
-    title: "Brand Strategy",
-    description:
-      "Develop digital branding strategies that strengthen awareness, trust, and long-term customer loyalty.",
-  },
-];
+const serviceIcons = [Search, Megaphone, Share2, FileText, Mail, BarChart3, Target, Target];
 
 export default function DigitalMarketingOffer() {
+  const { badge, heading, description, learnMoreButton, services } = digitalMarketingOfferContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-3xl">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            What We Offer
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Complete Digital Marketing Services
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            From SEO and paid advertising to social media and analytics, we
-            provide end-to-end digital marketing solutions that drive measurable
-            business growth.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => {
-            const Icon = service.icon;
-
+          {services.map((service, index) => {
+            const Icon = serviceIcons[index];
             return (
               <div
                 key={service.title}
@@ -107,7 +58,7 @@ export default function DigitalMarketingOffer() {
                 </p>
 
                 <button className="mt-6 flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
-                  Learn More
+                  {learnMoreButton.text}
                   <ArrowUpRight size={18} />
                 </button>
               </div>

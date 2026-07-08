@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaWhatsapp, FaArrowUp, FaRobot, FaComments } from "react-icons/fa6";
-
+import {contactInfoContent} from "../../constants/Contact.js"
+ 
 export default function FloatingButtons() {
   const [showTop, setShowTop] = useState(false);
 
@@ -72,7 +73,7 @@ export default function FloatingButtons() {
             {/* WhatsApp */}
 
             <a
-                href="https://wa.me/919999999999"
+                href={`https://wa.me/${contactInfoContent.contactMethods[1].value}`}
                 target="_blank"
                 rel="noreferrer"
                 className="

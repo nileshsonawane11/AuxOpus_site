@@ -7,52 +7,29 @@ import {
   Activity,
   ArrowRight,
 } from "lucide-react";
+import { maintenanceSupportPortfolioContent } from "../../../constants/Services/MaintenanceSupport.js";
 
-const projects = [
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure Monitoring",
-    company: "Enterprise SaaS",
-    result: "99.99% Uptime",
-  },
-  {
-    icon: Database,
-    title: "Database Optimization",
-    company: "Healthcare Platform",
-    result: "65% Faster Queries",
-  },
-  {
-    icon: Shield,
-    title: "Security Maintenance",
-    company: "FinTech Company",
-    result: "Zero Critical Vulnerabilities",
-  },
-  {
-    icon: Activity,
-    title: "24×7 Production Monitoring",
-    company: "Manufacturing ERP",
-    result: "70% Faster Incident Resolution",
-  },
-];
+const projectIcons = [Cloud, Database, Shield, Activity];
 
 export default function MaintenanceSupportPortfolio() {
+  const { badge, heading, projects } = maintenanceSupportPortfolioContent;
+
   return (
     <section className="bg-slate-950 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <span className="text-blue-400">
-            Success Stories
+            {badge}
           </span>
 
           <h2 className="mt-4 text-5xl font-bold text-white">
-            Proven Maintenance Excellence
+            {heading}
           </h2>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2">
-          {projects.map((project) => {
-            const Icon = project.icon;
-
+          {projects.map((project, index) => {
+            const Icon = projectIcons[index];
             return (
               <div
                 key={project.title}

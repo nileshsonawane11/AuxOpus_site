@@ -16,14 +16,14 @@ export default function WebDevelopment() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><WebHero /></ScrollReveal>
-        <ScrollReveal><WebOverview /></ScrollReveal>
-        <ScrollReveal><WebOffer /></ScrollReveal>
-        <ScrollReveal><WebTechnologies /></ScrollReveal>
-        <ScrollReveal><WebIndustries /></ScrollReveal>
-        <ScrollReveal><WebPortfolio /></ScrollReveal>
-        <ScrollReveal><WebCaseStudy /></ScrollReveal>
-        <ScrollReveal><WebFAQ /></ScrollReveal>
+        <WebHero />
+        <WebOverview />
+        <WebOffer />
+        <WebTechnologies />
+        <WebIndustries />
+        <WebPortfolio />
+        <WebCaseStudy />
+        <WebFAQ />
         <Footer />
     </>
   );

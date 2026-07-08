@@ -8,101 +8,33 @@ import {
   PenSquare,
   LineChart,
 } from "lucide-react";
+import { digitalMarketingTechnologiesContent } from "../../../constants/Services/DigitalMarketing.js";
 
-const categories = [
-  {
-    icon: Search,
-    title: "SEO Tools",
-    tools: [
-      "Google Search Console",
-      "Ahrefs",
-      "SEMrush",
-      "Moz",
-      "Screaming Frog",
-      "Ubersuggest",
-    ],
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics",
-    tools: [
-      "Google Analytics 4",
-      "Looker Studio",
-      "Google Tag Manager",
-      "Hotjar",
-      "Mixpanel",
-    ],
-  },
-  {
-    icon: Globe,
-    title: "Advertising",
-    tools: [
-      "Google Ads",
-      "Meta Ads",
-      "LinkedIn Ads",
-      "YouTube Ads",
-      "Microsoft Ads",
-    ],
-  },
-  {
-    icon: MousePointerClick,
-    title: "Marketing Automation",
-    tools: [
-      "HubSpot",
-      "Mailchimp",
-      "Brevo",
-      "Zoho Campaigns",
-      "ActiveCampaign",
-    ],
-  },
-  {
-    icon: PenSquare,
-    title: "Content & Social",
-    tools: [
-      "Canva",
-      "Buffer",
-      "Hootsuite",
-      "WordPress",
-      "Notion",
-    ],
-  },
-  {
-    icon: LineChart,
-    title: "Performance",
-    tools: [
-      "A/B Testing",
-      "Heatmaps",
-      "Funnel Analysis",
-      "Conversion Tracking",
-      "ROI Reporting",
-    ],
-  },
-];
+const categoryIcons = [Search, BarChart3, Globe, MousePointerClick, PenSquare, LineChart];
 
 export default function DigitalMarketingTechnologies() {
+  const { badge, heading, description, categories } = digitalMarketingTechnologiesContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Tools & Platforms
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Marketing Technology Stack
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We leverage industry-leading marketing platforms, analytics tools,
-            and automation software to maximize campaign performance and
-            measurable growth.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {categories.map((category) => {
-            const Icon = category.icon;
-
+          {categories.map((category, index) => {
+            const Icon = categoryIcons[index];
             return (
               <div
                 key={category.title}

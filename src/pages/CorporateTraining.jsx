@@ -16,14 +16,14 @@ export default function CorporateTraining() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><CorporateTrainingHero /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingOverview /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingOffer /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingTechnologies /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingIndustries /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingPortfolio /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingCaseStudy /></ScrollReveal>
-        <ScrollReveal><CorporateTrainingFAQ /></ScrollReveal>
+        <CorporateTrainingHero />
+        <CorporateTrainingOverview />
+        <CorporateTrainingOffer />
+        <CorporateTrainingTechnologies />
+        <CorporateTrainingIndustries />
+        <CorporateTrainingPortfolio />
+        <CorporateTrainingCaseStudy />
+        <CorporateTrainingFAQ />
         <Footer />
     </>
   );

@@ -11,90 +11,42 @@ import {
   Trophy,
   ArrowUpRight,
 } from "lucide-react";
+import { digitalMarketingIndustriesContent } from "../../../constants/Services/DigitalMarketing.js";
 
-const industries = [
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce",
-    description:
-      "Increase online sales through SEO, paid advertising, conversion optimization, and remarketing campaigns.",
-    tags: ["SEO", "Google Ads", "Meta Ads"],
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    description:
-      "Generate student inquiries using digital campaigns, local SEO, and content marketing strategies.",
-    tags: ["Lead Generation", "LMS", "Admissions"],
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    description:
-      "Build trust and attract patients through local SEO, healthcare marketing, and reputation management.",
-    tags: ["Local SEO", "Appointments", "Branding"],
-  },
-  {
-    icon: Landmark,
-    title: "Finance",
-    description:
-      "Reach qualified audiences with compliant digital campaigns and performance-focused advertising.",
-    tags: ["FinTech", "Banking", "Insurance"],
-  },
-  {
-    icon: Factory,
-    title: "Manufacturing",
-    description:
-      "Generate B2B leads using LinkedIn marketing, SEO, and industrial branding strategies.",
-    tags: ["B2B", "Industrial", "Lead Gen"],
-  },
-  {
-    icon: Hotel,
-    title: "Hospitality",
-    description:
-      "Drive bookings with local SEO, travel campaigns, influencer marketing, and social media promotions.",
-    tags: ["Hotels", "Travel", "Restaurants"],
-  },
-  {
-    icon: Building2,
-    title: "Enterprise",
-    description:
-      "Scale SaaS products and enterprise brands through account-based marketing and performance campaigns.",
-    tags: ["SaaS", "CRM", "Enterprise"],
-  },
-  {
-    icon: Trophy,
-    title: "Sports",
-    description:
-      "Boost fan engagement, ticket sales, sponsorship visibility, and event registrations through digital channels.",
-    tags: ["Events", "Live Sports", "Community"],
-  },
+const industryIcons = [
+  ShoppingBag,
+  GraduationCap,
+  HeartPulse,
+  Landmark,
+  Factory,
+  Hotel,
+  Building2,
+  Trophy,
 ];
 
 export default function DigitalMarketingIndustries() {
+  const { badge, heading, description, exploreButton, industries } = digitalMarketingIndustriesContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Industries
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Marketing Solutions for Every Industry
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Every industry has different audiences and buying behaviors. We
-            create personalized marketing strategies that deliver measurable
-            business growth.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {industries.map((industry) => {
-            const Icon = industry.icon;
-
+          {industries.map((industry, index) => {
+            const Icon = industryIcons[index];
             return (
               <div
                 key={industry.title}
@@ -127,7 +79,7 @@ export default function DigitalMarketingIndustries() {
                 </div>
 
                 <button className="mt-7 flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3">
-                  Explore
+                  {exploreButton.text}
                   <ArrowUpRight size={18} />
                 </button>
               </div>

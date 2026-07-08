@@ -1,7 +1,7 @@
 // src/components/services/corporate-training/CorporateTrainingHero.jsx
 
 import { motion } from "framer-motion";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   GraduationCap,
   Users,
@@ -16,61 +16,15 @@ import {
   Clock,
   TrendingUp,
 } from "lucide-react";
-import Counter from "../../Counter"
+import Counter from "../../Counter";
+import { corporateTrainingHeroContent } from "../../../constants/Services/CorporateTraining.js";
 
-const stats = [
-  { 
-    value: "5,000+", 
-    label: "Professionals Trained",
-    icon: Users,
-    color: "blue"
-  },
-  { 
-    value: "150+", 
-    label: "Corporate Workshops",
-    icon: BookOpen,
-    color: "purple"
-  },
-  { 
-    value: "96%", 
-    label: "Satisfaction Rate",
-    icon: Star,
-    color: "amber"
-  },
-];
-
-const courses = [
-  { 
-    name: "AI & Automation", 
-    duration: "8 Weeks",
-    level: "Advanced",
-    enrolled: 234,
-    icon: BrainCircuit 
-  },
-  { 
-    name: "Full Stack Development", 
-    duration: "12 Weeks",
-    level: "Intermediate",
-    enrolled: 456,
-    icon: Laptop 
-  },
-  { 
-    name: "Cloud Computing", 
-    duration: "6 Weeks",
-    level: "Advanced",
-    enrolled: 189,
-    icon: GraduationCap 
-  },
-  { 
-    name: "Cyber Security", 
-    duration: "10 Weeks",
-    level: "Expert",
-    enrolled: 312,
-    icon: Award 
-  },
-];
+const statsIcons = [Users, BookOpen, Star];
+const courseIcons = [BrainCircuit, Laptop, GraduationCap, Award];
 
 export default function CorporateTrainingHero() {
+  const { badge, heading, description, buttons, stats, courses, dashboard, floatingCards } = corporateTrainingHeroContent;
+
   return (
     <section className="relative overflow-hidden bg-white">
       {/* Background Patterns */}
@@ -111,51 +65,65 @@ export default function CorporateTrainingHero() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-medium text-blue-700">
               <Sparkles size={16} />
-              Corporate Training
+              {badge.text}
             </div>
 
             <h1 className="text-6xl font-bold leading-tight text-slate-900 lg:text-7xl">
-              Build
+              {heading.line1}
               <span className="relative mx-3">
-                High-
+                {heading.line2}
                 <br className="hidden sm:block" />
-                Performance
               </span>
               <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
-                Teams
+                {heading.highlightedText}
               </span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg leading-8 text-slate-600">
-              Upskill your workforce with industry-focused training programs
-              designed by experienced professionals in software, AI, cloud,
-              cybersecurity, and modern technologies.
+              {description}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/Contact" className="cursor-pointer group flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:from-blue-700 hover:to-blue-800 hover:shadow-xl">
-                Schedule Training
-                <ArrowRight size={18} className="transition group-hover:translate-x-1" />
-              </Link>
-
-              <Link to="/Portfolio" className="cursor-pointer flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
-                <Play size={18} />
-                View Demo Session
-              </Link>
+              {buttons.map((button, index) => {
+                const isPrimary = button.type === "primary";
+                return (
+                  <Link
+                    key={index}
+                    to={button.link}
+                    className={`cursor-pointer group flex items-center gap-2 rounded-xl px-7 py-4 font-semibold transition ${
+                      isPrimary
+                        ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-200 hover:from-blue-700 hover:to-blue-800 hover:shadow-xl"
+                        : "border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:shadow-md"
+                    }`}
+                  >
+                    {isPrimary ? (
+                      <>
+                        {button.text}
+                        <ArrowRight size={18} className="transition group-hover:translate-x-1" />
+                      </>
+                    ) : (
+                      <>
+                        <Play size={18} />
+                        {button.text}
+                      </>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Stats Grid */}
             <div className="mt-16 grid gap-6 sm:grid-cols-3">
-              {stats.map((item) => {
-                const Icon = item.icon;
+              {stats.map((item, index) => {
+                const Icon = statsIcons[index];
                 return (
                   <motion.div
                     key={item.label}
                     whileHover={{ y: -5 }}
-                    className={`group rounded-2xl border border-${item.color}-100 bg-gradient-to-br from-white to-${item.color}-50/30 p-5 shadow-sm transition-all hover:shadow-lg hover:border-${item.color}-200`}
+                    className="group rounded-2xl border border-slate-100 bg-gradient-to-br from-white to-slate-50/30 p-5 shadow-sm transition-all hover:shadow-lg hover:border-blue-200"
                   >
-                    <div className={`rounded-xl bg-${item.color}-100 p-2 w-fit mb-4`}>
-                      <Icon className={`text-${item.color}-600`} size={20} />
+                    <div className="rounded-xl bg-blue-100 p-2 w-fit mb-4">
+                      <Icon className="text-blue-600" size={20} />
                     </div>
                     <h2 className="text-3xl font-bold text-slate-900">
                       <Counter value={item.value} />
@@ -186,21 +154,21 @@ export default function CorporateTrainingHero() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-slate-900">
-                      Live Training
+                      {dashboard.title}
                     </h3>
-                    <p className="text-sm text-slate-500">Active Sessions</p>
+                    <p className="text-sm text-slate-500">{dashboard.subtitle}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 rounded-full bg-green-100 px-4 py-2">
                   <span className="h-2 w-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-sm font-semibold text-green-700">Live</span>
+                  <span className="text-sm font-semibold text-green-700">{dashboard.liveStatus}</span>
                 </div>
               </div>
 
               {/* Course Cards */}
               <div className="space-y-4">
                 {courses.map((course, index) => {
-                  const Icon = course.icon;
+                  const Icon = courseIcons[index];
                   return (
                     <motion.div
                       key={course.name}
@@ -246,21 +214,25 @@ export default function CorporateTrainingHero() {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <h4 className="font-semibold text-slate-900">
-                      Training Progress
+                      {dashboard.progress.title}
                     </h4>
-                    <p className="text-sm text-slate-500">Company-wide completion rate</p>
+                    <p className="text-sm text-slate-500">{dashboard.progress.subtitle}</p>
                   </div>
                   <TrendingUp className="text-green-600" size={24} />
                 </div>
                 <div className="flex items-end justify-between">
                   <div>
-                    <span className="text-4xl font-bold text-slate-900"><Counter value="78%" /></span>
-                    <span className="ml-2 text-sm font-semibold text-green-600"><Counter value="+12%" /></span>
+                    <span className="text-4xl font-bold text-slate-900">
+                      <Counter value={dashboard.progress.value} />
+                    </span>
+                    <span className="ml-2 text-sm font-semibold text-green-600">
+                      <Counter value={dashboard.progress.change} />
+                    </span>
                   </div>
                   <div className="w-48 h-3 rounded-full bg-white overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
-                      whileInView={{ width: "78%" }}
+                      whileInView={{ width: dashboard.progress.progressWidth }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, delay: 0.5 }}
                       className="h-full rounded-full bg-gradient-to-r from-blue-600 to-purple-600"
@@ -283,8 +255,10 @@ export default function CorporateTrainingHero() {
                   <Award className="text-white" size={24} />
                 </div>
                 <div>
-                  <p className="font-bold text-slate-900">Industry Certified</p>
-                  <p className="text-sm text-slate-500"><Counter value="50+" /> Programs</p>
+                  <p className="font-bold text-slate-900">{floatingCards.award.title}</p>
+                  <p className="text-sm text-slate-500">
+                    <Counter value={floatingCards.award.programs} /> {floatingCards.award.label}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -299,9 +273,11 @@ export default function CorporateTrainingHero() {
             >
               <div className="flex items-center gap-2">
                 <Users className="text-blue-600" size={20} />
-                <span className="font-bold text-slate-900"><Counter value="2.4K+" /></span>
+                <span className="font-bold text-slate-900">
+                  <Counter value={floatingCards.students.count} />
+                </span>
               </div>
-              <p className="text-xs text-slate-500 mt-1">Active Learners</p>
+              <p className="text-xs text-slate-500 mt-1">{floatingCards.students.label}</p>
             </motion.div>
           </motion.div>
         </div>

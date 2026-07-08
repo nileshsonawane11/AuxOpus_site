@@ -14,14 +14,14 @@ export default function AIAutomation() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><AIHero /></ScrollReveal>
-        <ScrollReveal><AIOverview /></ScrollReveal>
-        <ScrollReveal><AIOffer /></ScrollReveal>
-        <ScrollReveal><AITechnologies /></ScrollReveal>
-        <ScrollReveal><AIIndustries /></ScrollReveal>
-        <ScrollReveal><AIPortfolio /></ScrollReveal>
-        <ScrollReveal><AICaseStudy /></ScrollReveal>
-        <ScrollReveal><AIFAQ /></ScrollReveal>
+        <AIHero />
+        <AIOverview />
+        <AIOffer />
+        <AITechnologies />
+        <AIIndustries />
+        <AIPortfolio />
+        <AICaseStudy />
+        <AIFAQ />
         <Footer />
     </>
   );

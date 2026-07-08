@@ -10,36 +10,29 @@ import {
   Bot,
   MonitorCog,
 } from "lucide-react";
+import { corporateTrainingOfferContent } from "../../../constants/Services/CorporateTraining.js";
 
-const courses = [
-  { icon: Code2, title: "Full Stack Development" },
-  { icon: Smartphone, title: "Mobile App Development" },
-  { icon: BrainCircuit, title: "Artificial Intelligence" },
-  { icon: Bot, title: "Automation & RPA" },
-  { icon: Cloud, title: "Cloud Computing" },
-  { icon: Shield, title: "Cyber Security" },
-  { icon: Database, title: "Database Technologies" },
-  { icon: MonitorCog, title: "DevOps & CI/CD" },
-];
+const courseIcons = [Code2, Smartphone, BrainCircuit, Bot, Cloud, Shield, Database, MonitorCog];
 
 export default function CorporateTrainingOffer() {
+  const { badge, heading, courses } = corporateTrainingOfferContent;
+
   return (
     <section className="bg-slate-100 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-5 py-2 text-blue-700">
-            Programs
+            {badge}
           </span>
 
           <h2 className="mt-6 text-5xl font-bold">
-            Training Programs We Offer
+            {heading}
           </h2>
         </div>
 
         <div className="mt-20 grid gap-7 md:grid-cols-2 xl:grid-cols-4">
-          {courses.map((course) => {
-            const Icon = course.icon;
-
+          {courses.map((course, index) => {
+            const Icon = courseIcons[index];
             return (
               <div
                 key={course.title}

@@ -11,32 +11,13 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import Counter from "../../Counter"
+import Counter from "../../Counter";
 import { Link } from "react-router-dom";
-
-const metrics = [
-  {
-    value: "99.99%",
-    label: "System Uptime",
-  },
-  {
-    value: "<15 min",
-    label: "Average Response",
-  },
-  {
-    value: "24/7",
-    label: "Monitoring",
-  },
-];
-
-const services = [
-  "Infrastructure Monitoring",
-  "Application Support",
-  "Security Updates",
-  "Performance Optimization",
-];
+import { maintenanceSupportHeroContent } from "../../../constants/Services/MaintenanceSupport.js";
 
 export default function MaintenanceSupportHero() {
+  const { badge, heading, description, buttons, metrics, dashboard } = maintenanceSupportHeroContent;
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_right,#3b82f620,transparent_45%)] -z-10" />
@@ -48,32 +29,39 @@ export default function MaintenanceSupportHero() {
           viewport={{ once: true }}
         >
           <span className="rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-medium text-blue-700">
-            Maintenance & Support
+            {badge.text}
           </span>
 
           <h1 className="mt-8 text-6xl font-bold leading-tight text-slate-900">
-            Keep Your
+            {heading.line1}
             <span className="block text-blue-600">
-              Business Running
+              {heading.highlightedText}
             </span>
-            Without Downtime
+            {heading.line3}
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
-            Continuous monitoring, proactive maintenance, rapid issue
-            resolution, and dedicated technical support that keeps your
-            applications secure, optimized, and always available.
+            {description}
           </p>
 
           <div className="mt-10 flex gap-4">
-            <Link to="/Contact" className="cursor-pointer rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
-              Get Support
-            </Link>
-
-            <Link to="/Portfolio" className="cursor-pointer flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
-              View SLA
-              <ArrowRight size={18} />
-            </Link>
+            {buttons.map((button, index) => {
+              const isPrimary = button.type === "primary";
+              return (
+                <Link
+                  key={index}
+                  to={button.link}
+                  className={`cursor-pointer rounded-xl px-7 py-4 font-semibold transition ${
+                    isPrimary
+                      ? "bg-blue-600 text-white shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl"
+                      : "flex items-center gap-2 border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:shadow-md"
+                  }`}
+                >
+                  {button.text}
+                  {!isPrimary && <ArrowRight size={18} />}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="mt-16 grid gap-5 md:grid-cols-3">
@@ -107,17 +95,17 @@ export default function MaintenanceSupportHero() {
 
             <div>
               <h3 className="text-2xl font-bold text-slate-900">
-                Live System Status
+                {dashboard.title}
               </h3>
 
               <p className="text-slate-500">
-                Infrastructure Monitoring
+                {dashboard.subtitle}
               </p>
             </div>
           </div>
 
           <div className="space-y-4">
-            {services.map((item) => (
+            {dashboard.services.map((item) => (
               <div
                 key={item}
                 className="flex items-center justify-between rounded-2xl bg-slate-50 p-5 transition hover:bg-slate-100"
@@ -128,7 +116,7 @@ export default function MaintenanceSupportHero() {
                 </div>
 
                 <span className="rounded-full bg-green-100 px-3 py-1 text-sm font-medium text-green-700">
-                  Active
+                  {dashboard.statusText}
                 </span>
               </div>
             ))}

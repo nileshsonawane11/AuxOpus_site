@@ -8,74 +8,33 @@ import {
   LineChart,
   ArrowUpRight,
 } from "lucide-react";
+import { digitalMarketingPortfolioContent } from "../../../constants/Services/DigitalMarketing.js";
 
-const projects = [
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Growth Campaign",
-    category: "SEO + PPC",
-    description:
-      "Executed a full-funnel SEO and paid advertising strategy to increase online sales and reduce acquisition costs.",
-    result: "+310% Organic Traffic",
-  },
-  {
-    icon: GraduationCap,
-    title: "University Lead Generation",
-    category: "Education Marketing",
-    description:
-      "Designed multi-channel campaigns that significantly increased admission inquiries and enrollment applications.",
-    result: "+180% Student Leads",
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare Digital Presence",
-    category: "Local SEO",
-    description:
-      "Improved search visibility, online reputation, and appointment bookings for a healthcare provider.",
-    result: "+240% Appointment Requests",
-  },
-  {
-    icon: Building2,
-    title: "B2B SaaS Marketing",
-    category: "Performance Marketing",
-    description:
-      "Generated qualified enterprise leads using LinkedIn Ads, content marketing, and landing page optimization.",
-    result: "4.9X Marketing ROI",
-  },
-  {
-    icon: LineChart,
-    title: "Brand Awareness Campaign",
-    category: "Social Media",
-    description:
-      "Built a strong digital presence through strategic content creation, influencer partnerships, and social campaigns.",
-    result: "12M+ Reach",
-  },
-];
+const projectIcons = [ShoppingCart, GraduationCap, HeartPulse, Building2, LineChart];
 
 export default function DigitalMarketingPortfolio() {
+  const { badge, heading, description, viewCaseStudyButton, projects } = digitalMarketingPortfolioContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Portfolio
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Marketing Success Stories
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Discover how our digital marketing strategies have helped businesses
-            improve visibility, generate qualified leads, and achieve measurable
-            growth.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 lg:grid-cols-2">
-          {projects.map((project) => {
-            const Icon = project.icon;
-
+          {projects.map((project, index) => {
+            const Icon = projectIcons[index];
             return (
               <div
                 key={project.title}
@@ -112,7 +71,7 @@ export default function DigitalMarketingPortfolio() {
                   </div>
 
                   <button className="flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
-                    View Case Study
+                    {viewCaseStudyButton.text}
                     <ArrowUpRight size={18} />
                   </button>
                 </div>

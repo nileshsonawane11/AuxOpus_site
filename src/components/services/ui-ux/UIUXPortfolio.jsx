@@ -8,73 +8,33 @@ import {
   HeartPulse,
   ArrowUpRight,
 } from "lucide-react";
+import { uiuxPortfolioContent } from "../../../constants/Services/UIUXDesign.js";
 
-const projects = [
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Platform",
-    category: "Web Design",
-    description:
-      "Redesigned an online shopping platform to improve product discovery, checkout experience, and mobile usability.",
-    result: "+42% Conversion Rate",
-  },
-  {
-    icon: Smartphone,
-    title: "Banking Mobile App",
-    category: "Mobile UI",
-    description:
-      "Designed a modern fintech application focused on accessibility, security, and intuitive financial management.",
-    result: "4.9★ User Rating",
-  },
-  {
-    icon: Monitor,
-    title: "Enterprise CRM Dashboard",
-    category: "Dashboard",
-    description:
-      "Built a scalable design system and analytics dashboard for enterprise sales and operations teams.",
-    result: "35% Productivity Increase",
-  },
-  {
-    icon: GraduationCap,
-    title: "Learning Management System",
-    category: "Education",
-    description:
-      "Created engaging learning experiences with interactive dashboards, course management, and assessments.",
-    result: "+60% User Engagement",
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare Portal",
-    category: "Healthcare",
-    description:
-      "Designed a patient-centric healthcare portal with appointment booking, reports, and teleconsultation.",
-    result: "90% Positive Feedback",
-  },
-];
+const projectIcons = [ShoppingCart, Smartphone, Monitor, GraduationCap, HeartPulse];
 
 export default function UIUXPortfolio() {
+  const { badge, heading, description, viewProjectButton, projects } = uiuxPortfolioContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Portfolio
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Featured UI/UX Projects
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Explore a selection of user-centered interfaces crafted to solve
-            real-world challenges and deliver measurable business outcomes.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 lg:grid-cols-2">
-          {projects.map((project) => {
-            const Icon = project.icon;
-
+          {projects.map((project, index) => {
+            const Icon = projectIcons[index];
             return (
               <div
                 key={project.title}
@@ -110,7 +70,7 @@ export default function UIUXPortfolio() {
                   </div>
 
                   <button className="flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
-                    View Project
+                    {viewProjectButton.text}
                     <ArrowUpRight size={18} />
                   </button>
                 </div>

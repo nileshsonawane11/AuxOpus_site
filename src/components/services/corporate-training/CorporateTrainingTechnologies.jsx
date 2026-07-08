@@ -8,60 +8,31 @@ import {
   Smartphone,
   GitBranch,
 } from "lucide-react";
+import { corporateTrainingTechnologiesContent } from "../../../constants/Services/CorporateTraining.js";
 
-const stacks = [
-  {
-    icon: Code2,
-    title: "Programming",
-    list: ["Java", "Python", "JavaScript", "C#", "Go"],
-  },
-  {
-    icon: Smartphone,
-    title: "Frontend",
-    list: ["React", "Next.js", "Angular", "Flutter", "React Native"],
-  },
-  {
-    icon: Database,
-    title: "Backend",
-    list: ["Node.js", "Laravel", "Spring", ".NET", "Express"],
-  },
-  {
-    icon: Cpu,
-    title: "AI",
-    list: ["OpenAI", "Gemini", "LangChain", "ML", "TensorFlow"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud",
-    list: ["AWS", "Azure", "Docker", "Kubernetes", "Firebase"],
-  },
-  {
-    icon: GitBranch,
-    title: "DevOps",
-    list: ["Git", "CI/CD", "Terraform", "Jenkins", "GitHub Actions"],
-  },
-];
+const stackIcons = [Code2, Smartphone, Database, Cpu, Cloud, GitBranch];
 
 export default function CorporateTrainingTechnologies() {
+  const { badge, heading, stacks } = corporateTrainingTechnologiesContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-20 flex items-end justify-between">
           <div>
             <span className="font-semibold text-blue-600">
-              Technologies
+              {badge}
             </span>
 
             <h2 className="mt-5 text-5xl font-bold">
-              Learn Modern Technologies
+              {heading}
             </h2>
           </div>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-3">
-          {stacks.map((stack) => {
-            const Icon = stack.icon;
-
+          {stacks.map((stack, index) => {
+            const Icon = stackIcons[index];
             return (
               <div
                 key={stack.title}

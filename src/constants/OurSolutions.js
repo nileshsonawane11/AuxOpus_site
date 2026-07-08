@@ -1,3 +1,5 @@
+import {companyStats} from "./Stats.js"
+
 export const solutionsHeroContent = {
     badge: {
         text: "AI Powered Business Solutions",
@@ -24,10 +26,10 @@ export const solutionsHeroContent = {
         },
     ],
     stats: [
-        { value: "20+", label: "Solutions" },
-        { value: "10+", label: "Industries" },
-        { value: "24×7", label: "Support" },
-        { value: "99%", label: "Client Satisfaction" },
+        { value: companyStats.overview[1].value, label: companyStats.overview[1].label },
+        { value: companyStats.overview[7].value, label: companyStats.overview[7].label },
+        { value: companyStats.overview[5].value, label: companyStats.overview[5].label},
+        { value: companyStats.overview[4].value, label: companyStats.overview[4].label },
     ],
     trustedTechnologies: {
         label: "Trusted Technologies",
@@ -565,20 +567,20 @@ export const successStoriesContent = {
 export const solutionStatsContent = {
     stats: [
         {
-        number: "10+",
-        title: "Business Domains",
+        number: companyStats.overview[6].value,
+        title: companyStats.overview[6].label,
         },
         {
-        number: "50+",
-        title: "Solution Modules",
+        number: companyStats.overview[1].value,
+        title: companyStats.overview[1].label,
         },
         {
-        number: "100%",
-        title: "Customized",
+        number: companyStats.overview[8].value,
+        title: companyStats.overview[8].label,
         },
         {
-        number: "24×7",
-        title: "Support",
+        number: companyStats.overview[5].value,
+        title: companyStats.overview[5].label,
         },
     ],
 };

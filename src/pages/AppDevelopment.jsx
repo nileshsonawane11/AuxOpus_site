@@ -16,14 +16,14 @@ export default function AppDevelopment() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><AppHero /></ScrollReveal>
-        <ScrollReveal><AppOverview /></ScrollReveal>
-        <ScrollReveal><AppOffer /></ScrollReveal>
-        <ScrollReveal><AppTechnologies /></ScrollReveal>
-        <ScrollReveal><AppIndustries /></ScrollReveal>
-        <ScrollReveal><AppPortfolio /></ScrollReveal>
-        <ScrollReveal><AppCaseStudy /></ScrollReveal>
-        <ScrollReveal><AppFAQ /></ScrollReveal>
+        <AppHero />
+        <AppOverview />
+        <AppOffer />
+        <AppTechnologies />
+        <AppIndustries />
+        <AppPortfolio />
+        <AppCaseStudy />
+        <AppFAQ />
         <Footer />
     </>
   );

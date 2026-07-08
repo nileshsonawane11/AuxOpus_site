@@ -11,82 +11,42 @@ import {
   MousePointerClick,
   ArrowUpRight,
 } from "lucide-react";
+import { uiuxOfferContent } from "../../../constants/Services/UIUXDesign.js";
 
-const services = [
-  {
-    icon: Palette,
-    title: "UI Design",
-    description:
-      "Modern, visually engaging, and brand-consistent interfaces designed for web and mobile applications.",
-  },
-  {
-    icon: Layout,
-    title: "UX Research",
-    description:
-      "User interviews, competitor analysis, journey mapping, and usability research to build better products.",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App Design",
-    description:
-      "Native Android and iOS interfaces focused on usability, accessibility, and delightful user experiences.",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Responsive Web Design",
-    description:
-      "Adaptive interfaces optimized for desktops, tablets, laptops, and smartphones.",
-  },
-  {
-    icon: PenTool,
-    title: "Wireframing & Prototyping",
-    description:
-      "Low and high-fidelity wireframes with interactive prototypes before development begins.",
-  },
-  {
-    icon: Workflow,
-    title: "Design Systems",
-    description:
-      "Scalable component libraries, design tokens, typography, colors, icons, and reusable UI guidelines.",
-  },
-  {
-    icon: SearchCheck,
-    title: "Usability Testing",
-    description:
-      "Validate interfaces with real users to identify friction points and improve product usability.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "UX Optimization",
-    description:
-      "Improve engagement, conversions, and retention by optimizing existing digital experiences.",
-  },
+const serviceIcons = [
+  Palette,
+  Layout,
+  Smartphone,
+  MonitorSmartphone,
+  PenTool,
+  Workflow,
+  SearchCheck,
+  MousePointerClick,
 ];
 
 export default function UIUXOffer() {
+  const { badge, heading, description, learnMoreButton, services } = uiuxOfferContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-3xl">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            What We Offer
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Complete UI/UX Design Services
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            From user research and wireframes to polished interfaces and design
-            systems, we create digital experiences that users enjoy and
-            businesses trust.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => {
-            const Icon = service.icon;
-
+          {services.map((service, index) => {
+            const Icon = serviceIcons[index];
             return (
               <div
                 key={service.title}
@@ -108,7 +68,7 @@ export default function UIUXOffer() {
                 </p>
 
                 <button className="mt-6 flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
-                  Learn More
+                  {learnMoreButton.text}
                   <ArrowUpRight size={18} />
                 </button>
               </div>

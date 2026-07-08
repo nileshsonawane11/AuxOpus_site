@@ -8,54 +8,25 @@ import {
   MonitorSmartphone,
   Workflow,
 } from "lucide-react";
+import { maintenanceSupportTechnologiesContent } from "../../../constants/Services/MaintenanceSupport.js";
 
-const stacks = [
-  {
-    icon: Server,
-    title: "Infrastructure",
-    items: ["Linux", "Windows Server", "Nginx", "Apache", "Docker"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud",
-    items: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vercel"],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    items: ["MongoDB", "MySQL", "PostgreSQL", "Redis", "SQL Server"],
-  },
-  {
-    icon: Shield,
-    title: "Security",
-    items: ["Cloudflare", "SSL", "Firewall", "WAF", "Fail2Ban"],
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Monitoring",
-    items: ["Grafana", "Prometheus", "UptimeRobot", "Sentry", "LogRocket"],
-  },
-  {
-    icon: Workflow,
-    title: "DevOps",
-    items: ["GitHub Actions", "Jenkins", "Kubernetes", "Terraform", "Ansible"],
-  },
-];
+const stackIcons = [Server, Cloud, Database, Shield, MonitorSmartphone, Workflow];
 
 export default function MaintenanceSupportTechnologies() {
+  const { heading, stacks } = maintenanceSupportTechnologiesContent;
+
   return (
     <section className="bg-slate-100 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <h2 className="text-5xl font-bold text-slate-900">
-            Technologies We Support
+            {heading}
           </h2>
         </div>
 
         <div className="mt-20 grid gap-8 lg:grid-cols-3">
-          {stacks.map((stack) => {
-            const Icon = stack.icon;
-
+          {stacks.map((stack, index) => {
+            const Icon = stackIcons[index];
             return (
               <div
                 key={stack.title}

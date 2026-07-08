@@ -8,100 +8,40 @@ import {
   Component,
 } from "lucide-react";
 import { FaFigma } from "react-icons/fa6";
+import { uiuxToolsContent } from "../../../constants/Services/UIUXDesign.js";
 
-const categories = [
-  {
-    icon: FaFigma,
-    title: "Design Tools",
-    tools: [
-      "Figma",
-      "Adobe XD",
-      "Sketch",
-      "Photoshop",
-      "Illustrator",
-      "Framer",
-    ],
-  },
-  {
-    icon: PenTool,
-    title: "UX Research",
-    tools: [
-      "User Personas",
-      "Journey Mapping",
-      "User Interviews",
-      "Information Architecture",
-      "Competitor Analysis",
-    ],
-  },
-  {
-    icon: Layers3,
-    title: "Design Deliverables",
-    tools: [
-      "Wireframes",
-      "Mockups",
-      "Interactive Prototype",
-      "Design System",
-      "Style Guide",
-    ],
-  },
-  {
-    icon: Component,
-    title: "Frontend Ready",
-    tools: [
-      "Tailwind CSS",
-      "Material UI",
-      "Shadcn UI",
-      "Bootstrap",
-      "React Components",
-    ],
-  },
-  {
-    icon: MousePointerClick,
-    title: "Testing",
-    tools: [
-      "Usability Testing",
-      "Accessibility",
-      "Heatmaps",
-      "A/B Testing",
-      "Feedback Sessions",
-    ],
-  },
-  {
-    icon: Sparkles,
-    title: "Design Principles",
-    tools: [
-      "Consistency",
-      "Accessibility",
-      "Responsive Design",
-      "Micro Interactions",
-      "Visual Hierarchy",
-    ],
-  },
+const categoryIcons = [
+  FaFigma,
+  PenTool,
+  Layers3,
+  Component,
+  MousePointerClick,
+  Sparkles,
 ];
 
 export default function UIUXTools() {
+  const { badge, heading, description, categories } = uiuxToolsContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-3xl text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            Tools & Technologies
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            Our UI/UX Toolkit
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            We use industry-leading design tools and proven methodologies to
-            deliver scalable, intuitive, and user-friendly digital experiences.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {categories.map((category) => {
-            const Icon = category.icon;
-
+          {categories.map((category, index) => {
+            const Icon = categoryIcons[index];
             return (
               <div
                 key={category.title}

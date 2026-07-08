@@ -16,14 +16,14 @@ export default function UIUXDesign() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><UIUXHero /></ScrollReveal>
-        <ScrollReveal><UIUXOverview /></ScrollReveal>
-        <ScrollReveal><UIUXOffer /></ScrollReveal>
-        <ScrollReveal><UIUXTools /></ScrollReveal>
-        <ScrollReveal><UIUXIndustries /></ScrollReveal>
-        <ScrollReveal><UIUXPortfolio /></ScrollReveal>
-        <ScrollReveal><UIUXCaseStudy /></ScrollReveal>
-        <ScrollReveal><UIUXFAQ /></ScrollReveal>
+        <UIUXHero />
+        <UIUXOverview />
+        <UIUXOffer />
+        <UIUXTools />
+        <UIUXIndustries />
+        <UIUXPortfolio />
+        <UIUXCaseStudy />
+        <UIUXFAQ />
         <Footer />
     </>
   );

@@ -8,70 +8,33 @@ import {
   Cpu,
   Bug,
 } from "lucide-react";
+import { maintenanceSupportOverviewContent } from "../../../constants/Services/MaintenanceSupport.js";
 
-const cards = [
-  {
-    icon: ShieldCheck,
-    title: "Security Maintenance",
-    description:
-      "Regular patching, security audits, vulnerability fixes, and infrastructure hardening.",
-  },
-  {
-    icon: Activity,
-    title: "24×7 Monitoring",
-    description:
-      "Continuous monitoring of servers, databases, APIs, and cloud infrastructure.",
-  },
-  {
-    icon: Wrench,
-    title: "Preventive Maintenance",
-    description:
-      "Identify issues before they become failures through proactive maintenance.",
-  },
-  {
-    icon: Clock3,
-    title: "Rapid Incident Response",
-    description:
-      "Dedicated support engineers minimize downtime with quick issue resolution.",
-  },
-  {
-    icon: Cpu,
-    title: "Performance Optimization",
-    description:
-      "Improve application speed, scalability, and infrastructure efficiency.",
-  },
-  {
-    icon: Bug,
-    title: "Bug Fixes & Enhancements",
-    description:
-      "Continuous improvements, feature updates, and issue resolution after deployment.",
-  },
-];
+const cardIcons = [ShieldCheck, Activity, Wrench, Clock3, Cpu, Bug];
 
 export default function MaintenanceSupportOverview() {
+  const { badge, heading, description, cards } = maintenanceSupportOverviewContent;
+
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-blue-700">
-            Overview
+            {badge}
           </span>
 
           <h2 className="mt-6 text-5xl font-bold text-slate-900">
-            Reliable Support Beyond Deployment
+            {heading}
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            Launching software is only the beginning. Our maintenance services
-            ensure your systems remain secure, stable, fast, and available as
-            your business grows.
+            {description}
           </p>
         </div>
 
         <div className="mt-20 grid gap-7 md:grid-cols-2 xl:grid-cols-3">
-          {cards.map((card) => {
-            const Icon = card.icon;
-
+          {cards.map((card, index) => {
+            const Icon = cardIcons[index];
             return (
               <div
                 key={card.title}

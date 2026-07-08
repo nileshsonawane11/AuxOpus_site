@@ -6,58 +6,31 @@ import {
   Users,
   Award,
 } from "lucide-react";
+import { corporateTrainingPortfolioContent } from "../../../constants/Services/CorporateTraining.js";
 
-const portfolio = [
-  {
-    icon: Building2,
-    title: "Enterprise AI Bootcamp",
-    duration: "6 Weeks",
-    participants: "180 Employees",
-    outcome: "AI Adoption Across Teams",
-  },
-  {
-    icon: Users,
-    title: "Full Stack Developer Program",
-    duration: "12 Weeks",
-    participants: "85 Engineers",
-    outcome: "Production-Ready Developers",
-  },
-  {
-    icon: GraduationCap,
-    title: "Cloud Migration Workshop",
-    duration: "5 Days",
-    participants: "120 Professionals",
-    outcome: "AWS Certified Teams",
-  },
-  {
-    icon: Award,
-    title: "Cyber Security Awareness",
-    duration: "3 Days",
-    participants: "600 Employees",
-    outcome: "Reduced Security Risks",
-  },
-];
+const portfolioIcons = [Building2, Users, GraduationCap, Award];
 
 export default function CorporateTrainingPortfolio() {
+  const { badge, heading, portfolio } = corporateTrainingPortfolioContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between">
           <div>
             <span className="font-semibold text-blue-600">
-              Success Programs
+              {badge}
             </span>
 
             <h2 className="mt-5 text-5xl font-bold">
-              Corporate Training Portfolio
+              {heading}
             </h2>
           </div>
         </div>
 
         <div className="mt-20 space-y-8">
-          {portfolio.map((item) => {
-            const Icon = item.icon;
-
+          {portfolio.map((item, index) => {
+            const Icon = portfolioIcons[index];
             return (
               <div
                 key={item.title}

@@ -13,6 +13,7 @@ import {
   Database,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { aiHeroContent } from "../../../constants/Services/AIAutomation.js";
 
 const floatingIcons = [
   { icon: Bot, top: "8%", left: "10%" },
@@ -21,22 +22,9 @@ const floatingIcons = [
   { icon: Database, bottom: "10%", right: "15%" },
 ];
 
-const stats = [
-  {
-    value: "95%",
-    label: "Automation Accuracy",
-  },
-  {
-    value: "70%",
-    label: "Reduced Manual Work",
-  },
-  {
-    value: "24/7",
-    label: "AI Availability",
-  },
-];
-
 export default function AIHero() {
+  const { badge, heading, description, buttons, stats, dashboard } = aiHeroContent;
+
   return (
     <section className="relative overflow-hidden bg-white">
       {/* Background */}
@@ -82,35 +70,50 @@ export default function AIHero() {
           >
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm text-blue-700">
               <Sparkles size={16} />
-              Intelligent AI Solutions
+              {badge.text}
             </div>
 
             <h1 className="text-5xl font-bold leading-tight text-slate-900 lg:text-7xl">
-              Transform Your
+              {heading.line1}
               <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-800 bg-clip-text text-transparent">
-                Business With AI
+                {heading.highlightedText}
               </span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">
-              Build intelligent applications, automate repetitive workflows,
-              deploy enterprise AI assistants, and unlock data-driven
-              decision-making using modern AI technologies.
+              {description}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/Contact" className="cursor-pointer group flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
-                Get Started
-                <ArrowRight
-                  size={18}
-                  className="transition group-hover:translate-x-1"
-                />
-              </Link>
-
-              <Link to="/Portfolio" className="cursor-pointer flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
-                <Play size={18} />
-                Watch Demo
-              </Link>
+              {buttons.map((button, index) => {
+                const isPrimary = button.type === "primary";
+                return (
+                  <Link
+                    key={index}
+                    to={button.link}
+                    className={`cursor-pointer group flex items-center gap-2 rounded-xl px-7 py-4 font-semibold transition ${
+                      isPrimary
+                        ? "bg-blue-600 text-white shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl"
+                        : "border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:shadow-md"
+                    }`}
+                  >
+                    {isPrimary ? (
+                      <>
+                        {button.text}
+                        <ArrowRight
+                          size={18}
+                          className="transition group-hover:translate-x-1"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <Play size={18} />
+                        {button.text}
+                      </>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="mt-16 grid gap-6 sm:grid-cols-3">
@@ -143,11 +146,11 @@ export default function AIHero() {
               <div className="mb-8 flex items-center justify-between">
                 <div>
                   <p className="text-sm text-slate-500">
-                    Enterprise AI Dashboard
+                    {dashboard.subtitle}
                   </p>
 
                   <h3 className="mt-1 text-2xl font-bold text-slate-900">
-                    Automation Center
+                    {dashboard.title}
                   </h3>
                 </div>
 
@@ -157,24 +160,9 @@ export default function AIHero() {
               </div>
 
               <div className="space-y-5">
-                {[
-                  {
-                    icon: Bot,
-                    title: "AI Customer Assistant",
-                    status: "Online",
-                  },
-                  {
-                    icon: Workflow,
-                    title: "Workflow Automation",
-                    status: "Running",
-                  },
-                  {
-                    icon: Database,
-                    title: "Knowledge Retrieval",
-                    status: "Synced",
-                  },
-                ].map((item, index) => {
-                  const Icon = item.icon;
+                {dashboard.modules.map((item, index) => {
+                  const icons = [Bot, Workflow, Database];
+                  const Icon = icons[index];
 
                   return (
                     <div
@@ -207,21 +195,24 @@ export default function AIHero() {
 
               <div className="mt-8 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 p-6 shadow-lg shadow-blue-200">
                 <p className="text-sm text-blue-100">
-                  Automation Performance
+                  {dashboard.performance.label}
                 </p>
 
                 <div className="mt-3 flex items-end justify-between">
                   <h2 className="text-5xl font-bold text-white">
-                    <Counter value="96%" />
+                    <Counter value={dashboard.performance.value} />
                   </h2>
 
                   <span className="rounded-full bg-white/20 px-4 py-2 font-medium text-white">
-                    <Counter value="+18%" />
+                    <Counter value={dashboard.performance.change} />
                   </span>
                 </div>
 
                 <div className="mt-5 h-3 overflow-hidden rounded-full bg-white/20">
-                  <div className="h-full w-[96%] rounded-full bg-white" />
+                  <div
+                    className="h-full rounded-full bg-white"
+                    style={{ width: `${dashboard.performance.progress}%` }}
+                  />
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Counter from "../../Counter.jsx"
+import Counter from "../../Counter.jsx";
 import {
   Palette,
   PenTool,
@@ -11,21 +11,7 @@ import {
 } from "lucide-react";
 import { FaFigma } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
-const stats = [
-  {
-    value: "100+",
-    label: "Interfaces Designed",
-  },
-  {
-    value: "95%",
-    label: "User Satisfaction",
-  },
-  {
-    value: "40%",
-    label: "Higher Engagement",
-  },
-];
+import { uiuxHeroContent } from "../../../constants/Services/UIUXDesign.js";
 
 const floatingIcons = [
   {
@@ -51,6 +37,8 @@ const floatingIcons = [
 ];
 
 export default function UIUXHero() {
+  const { badge, heading, description, buttons, stats, dashboard } = uiuxHeroContent;
+
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#3b82f620,transparent_55%)]" />
@@ -59,7 +47,6 @@ export default function UIUXHero() {
 
       {floatingIcons.map((item, index) => {
         const Icon = item.icon;
-
         return (
           <motion.div
             key={index}
@@ -86,33 +73,39 @@ export default function UIUXHero() {
           >
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-blue-700">
               <Sparkles size={16} />
-              UI/UX Design Services
+              {badge.text}
             </div>
 
             <h1 className="mt-8 text-5xl font-bold leading-tight text-slate-900 lg:text-7xl">
-              Design
+              {heading.line1}
               <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-800 bg-clip-text text-transparent">
-                Experiences
+                {heading.highlightedText}
               </span>
-              People Love
+              {heading.line3}
             </h1>
 
             <p className="mt-8 text-lg leading-8 text-slate-600">
-              We create intuitive digital experiences that combine beautiful
-              interfaces, seamless usability, and user-centered design to help
-              businesses increase engagement and conversions.
+              {description}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link to="/Contact" className="flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-4 font-semibold text-white shadow-lg shadow-blue-200 transition hover:bg-blue-700 hover:shadow-xl">
-                Start Design Project
-                <ArrowRight size={18} />
-              </Link>
-
-              <Link to="/Portfolio" className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-7 py-4 font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 hover:shadow-md">
-                <Play size={18} />
-                View Portfolio
-              </Link>
+              {buttons.map((button, index) => {
+                const isPrimary = button.type === "primary";
+                return (
+                  <Link
+                    key={index}
+                    to={button.link}
+                    className={`flex items-center gap-2 rounded-xl px-7 py-4 font-semibold transition ${
+                      isPrimary
+                        ? "bg-blue-600 text-white shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl"
+                        : "border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:shadow-md"
+                    }`}
+                  >
+                    {button.text}
+                    {isPrimary ? <ArrowRight size={18} /> : <Play size={18} />}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="mt-16 grid gap-5 sm:grid-cols-3">
@@ -124,7 +117,6 @@ export default function UIUXHero() {
                   <h2 className="text-3xl font-bold text-slate-900">
                     <Counter value={item.value} />
                   </h2>
-
                   <p className="mt-2 text-sm text-slate-600">
                     {item.label}
                   </p>
@@ -142,25 +134,19 @@ export default function UIUXHero() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-slate-500">
-                    Live Design System
+                    {dashboard.subtitle}
                   </p>
-
                   <h3 className="text-2xl font-bold text-slate-900">
-                    Design Workspace
+                    {dashboard.title}
                   </h3>
                 </div>
-
                 <div className="rounded-xl bg-blue-600 p-4 shadow-lg shadow-blue-200">
                   <LayoutGrid className="text-white" />
                 </div>
               </div>
 
               <div className="mt-8 space-y-5">
-                {[
-                  "Wireframing",
-                  "High-Fidelity UI",
-                  "Prototype Testing",
-                ].map((item) => (
+                {dashboard.modules.map((item) => (
                   <div
                     key={item}
                     className="rounded-2xl border border-slate-100 bg-slate-50/80 p-5 transition hover:bg-slate-100"
@@ -168,9 +154,8 @@ export default function UIUXHero() {
                     <h4 className="font-semibold text-slate-900">
                       {item}
                     </h4>
-
                     <p className="mt-2 text-slate-500">
-                      Active Design Module
+                      {dashboard.moduleLabel}
                     </p>
                   </div>
                 ))}

@@ -1,4 +1,6 @@
 import BG from "../assets/Company_BG.jpeg";
+import {contactInfoContent} from "./Contact.js"
+import {companyStats} from "./Stats.js"
 
 export const aboutHeroContent = {
     
@@ -30,16 +32,16 @@ export const aboutHeroContent = {
     ],
     stats: [
         {
-        value: "100+",
-        label: "Projects Delivered",
+        value: companyStats.overview[1].value,
+        label: companyStats.overview[1].label,
         },
         {
-        value: "25+",
-        label: "Happy Clients",
+        value: companyStats.overview[8].value,
+        label: companyStats.overview[8].label,
         },
         {
-        value: "5+",
-        label: "Years Experience",
+        value: companyStats.overview[0].value,
+        label: companyStats.overview[0].label,
         },
     ],
 };
@@ -79,12 +81,12 @@ export const companyStatsContent = {
     badge: "Our Journey",
     heading: "Numbers That Speak",
     stats: [
-        { value: "100+", label: "Projects Delivered" },
-        { value: "25+", label: "Happy Clients" },
-        { value: "5+", label: "Years Experience" },
-        { value: "15+", label: "Technologies" },
-        { value: "99%", label: "Client Satisfaction" },
-        { value: "24/7", label: "Support" },
+        { value: companyStats.overview[1].value, label: companyStats.overview[1].label },
+        { value: companyStats.overview[8].value, label: companyStats.overview[8].label },
+        { value: companyStats.overview[0].value, label: companyStats.overview[0].label },
+        { value: companyStats.overview[2].value, label: companyStats.overview[2].label },
+        { value: companyStats.overview[4].value, label: companyStats.overview[4].label },
+        { value: companyStats.overview[5].value, label: companyStats.overview[5].label },
     ],
 };
 
@@ -273,12 +275,12 @@ export const ctaContent = {
         {
         icon: "FaPhone",
         label: "Call Us",
-        value: "+91 XXXXX XXXXX",
+        value: contactInfoContent.contactMethods[1].value,
         },
         {
         icon: "FaEnvelope",
         label: "Email Us",
-        value: "hello@auxopus.com",
+        value: contactInfoContent.contactMethods[2].value,
         },
     ],
     button: {

@@ -11,82 +11,42 @@ import {
   Database,
   ArrowUpRight,
 } from "lucide-react";
+import { aiOfferContent } from "../../../constants/Services/AIAutomation.js";
 
-const services = [
-  {
-    icon: Bot,
-    title: "AI Chatbots",
-    description:
-      "Context-aware chatbots for websites, mobile apps, WhatsApp, Slack, and Microsoft Teams with multilingual support.",
-  },
-  {
-    icon: Workflow,
-    title: "Workflow Automation",
-    description:
-      "Automate approvals, notifications, HR processes, finance operations, CRM updates, and repetitive business tasks.",
-  },
-  {
-    icon: FileText,
-    title: "Document Intelligence",
-    description:
-      "Extract, classify, validate, and process invoices, contracts, purchase orders, reports, and PDFs using AI.",
-  },
-  {
-    icon: BrainCircuit,
-    title: "AI Agents",
-    description:
-      "Autonomous AI agents capable of reasoning, retrieving data, executing actions, and assisting employees.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Predictive Analytics",
-    description:
-      "Forecast sales, demand, customer behavior, inventory, and business trends using machine learning.",
-  },
-  {
-    icon: ScanSearch,
-    title: "Computer Vision",
-    description:
-      "Image recognition, defect detection, attendance systems, OCR, object detection, and quality inspection.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Enterprise Knowledge AI",
-    description:
-      "Build secure AI assistants trained on company documents, SOPs, manuals, and internal knowledge bases.",
-  },
-  {
-    icon: Database,
-    title: "Custom AI Solutions",
-    description:
-      "Design and develop tailored AI applications that integrate seamlessly with your existing business systems.",
-  },
+const serviceIcons = [
+  Bot,
+  Workflow,
+  FileText,
+  BrainCircuit,
+  TrendingUp,
+  ScanSearch,
+  MessageSquare,
+  Database,
 ];
 
 export default function AIOffer() {
+  const { badge, heading, description, services, learnMoreButton } = aiOfferContent;
+
   return (
     <section className="bg-slate-50 py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="max-w-3xl">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            What We Offer
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl">
-            AI Solutions Designed for Modern Businesses
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            From conversational AI and intelligent automation to enterprise
-            knowledge assistants and predictive analytics, we develop scalable
-            AI solutions that transform the way organizations operate.
+            {description}
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-          {services.map((service) => {
-            const Icon = service.icon;
-
+          {services.map((service, index) => {
+            const Icon = serviceIcons[index];
             return (
               <div
                 key={service.title}
@@ -108,7 +68,7 @@ export default function AIOffer() {
                 </p>
 
                 <button className="mt-6 flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
-                  Learn More
+                  {learnMoreButton.text}
                   <ArrowUpRight size={18} />
                 </button>
               </div>

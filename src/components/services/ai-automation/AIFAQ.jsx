@@ -2,57 +2,26 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "What AI solutions do you develop?",
-    answer:
-      "We build AI chatbots, virtual assistants, workflow automation systems, document intelligence platforms, predictive analytics solutions, AI agents, recommendation engines, and custom AI applications.",
-  },
-  {
-    question: "Can AI integrate with our existing ERP or CRM?",
-    answer:
-      "Yes. Our AI solutions integrate seamlessly with ERP, CRM, HRMS, accounting software, and custom enterprise applications using secure APIs.",
-  },
-  {
-    question: "Which AI models do you work with?",
-    answer:
-      "We work with OpenAI GPT, Google Gemini, Claude, Llama, Mistral, and other open-source models depending on your business requirements.",
-  },
-  {
-    question: "Is our business data secure?",
-    answer:
-      "Absolutely. We follow enterprise-grade security standards including encryption, access control, secure APIs, and private deployment options.",
-  },
-  {
-    question: "How long does an AI implementation take?",
-    answer:
-      "The timeline depends on project complexity, integrations, and business goals. Most AI solutions are delivered through phased development and deployment.",
-  },
-  {
-    question: "Do you provide post-deployment support?",
-    answer:
-      "Yes. We offer monitoring, maintenance, optimization, model improvements, and long-term technical support for all AI solutions.",
-  },
-];
+import { aiFAQContent } from "../../../constants/Services/AIAutomation.js";
 
 export default function AIFAQ() {
   const [active, setActive] = useState(0);
+  const { badge, heading, description, faqs } = aiFAQContent;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            FAQ
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900">
-            Frequently Asked Questions
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            Everything you need to know about our AI & Automation services.
+            {description}
           </p>
         </div>
 

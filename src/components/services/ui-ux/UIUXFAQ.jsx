@@ -2,57 +2,26 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    question: "Why is UI/UX design important?",
-    answer:
-      "Good UI/UX improves usability, increases customer satisfaction, strengthens brand perception, and helps businesses achieve higher conversion rates.",
-  },
-  {
-    question: "Do you design for both web and mobile?",
-    answer:
-      "Yes. We create responsive web interfaces, Android apps, iOS apps, SaaS dashboards, enterprise software, and cross-platform experiences.",
-  },
-  {
-    question: "Which design tools do you use?",
-    answer:
-      "We primarily use Figma, Adobe XD, FigJam, Photoshop, Illustrator, and other industry-standard collaboration tools.",
-  },
-  {
-    question: "Will I receive editable design files?",
-    answer:
-      "Yes. Upon project completion, you'll receive organized Figma files, design systems, assets, prototypes, and documentation.",
-  },
-  {
-    question: "Can you redesign an existing product?",
-    answer:
-      "Absolutely. We perform UX audits, identify usability issues, modernize interfaces, and optimize user journeys while preserving your business goals.",
-  },
-  {
-    question: "Do developers receive implementation support?",
-    answer:
-      "Yes. We provide developer-ready assets, component specifications, responsive layouts, and ongoing collaboration throughout development.",
-  },
-];
+import { uiuxFAQContent } from "../../../constants/Services/UIUXDesign.js";
 
 export default function UIUXFAQ() {
   const [active, setActive] = useState(0);
+  const { badge, heading, description, faqs } = uiuxFAQContent;
 
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center">
           <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
-            FAQ
+            {badge}
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-slate-900">
-            Frequently Asked Questions
+            {heading}
           </h2>
 
           <p className="mt-6 text-lg text-slate-600">
-            Everything you need to know about our UI/UX Design services.
+            {description}
           </p>
         </div>
 

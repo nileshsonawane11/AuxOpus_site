@@ -16,14 +16,14 @@ export default function DigitalMarketing() {
   return (
     <>
         <Navbar />
-        <ScrollReveal><DigitalMarketingHero /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingOverview /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingOffer /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingTechnologies /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingIndustries /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingPortfolio /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingCaseStudy /></ScrollReveal>
-        <ScrollReveal><DigitalMarketingFAQ /></ScrollReveal>
+        <DigitalMarketingHero />
+        <DigitalMarketingOverview />
+        <DigitalMarketingOffer />
+        <DigitalMarketingTechnologies />
+        <DigitalMarketingIndustries />
+        <DigitalMarketingPortfolio />
+        <DigitalMarketingCaseStudy />
+        <DigitalMarketingFAQ />
         <Footer />
     </>
   );

@@ -14,91 +14,22 @@ import {
   Users,
   Star,
 } from "lucide-react";
+import { corporateTrainingIndustriesContent } from "../../../constants/Services/CorporateTraining.js";
 
-const industries = [
-  {
-    icon: Building2,
-    title: "Enterprise IT",
-    desc: "Upskill software teams with modern technologies and engineering best practices.",
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-50",
-    textColor: "text-blue-600",
-    borderColor: "border-blue-200",
-    stats: "200+ Companies",
-  },
-  {
-    icon: Factory,
-    title: "Manufacturing",
-    desc: "Industry 4.0, ERP, automation, IoT, and digital transformation training.",
-    color: "from-orange-500 to-red-500",
-    bgColor: "bg-orange-50",
-    textColor: "text-orange-600",
-    borderColor: "border-orange-200",
-    stats: "150+ Factories",
-  },
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    desc: "Healthcare software, cybersecurity, compliance, and digital healthcare systems.",
-    color: "from-pink-500 to-rose-500",
-    bgColor: "bg-pink-50",
-    textColor: "text-pink-600",
-    borderColor: "border-pink-200",
-    stats: "100+ Hospitals",
-  },
-  {
-    icon: Landmark,
-    title: "Finance",
-    desc: "Cloud security, fintech development, AI, and enterprise banking solutions.",
-    color: "from-emerald-500 to-green-500",
-    bgColor: "bg-emerald-50",
-    textColor: "text-emerald-600",
-    borderColor: "border-emerald-200",
-    stats: "80+ Banks",
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    desc: "Faculty development, AI literacy, LMS, and educational technologies.",
-    color: "from-violet-500 to-indigo-500",
-    bgColor: "bg-violet-50",
-    textColor: "text-violet-600",
-    borderColor: "border-violet-200",
-    stats: "300+ Institutions",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Retail",
-    desc: "Digital commerce, CRM, analytics, and customer experience technologies.",
-    color: "from-amber-500 to-orange-500",
-    bgColor: "bg-amber-50",
-    textColor: "text-amber-600",
-    borderColor: "border-amber-200",
-    stats: "120+ Retailers",
-  },
-  {
-    icon: Trophy,
-    title: "Sports",
-    desc: "Sports analytics, live scoring systems, and digital engagement platforms.",
-    color: "from-sky-500 to-blue-500",
-    bgColor: "bg-sky-50",
-    textColor: "text-sky-600",
-    borderColor: "border-sky-200",
-    stats: "50+ Organizations",
-  },
-  {
-    icon: Briefcase,
-    title: "Startups",
-    desc: "Accelerated learning paths for rapidly growing technology startups.",
-    color: "from-slate-700 to-slate-900",
-    bgColor: "bg-slate-50",
-    textColor: "text-slate-600",
-    borderColor: "border-slate-200",
-    stats: "500+ Startups",
-  },
+const industryIcons = [
+  Building2,
+  Factory,
+  HeartPulse,
+  Landmark,
+  GraduationCap,
+  ShoppingBag,
+  Trophy,
+  Briefcase,
 ];
 
 export default function CorporateTrainingIndustries() {
+  const { badge, heading, description, industries, cta } = corporateTrainingIndustriesContent;
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white py-24">
       {/* Background Pattern */}
@@ -114,7 +45,7 @@ export default function CorporateTrainingIndustries() {
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700">
               <Star size={16} />
-              Industries We Train
+              {badge.text}
             </span>
           </motion.div>
 
@@ -125,9 +56,9 @@ export default function CorporateTrainingIndustries() {
             transition={{ delay: 0.1 }}
             className="mt-6 text-4xl font-bold text-slate-900 lg:text-5xl"
           >
-            Customized Training For
+            {heading.line1}
             <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent">
-              Every Industry
+              {heading.highlightedText}
             </span>
           </motion.h2>
 
@@ -138,16 +69,14 @@ export default function CorporateTrainingIndustries() {
             transition={{ delay: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-lg text-slate-600"
           >
-            Tailored learning solutions designed to address the unique challenges
-            and technology needs of your specific industry sector.
+            {description}
           </motion.p>
         </div>
 
         {/* Industries Grid */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {industries.map((industry, index) => {
-            const Icon = industry.icon;
-
+            const Icon = industryIcons[index];
             return (
               <motion.div
                 key={industry.title}
@@ -212,14 +141,14 @@ export default function CorporateTrainingIndustries() {
           <div className="inline-flex items-center gap-6 rounded-2xl border border-blue-100 bg-gradient-to-r from-blue-50 to-white p-6 shadow-lg">
             <div>
               <p className="font-semibold text-slate-900">
-                Don't see your industry?
+                {cta.title}
               </p>
               <p className="text-sm text-slate-600">
-                We create custom training programs for any sector
+                {cta.subtitle}
               </p>
             </div>
             <button className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-200 transition hover:from-blue-700 hover:to-blue-800">
-              Request Custom Program
+              {cta.button.text}
               <ArrowRight size={18} />
             </button>
           </div>

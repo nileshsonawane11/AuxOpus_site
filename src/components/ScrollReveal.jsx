@@ -5,7 +5,7 @@ export default function ScrollReveal({
   className = "",
   animation = "up",
   delay = 0,
-  duration = 1000,
+  duration = 200,
   threshold = 0.2,
   once = true,
 }) {

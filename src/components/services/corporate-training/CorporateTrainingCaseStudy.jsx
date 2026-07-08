@@ -6,48 +6,29 @@ import {
   Laptop,
   TrendingUp,
 } from "lucide-react";
+import { corporateTrainingCaseStudyContent } from "../../../constants/Services/CorporateTraining.js";
 
-const phases = [
-  {
-    icon: ClipboardList,
-    title: "Skill Assessment",
-    text: "Evaluate existing technical skills and identify learning gaps.",
-  },
-  {
-    icon: Users,
-    title: "Customized Curriculum",
-    text: "Create a role-specific learning roadmap aligned with business goals.",
-  },
-  {
-    icon: Laptop,
-    title: "Hands-on Training",
-    text: "Interactive workshops, live coding sessions, labs, and real projects.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Business Impact",
-    text: "Higher productivity, faster delivery, and improved technical capabilities.",
-  },
-];
+const phaseIcons = [ClipboardList, Users, Laptop, TrendingUp];
 
 export default function CorporateTrainingCaseStudy() {
+  const { badge, heading, phases } = corporateTrainingCaseStudyContent;
+
   return (
     <section className="bg-gradient-to-br from-blue-600 to-slate-900 py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="text-center text-white">
           <span className="rounded-full bg-white/10 px-5 py-2">
-            Case Study
+            {badge}
           </span>
 
           <h2 className="mt-6 text-5xl font-bold">
-            Workforce Transformation Journey
+            {heading}
           </h2>
         </div>
 
         <div className="mt-20 grid gap-8 md:grid-cols-2">
           {phases.map((phase, index) => {
-            const Icon = phase.icon;
-
+            const Icon = phaseIcons[index];
             return (
               <div
                 key={phase.title}
