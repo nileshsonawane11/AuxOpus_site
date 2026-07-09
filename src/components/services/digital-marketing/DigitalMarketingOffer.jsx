@@ -57,10 +57,10 @@ export default function DigitalMarketingOffer() {
                   {service.description}
                 </p>
 
-                <button className="mt-6 flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
+                {/* <button className="mt-6 flex items-center gap-2 font-medium text-blue-600 transition hover:gap-3">
                   {learnMoreButton.text}
                   <ArrowUpRight size={18} />
-                </button>
+                </button> */}
               </div>
             );
           })}

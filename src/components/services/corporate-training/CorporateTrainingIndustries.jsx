@@ -1,6 +1,7 @@
 // src/components/services/corporate-training/CorporateTrainingIndustries.jsx
 
 import { motion } from "framer-motion";
+import {Link} from "react-router-dom";
 import {
   Building2,
   Factory,
@@ -113,13 +114,13 @@ export default function CorporateTrainingIndustries() {
                       <span>{industry.stats}</span>
                     </div>
                     
-                    <motion.div
+                    {/* <motion.div
                       whileHover={{ x: 3 }}
                       className="flex items-center gap-1 text-sm font-semibold text-blue-600"
                     >
                       Learn more
                       <ArrowRight size={14} />
-                    </motion.div>
+                    </motion.div> */}
                   </div>
                 </div>
 
@@ -147,10 +148,10 @@ export default function CorporateTrainingIndustries() {
                 {cta.subtitle}
               </p>
             </div>
-            <button className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-200 transition hover:from-blue-700 hover:to-blue-800">
+            <Link to="/Contact" className="flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-6 py-3 font-semibold text-white shadow-lg shadow-blue-200 transition hover:from-blue-700 hover:to-blue-800">
               {cta.button.text}
               <ArrowRight size={18} />
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>

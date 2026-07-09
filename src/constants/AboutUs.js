@@ -232,7 +232,11 @@ export const technologiesContent = {
 };
 
 
-import Img from "../assets/AuxOpus.png";
+import NileshImg from "../assets/Team/Nilesh.png";
+import YashrajImg from "../assets/Team/Yashraj.png";
+import kaustubhImg from "../assets/Team/Kaustubh.png";
+import GuruImg from "../assets/Team/Guru.png";
+import HimanshuImg from "../assets/Team/Himanshu.png";
 
 export const teamContent = {
     badge: "Our Team",
@@ -243,27 +247,27 @@ export const teamContent = {
         {
         name: "Yashraj Chavan",
         role: "Chief Executive Officer",
-        image: Img,
+        image: YashrajImg,
         },
         {
         name: "Guru Bhamare",
         role: "Chief Technology Officer",
-        image: Img,
+        image: GuruImg,
         },
         {
         name: "Nilesh Sonawane",
         role: "Chief Operating Officer",
-        image: Img,
+        image: NileshImg,
         },
         {
         name: "Kaustubh Patil",
         role: "Chief Marketing Officer",
-        image: Img,
+        image: kaustubhImg,
         },
         {
         name: "Himanshu Patil",
         role: "Chief Finance Officer",
-        image: Img,
+        image: HimanshuImg,
         },
     ],
 };

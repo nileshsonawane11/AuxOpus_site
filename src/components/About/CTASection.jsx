@@ -1,6 +1,7 @@
 // CTASection.jsx
 
 import React from "react";
+import {Link} from "react-router-dom";
 import * as Icons from "react-icons/fa6";
 import { ctaContent } from "../../constants/AboutUs.js";
 
@@ -57,10 +58,10 @@ export default function CTASection() {
                 );
               })}
 
-              <button className="w-full py-5 rounded-2xl bg-white text-black font-semibold text-lg flex items-center justify-center gap-3 hover:bg-cyan-400 transition">
+              <Link to="/Contact" className="w-full cursor-pointer py-5 rounded-2xl bg-white text-black font-semibold text-lg flex items-center justify-center gap-3 hover:scale-95 transition">
                 {button.text}
                 {ButtonIcon ? <ButtonIcon /> : null}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

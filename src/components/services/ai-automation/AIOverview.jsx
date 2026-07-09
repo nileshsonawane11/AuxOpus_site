@@ -99,10 +99,7 @@ export default function AIOverview() {
               ))}
             </div>
 
-            <button className="mt-10 flex items-center gap-2 rounded-xl bg-slate-900 px-7 py-4 font-semibold text-white transition hover:bg-blue-600">
-              {whyChoose.button.text}
-              <ArrowRight size={18} />
-            </button>
+          
           </div>
 
           {/* Right Side */}

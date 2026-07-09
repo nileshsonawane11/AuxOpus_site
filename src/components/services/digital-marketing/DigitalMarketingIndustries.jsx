@@ -78,10 +78,10 @@ export default function DigitalMarketingIndustries() {
                   ))}
                 </div>
 
-                <button className="mt-7 flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3">
+                {/* <button className="mt-7 flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:gap-3">
                   {exploreButton.text}
                   <ArrowUpRight size={18} />
-                </button>
+                </button> */}
               </div>
             );
           })}
