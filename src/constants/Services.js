@@ -10,7 +10,7 @@ export const servicesHeroContent = {
         line3: "That Drive Growth",
     },
     description:
-        "From websites and mobile applications to AI, automation, digital marketing, and enterprise software, we build digital products designed for measurable business success.",
+        "From web platforms and mobile applications to cloud architecture and AI-driven automation, we build digital products engineered for real business outcomes — not just launches.",
     buttons: [
         {
         text: "Start Project",
@@ -32,8 +32,8 @@ export const servicesHeroContent = {
         { value: companyStats.overview[5].value, label: companyStats.overview[5].label },
     ],
     trustedCompanies: {
-        label: "Trusted by leading companies",
-        companies: ["Microsoft", "AWS", "Google", "HubSpot", "Zoho"],
+        label: "Built on technologies we trust",
+        companies: ["React", "Supabase", "Flutter", "Firebase", "Vercel"],
     },
     orbitingIcons: [
         { icon: "FaCloud", delay: "0s" },
@@ -49,7 +49,7 @@ export const servicesHeroContent = {
         {
         icon: "FaCode",
         title: "Web Development",
-        desc: "React, Next.js, Laravel",
+        desc: "React, Next.js, Supabase",
         position: "top-[-120px] left-0",
         delay: "0s",
         },
@@ -62,15 +62,15 @@ export const servicesHeroContent = {
         },
         {
         icon: "FaRobot",
-        title: "AI Solutions",
-        desc: "ML, NLP, Automation",
+        title: "AI & Automation",
+        desc: "Workflow & data automation",
         position: "bottom-[-120px] left-0",
         delay: "4s",
         },
         {
-        icon: "FaChartLine",
-        title: "Digital Marketing",
-        desc: "SEO, Analytics, Social",
+        icon: "FaPenRuler",
+        title: "UI/UX Design",
+        desc: "Product-first interfaces",
         position: "bottom-[-80px] right-0",
         delay: "6s",
         },
@@ -78,16 +78,16 @@ export const servicesHeroContent = {
     widgets: {
         aiAssistant: {
         icon: "FaRobot",
-        title: "AI Assistant",
+        title: "System Status",
         status: "Active",
-        tasksLabel: "Tasks",
+        tasksLabel: "Processes",
         tasksValue: "1,245",
         progress: 76,
         },
         revenue: {
-        label: "Revenue",
+        label: "Efficiency Gain",
         change: "+18%",
-        value: "₹8.5M",
+        value: "Avg. Client",
         },
         serverStatus: {
         label: "Server Status",
@@ -100,8 +100,8 @@ export const servicesHeroContent = {
         },
         uptime: {
         icon: "FaCloud",
-        value: "99.98%",
-        label: "Uptime",
+        value: "99.9%",
+        label: "Uptime Target",
         subtitle: "Cloud Infrastructure",
         },
     },
@@ -113,11 +113,11 @@ export const servicesHeroContent = {
 export const serviceStatsContent = {
     stats: [
         {
-        number: "7+",
+        number: "8",
         title: "Core Services",
         },
         {
-        number: "20+",
+        number: "15+",
         title: "Technologies",
         },
         {
@@ -132,14 +132,14 @@ export const serviceStatsContent = {
 };
 
 export const trustedByContent = {
-    label: "Trusted Across Industries",
+    label: "Built For Industries That Need Reliable Software",
     companies: [
-        "Startup",
         "Education",
+        "Hospitality",
         "Healthcare",
         "Retail",
-        "Finance",
-        "Manufacturing",
+        "Startups",
+        "Sports & Fitness",
     ],
 };
 
@@ -147,19 +147,19 @@ export const webDevelopmentContent = {
     badge: "Web Development",
     heading: {
         line1: "Build Powerful &",
-        highlightedText: " Scalable Web Solutions",
+        highlightedText: " Scalable Web Platforms",
     },
     description:
-        "We create modern websites and enterprise-grade web applications using the latest technologies. Every solution is designed for speed, security, scalability, and an exceptional user experience.",
+        "We design and build modern web applications and admin dashboards backed by secure, real-time architecture — from initial data model to production deployment.",
     features: [
-        "Corporate Websites",
+        "Corporate & Business Websites",
         "Custom Web Applications",
-        "ERP & CRM Solutions",
-        "E-Commerce Platforms",
-        "Admin Dashboards",
+        "Admin & Analytics Dashboards",
+        "Supabase / Firebase Backend Architecture",
+        "Role-Based Access & Authentication",
+        "Real-Time Data Dashboards",
         "API Development & Integration",
-        "Cloud Deployment",
-        "Performance Optimization",
+        "Cloud Deployment (Vercel, Cloudflare)",
     ],
     cards: [
         {
@@ -168,11 +168,11 @@ export const webDevelopmentContent = {
         },
         {
         icon: "FaDatabase",
-        title: "Enterprise Software",
+        title: "Admin Dashboards",
         },
         {
-        icon: "FaGlobe",
-        title: "E-Commerce",
+        icon: "FaShieldHalved",
+        title: "Secure Backends",
         },
         {
         icon: "FaCode",
@@ -188,15 +188,15 @@ export const appDevelopmentContent = {
     badge: "Mobile Development",
     heading: "Mobile Experiences That Users Love",
     description:
-        "We build intuitive, high-performance mobile applications that deliver seamless user experiences across Android and iOS devices.",
+        "We build cross-platform mobile applications with React Native and Flutter, backed by production-grade cloud infrastructure — from onboarding flows to real-time backend integration.",
     technologies: [
-        "Android Apps",
-        "iOS Apps",
-        "Cross Platform",
-        "Flutter",
-        "React Native",
-        "Firebase",
-        "REST APIs",
+        "React Native Apps",
+        "Flutter Apps",
+        "Android",
+        "iOS",
+        "Supabase & Firebase Integration",
+        "Real-Time Data Sync",
+        "Payment Integration (Razorpay)",
         "Cloud Backend",
     ],
     cards: [
@@ -224,42 +224,26 @@ export const appDevelopmentContent = {
 };
 
 export const aiAutomationContent = {
-    badge: "Artificial Intelligence",
-    heading: "Smarter Business Through AI",
+    badge: "AI & Automation",
+    heading: "Smarter Operations Through Automation",
     description:
-        "Automate repetitive tasks, improve productivity, and make data-driven decisions with intelligent AI-powered solutions.",
+        "We help businesses automate repetitive workflows, connect data across systems, and build intelligent features into existing products.",
     cards: [
-        {
-        title: "AI Chatbots",
-        icon: "FaRobot",
-        },
-        {
-        title: "AI Agents",
-        icon: "FaBrain",
-        },
         {
         title: "Workflow Automation",
         icon: "FaMicrochip",
         },
         {
-        title: "Document Processing",
-        icon: "FaBolt",
-        },
-        {
-        title: "OCR Solutions",
+        title: "AI Chatbots",
         icon: "FaRobot",
         },
         {
-        title: "Generative AI",
-        icon: "FaBrain",
-        },
-        {
-        title: "Machine Learning",
-        icon: "FaMicrochip",
-        },
-        {
-        title: "Predictive Analytics",
+        title: "Data Automation",
         icon: "FaBolt",
+        },
+        {
+        title: "Process Integration",
+        icon: "FaGear",
         },
     ],
 };
@@ -267,7 +251,7 @@ export const aiAutomationContent = {
 export const uiuxDesignContent = {
     heading: "UI / UX Design",
     description:
-        "Beautiful interfaces combined with meaningful user experiences that increase engagement and improve customer satisfaction.",
+        "Clean, intentional interfaces built around real user behavior — from wireframe to a finished product people actually enjoy using.",
     services: [
         {
         icon: "FaPenRuler",
@@ -295,7 +279,7 @@ export const digitalMarketingContent = {
         highlightedText: "With Data-Driven Marketing",
     },
     description:
-        "We create marketing strategies that increase visibility, generate quality leads, strengthen your brand, and drive measurable business growth across digital platforms.",
+        "We help businesses build visibility, generate quality leads, and grow their brand through focused, measurable digital marketing.",
     services: [
         "Search Engine Optimization (SEO)",
         "Google Ads (PPC)",
@@ -333,15 +317,15 @@ export const maintenanceSupportContent = {
     badge: "Maintenance & Support",
     heading: "Reliable Support Beyond Project Delivery",
     description:
-        "Our dedicated support team ensures your software remains secure, updated, and optimized for maximum performance throughout its lifecycle.",
+        "We stay involved after launch — monitoring, fixing, and improving your product so it keeps performing as your business grows.",
     items: [
-        "24×7 Technical Support",
+        "Ongoing Technical Support",
         "Performance Monitoring",
-        "Bug Fixes",
+        "Bug Fixes & Patches",
         "Security Updates",
-        "Cloud Infrastructure",
+        "Cloud Infrastructure Management",
         "Backup & Recovery",
-        "Application Upgrades",
+        "Feature Upgrades",
         "Continuous Improvements",
     ],
     cards: [
@@ -366,17 +350,17 @@ export const maintenanceSupportContent = {
 
 export const corporateTrainingContent = {
     badge: "Corporate Training",
-    heading: "Empower Teams Through Practical Learning",
+    heading: "Empower Teams Through Practical Training",
     description:
-        "Upskill your workforce with industry-oriented training programs designed by experienced professionals and tailored to your organization's needs.",
+        "We run hands-on training programs and workshops designed to build real, applicable skills — not just theory.",
     courses: [
-        "Full Stack Development",
-        "Artificial Intelligence",
-        "Cloud Computing",
-        "Cyber Security",
+        "Full Stack Web Development",
+        "React & React Native",
+        "Flutter App Development",
+        "Cloud & Backend (Supabase/Firebase)",
         "UI / UX Design",
-        "Digital Marketing",
-        "Data Analytics",
+        "AI & Automation Fundamentals",
+        "Git & Deployment Workflows",
         "Professional Soft Skills",
     ],
     cards: [
@@ -402,20 +386,20 @@ export const corporateTrainingContent = {
 export const technologyStackContent = {
     heading: "Technologies We Use",
     description:
-        "Leveraging modern frameworks, cloud platforms, databases, and development tools to build secure and scalable digital solutions.",
+        "A modern, production-tested stack for building fast, secure, and scalable digital products.",
     technologies: [
         { icon: "FaReact", library: "fa6", name: "React" },
-        { icon: "FaNodeJs", library: "fa6", name: "Node.js" },
-        { icon: "FaPhp", library: "fa6", name: "PHP" },
-        { icon: "FaPython", library: "fa6", name: "Python" },
-        { icon: "SiMongodb", library: "si", name: "MongoDB" },
-        { icon: "SiMysql", library: "si", name: "MySQL" },
+        { icon: "SiNextdotjs", library: "si", name: "Next.js" },
         { icon: "FaFlutter", library: "fa6", name: "Flutter" },
+        { icon: "SiSupabase", library: "si", name: "Supabase" },
         { icon: "SiFirebase", library: "si", name: "Firebase" },
-        { icon: "FaDocker", library: "fa6", name: "Docker" },
-        { icon: "FaAws", library: "fa6", name: "AWS" },
+        { icon: "FaNodeJs", library: "fa6", name: "Node.js" },
+        { icon: "SiPostgresql", library: "si", name: "PostgreSQL" },
+        { icon: "SiVercel", library: "si", name: "Vercel" },
+        { icon: "SiCloudflare", library: "si", name: "Cloudflare" },
         { icon: "SiTailwindcss", library: "si", name: "Tailwind CSS" },
         { icon: "FaFigma", library: "fa6", name: "Figma" },
+        { icon: "SiRazorpay", library: "si", name: "Razorpay" },
     ],
 };
 
@@ -423,7 +407,7 @@ export const developmentProcessContent = {
     badge: "Our Process",
     heading: "From Idea to Deployment",
     description:
-        "Every successful project follows a structured development process that ensures quality, transparency, and timely delivery.",
+        "Every project follows a structured process that keeps development transparent, tested, and on schedule.",
     steps: [
         {
         icon: "FaComments",
@@ -433,7 +417,7 @@ export const developmentProcessContent = {
         {
         icon: "FaLightbulb",
         title: "Planning",
-        desc: "Creating the roadmap, technology stack, timeline, and architecture.",
+        desc: "Defining the roadmap, technology stack, and system architecture.",
         },
         {
         icon: "FaPenRuler",
@@ -443,17 +427,17 @@ export const developmentProcessContent = {
         {
         icon: "FaCode",
         title: "Development",
-        desc: "Developing secure, scalable, and high-performance applications.",
+        desc: "Building secure, scalable, and high-performance applications.",
         },
         {
         icon: "FaVial",
         title: "Testing",
-        desc: "Quality assurance through functional, security, and performance testing.",
+        desc: "Quality assurance through functional and performance testing.",
         },
         {
         icon: "FaRocket",
         title: "Launch & Support",
-        desc: "Deployment, monitoring, maintenance, and continuous improvements.",
+        desc: "Deployment, monitoring, and continuous improvement.",
         },
     ],
 };
@@ -461,39 +445,31 @@ export const developmentProcessContent = {
 export const industriesServedContent = {
     heading: "Industries We Serve",
     description:
-        "We develop tailored digital solutions for organizations across multiple industries and business domains.",
+        "We build tailored digital solutions for organizations across a range of industries and use cases.",
     industries: [
         {
         icon: "FaBuilding",
         name: "Startups & SMEs",
         },
         {
-        icon: "FaIndustry",
-        name: "Manufacturing",
+        icon: "FaGraduationCap",
+        name: "Education & Hostels",
         },
         {
         icon: "FaHospital",
         name: "Healthcare",
         },
         {
-        icon: "FaGraduationCap",
-        name: "Education",
+        icon: "FaCartShopping",
+        name: "Retail & Food Delivery",
+        },
+        {
+        icon: "FaFutbol",
+        name: "Sports & Fitness",
         },
         {
         icon: "FaMoneyBillTrendUp",
         name: "Finance",
-        },
-        {
-        icon: "FaCartShopping",
-        name: "Retail",
-        },
-        {
-        icon: "FaPlaneDeparture",
-        name: "Travel",
-        },
-        {
-        icon: "FaLeaf",
-        name: "Agriculture",
         },
     ],
 };
@@ -508,18 +484,18 @@ export const clientBenefitsContent = {
         },
         {
         icon: "FaShield",
-        title: "Secure Solutions",
-        desc: "Built using industry best practices and security standards.",
+        title: "Secure by Design",
+        desc: "Row-level security and best-practice authentication from day one.",
         },
         {
         icon: "FaCoins",
         title: "Cost Effective",
-        desc: "Maximum ROI with optimized development strategies.",
+        desc: "Lean, efficient development without unnecessary overhead.",
         },
         {
         icon: "FaArrowTrendUp",
-        title: "Business Growth",
-        desc: "Technology focused on measurable business outcomes.",
+        title: "Built to Scale",
+        desc: "Architecture designed to grow with your product.",
         },
     ],
 };
@@ -527,22 +503,22 @@ export const clientBenefitsContent = {
 export const whyChooseServicesContent = {
     heading: "Why Choose AuxOpus?",
     description:
-        "We focus on delivering business value, long-term partnerships, and technology solutions that help organizations succeed.",
+        "We're a technology and engineering studio focused on building real products, not just delivering code — combining engineering discipline with product-level design sense.",
     reasons: [
         {
         icon: "FaUsers",
-        title: "Experienced Team",
-        desc: "Dedicated professionals delivering high-quality software solutions.",
+        title: "Hands-On Team",
+        desc: "You work directly with the people building your product.",
         },
         {
         icon: "FaShieldHalved",
-        title: "Secure Development",
-        desc: "Security-first development practices across every project.",
+        title: "Security-First Development",
+        desc: "Secure architecture and access control built in from the start.",
         },
         {
-        icon: "FaLightbulb",
-        title: "Innovative Solutions",
-        desc: "Modern technologies solving real business challenges.",
+        icon: "FaPenRuler",
+        title: "Design-Driven Engineering",
+        desc: "Every product is built with UI/UX craft, not just functionality.",
         },
         {
         icon: "FaClock",
@@ -552,43 +528,43 @@ export const whyChooseServicesContent = {
         {
         icon: "FaHandshake",
         title: "Transparent Communication",
-        desc: "Regular updates and collaborative development process.",
+        desc: "Regular updates and a collaborative development process.",
         },
         {
         icon: "FaArrowTrendUp",
         title: "Scalable Products",
-        desc: "Solutions designed to grow with your business.",
+        desc: "Solutions architected to grow with your business.",
         },
     ],
 };
 
 export const caseStudyPreviewContent = {
     heading: "Recent Work",
-    description: "A glimpse of our latest digital transformation projects.",
+    description: "A glimpse of the products we've built.",
     viewAllButton: {
         text: "View Portfolio",
     },
     projects: [
         {
-        icon: "FaGlobe",
-        title: "Corporate Website",
-        desc: "Modern responsive website with CMS integration.",
+        icon: "FaQrcode",
+        title: "StayPass",
+        desc: "QR-based hostel exit management system with real-time admin dashboard, built on React Native and Supabase.",
         gradient: "from-blue-500 to-cyan-500",
-        img: "", // Add image path here, or leave empty for gradient
+        img: "",
         },
         {
-        icon: "FaMobileScreen",
-        title: "Healthcare App",
-        desc: "Cross-platform mobile application for patients.",
+        icon: "FaChartLine",
+        title: "LiveStrike",
+        desc: "Real-time sports match tracking dashboard with live, upcoming, and completed match states.",
         gradient: "from-blue-500 to-cyan-500",
-        img: "", // Add image path here, or leave empty for gradient
+        img: "",
         },
         {
-        icon: "FaRobot",
-        title: "AI Automation",
-        desc: "AI-powered workflow automation platform.",
+        icon: "FaSitemap",
+        title: "Supervision Allocation System",
+        desc: "A platform for managing and allocating supervision assignments, streamlining tracking and workflow across teams.",
         gradient: "from-blue-500 to-cyan-500",
-        img: "", // Add image path here, or leave empty for gradient
+        img: "",
         },
     ],
 };
@@ -596,7 +572,7 @@ export const caseStudyPreviewContent = {
 export const serviceComparisonContent = {
     heading: "Suitable For Every Business",
     description:
-        "Whether you're launching your first startup or scaling a global enterprise, we have the right technology solution.",
+        "Whether you're launching your first product or scaling an existing one, we have the right approach for your stage.",
     plans: [
         {
         title: "Startup",
@@ -605,21 +581,21 @@ export const serviceComparisonContent = {
         features: [
             "Business Website",
             "Responsive Design",
-            "Basic SEO",
-            "Contact Forms",
+            "Basic SEO Setup",
+            "Contact & Lead Forms",
             "Email Support",
         ],
         },
         {
-        title: "Business",
+        title: "Growth",
         color: "border-blue-600",
         featured: true,
         features: [
-            "Custom Web App",
+            "Custom Web/Mobile App",
             "Admin Dashboard",
-            "Authentication",
+            "Authentication & Roles",
             "API Integration",
-            "Analytics",
+            "Analytics Setup",
             "Priority Support",
         ],
         },
@@ -628,8 +604,8 @@ export const serviceComparisonContent = {
         color: "border-slate-200",
         featured: false,
         features: [
-            "Custom ERP/CRM",
-            "AI Integration",
+            "Custom Platform Architecture",
+            "AI/Automation Integration",
             "Cloud Deployment",
             "Dedicated Team",
             "24×7 Support",
@@ -642,16 +618,16 @@ export const serviceComparisonContent = {
 export const numbersSectionContent = {
     numbers: [
         {
-        number: "7+",
+        number: "8",
         title: "Core Services",
         },
         {
-        number: "20+",
+        number: "15+",
         title: "Modern Technologies",
         },
         {
-        number: "50+",
-        title: "Business Solutions",
+        number: "3+",
+        title: "Products Built",
         },
         {
         number: "100%",
@@ -665,23 +641,23 @@ export const faqContent = {
     faqs: [
         {
         q: "How long does a project take?",
-        a: "Depending on project complexity, development may take from a few weeks to several months.",
+        a: "Depending on complexity, development typically takes from a few weeks to a few months.",
         },
         {
         q: "Do you provide post-launch support?",
-        a: "Yes. We offer maintenance, updates, monitoring, and technical support.",
+        a: "Yes. We offer maintenance, monitoring, and ongoing technical support after launch.",
         },
         {
         q: "Can you modernize existing software?",
-        a: "Absolutely. We redesign, optimize, and migrate legacy systems.",
+        a: "Yes. We redesign, optimize, and migrate legacy systems to modern architecture.",
         },
         {
-        q: "Do you sign NDA?",
+        q: "Do you sign an NDA?",
         a: "Yes. Client confidentiality is always maintained.",
         },
         {
-        q: "Can you work with startups?",
-        a: "Yes. We help startups from MVP development to enterprise-scale platforms.",
+        q: "Can you work with early-stage startups?",
+        a: "Yes. We help startups go from idea to MVP, and support them as they scale.",
         },
     ],
 };
