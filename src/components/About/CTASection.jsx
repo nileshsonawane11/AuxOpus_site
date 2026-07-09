@@ -10,7 +10,7 @@ export default function CTASection() {
   const ButtonIcon = Icons[button.icon];
 
   return (
-    <section className="relative overflow-hidden py-28 bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900">
+    <section className="hidden md:flex relative overflow-hidden py-28 bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900">
       <div className="absolute -top-32 -left-20 h-96 w-96 rounded-full bg-cyan-400/20 blur-[140px]" />
       <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-blue-400/20 blur-[150px]" />
 
