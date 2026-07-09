@@ -27,7 +27,7 @@ export default function FloatingButtons() {
 
         {/* WhatsApp */}
 
-        <div className="">
+        <div className="pointer-events-auto">
             <a
                 href={`https://wa.me/${contactInfoContent.contactMethods[1].value}`}
                 target="_blank"
