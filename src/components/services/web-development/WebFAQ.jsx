@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa6";
+import { ChevronDown } from "lucide-react";
 import { webFAQContent } from "../../../constants/Services/WebDevelopment.js";
 
 export default function WebFAQ() {
-  const [open, setOpen] = useState(0);
+  const [active, setActive] = useState(0);
   const { badge, heading, faqs } = webFAQContent;
 
   return (
@@ -23,29 +23,37 @@ export default function WebFAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border rounded-2xl overflow-hidden"
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
               <button
                 onClick={() =>
-                  setOpen(open === index ? null : index)
+                  setActive(active === index ? -1 : index)
                 }
-                className="w-full flex justify-between items-center px-8 py-6 font-semibold text-left"
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
               >
-                {faq.q}
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {faq.q}
+                </h3>
 
-                {open === index ? <FaMinus /> : <FaPlus />}
+                <ChevronDown
+                  className={`transition ${
+                    active === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               <div
-                className={`transition-all duration-300 overflow-hidden ${
-                  open === index
-                    ? "max-h-60"
-                    : "max-h-0"
+                className={`grid transition-all duration-300 ${
+                  active === index
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
                 }`}
               >
-                <p className="px-8 pb-6 leading-8 text-slate-600">
-                  {faq.a}
-                </p>
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 leading-7 text-slate-600">
+                    {faq.a}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

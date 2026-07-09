@@ -3,8 +3,8 @@ import {ourProducts, successStories} from "./Projects.js";
 
 export const solutionsHeroContent = {
     badge: {
-        text: "AI Powered Business Solutions",
-        icon: "FaRobot",
+        text: "Smart Business Solutions",
+        icon: "FaLightbulb",
     },
     heading: {
         line1: "Smart Digital",
@@ -12,7 +12,7 @@ export const solutionsHeroContent = {
         line3: "For Modern Businesses",
     },
     description:
-        "Empower your organization with intelligent software, automation, cloud infrastructure, AI, analytics and scalable enterprise solutions designed for long-term business growth.",
+        "Build the future of your business with modern software, artificial intelligence, cloud computing, automation, and enterprise technologies that deliver measurable results.",
     buttons: [
         {
         text: "Discuss Your Project",
@@ -34,7 +34,7 @@ export const solutionsHeroContent = {
     ],
     trustedTechnologies: {
         label: "Trusted Technologies",
-        items: ["React", "Node.js", "Laravel", "AWS", "Docker", "OpenAI"],
+        items: ["React", "Node.js", "Laravel", "Supabase", "Docker", "MySQL"],
     },
     floatingIcons: {
         topLeft: { icon: "FaCloud", color: "text-blue-600" },
@@ -50,9 +50,9 @@ export const solutionsHeroContent = {
         status: "Online",
         },
         kpiCards: [
-        { label: "Revenue", value: "₹8.5M", change: "+18%", changeColor: "text-green-500" },
-        { label: "Users", value: "12.8K", change: "+240", changeColor: "text-blue-500" },
-        { label: "Projects", value: "264", change: "Active", changeColor: "text-cyan-500" },
+        { label: "Revenue", value: "₹2M", change: "+18%", changeColor: "text-green-500" },
+        { label: "Users", value: "8K", change: "+240", changeColor: "text-blue-500" },
+        { label: "Projects", value: "20", change: "Active", changeColor: "text-cyan-500" },
         { label: "Support", value: "99%", change: "SLA", changeColor: "text-green-500" },
         ],
         chartData: [40, 60, 50, 80, 70, 100, 120, 110, 130, 150, 170, 200],
@@ -78,7 +78,7 @@ export const solutionsHeroContent = {
     mobileMockup: {
         title: "AuxOpus",
         subtitle: "Mobile ERP",
-        revenue: "₹2.4M",
+        revenue: "₹2M",
         progressBars: [70, 90, 55],
         button: "Open Dashboard",
     },
@@ -100,7 +100,7 @@ export const solutionsHeroContent = {
         progress: 96,
         },
         revenue: {
-        value: "₹8.5M",
+        value: "₹50K",
         icon: "FaChartLine",
         },
         server: {
@@ -197,24 +197,24 @@ export const ourProductsContent = {
 export const productAdvantagesContent = {
     advantages: [
         {
-        icon: "FaRocket",
-        title: "Quick Deployment",
-        desc: "Go live within days instead of months.",
+            icon: "FaRocket",
+            title: "Quick Deployment",
+            desc: "Go live within days instead of months.",
         },
         {
-        icon: "FaShieldHalved",
-        title: "Secure & Reliable",
-        desc: "Built using industry-standard security practices.",
+            icon: "FaShieldHalved",
+            title: "Secure & Reliable",
+            desc: "Built using industry-standard security practices.",
         },
         {
-        icon: "FaCloud",
-        title: "Cloud Ready",
-        desc: "Accessible from anywhere with scalable infrastructure.",
+            icon: "FaLayerGroup",
+            title: "Scalable Architecture",
+            desc: "Solutions designed to grow seamlessly with your business and evolving requirements.",
         },
         {
-        icon: "FaGears",
-        title: "Fully Customizable",
-        desc: "Adapt every product to your organization's workflow.",
+            icon: "FaGears",
+            title: "Fully Customizable",
+            desc: "Adapt every product to your organization's workflow.",
         },
     ],
 };
@@ -311,6 +311,7 @@ export const dataAnalyticsContent = {
         "FaChartColumn",
         "FaChartPie",
         "FaChartLine",
+        "FaMagnifyingGlassChart"
     ],
 };
 
@@ -445,13 +446,14 @@ export const technologyIntegrationContent = {
     heading: "Powered By Modern Technologies",
     technologies: [
         "Artificial Intelligence",
-        "Machine Learning",
+        "Enterprise Software",
         "Cloud Computing",
         "IoT",
-        "Blockchain",
-        "Big Data",
+        "Mobile Development",
+        "Microservices",
         "Cyber Security",
         "API Integration",
+        "Data Analytics",
         "Automation",
         "DevOps",
     ],
@@ -486,7 +488,7 @@ export const solutionProcessContent = {
 
 export const successStoriesContent = {
     badge: "Portfolio",
-    heading: "Solution Success Stories",
+    heading: "Solution Showcase",
     viewAllButton: {
         text: "View All",
         link: "/portfolio",
@@ -527,12 +529,16 @@ export const solutionsFAQContent = {
         a: "Absolutely. We integrate CRMs, ERPs, payment gateways, APIs, and third-party platforms.",
         },
         {
-        q: "Do you provide post-launch support?",
-        a: "Yes. We offer maintenance, monitoring, upgrades, and technical support.",
+        q: "Do you provide support after deployment?",
+        a: "Yes. We offer ongoing maintenance, performance optimization, feature enhancements, and technical support to help your solution evolve with your business.",
         },
         {
         q: "Are your solutions scalable?",
         a: "Yes. They are designed to grow with your business requirements.",
+        },
+        {
+        q: "What industries do you work with?",
+        a: "We collaborate with startups, SMEs, enterprises, educational institutions, healthcare organizations, financial services, manufacturing, retail, and public sector organizations.",
         },
     ],
 };

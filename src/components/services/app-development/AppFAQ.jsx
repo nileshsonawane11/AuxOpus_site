@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { appFAQContent } from "../../../constants/Services/AppDevelopment.js";
 
 export default function AppFAQ() {
-  const [open, setOpen] = useState(0);
+  const [active, setActive] = useState(0);
   const { badge, heading, faqs } = appFAQContent;
 
   return (
@@ -19,33 +20,41 @@ export default function AppFAQ() {
           </h2>
         </div>
 
-        <div className="space-y-5 mt-16">
+        <div className="mt-16 space-y-5">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border rounded-2xl overflow-hidden"
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
               <button
                 onClick={() =>
-                  setOpen(open === index ? null : index)
+                  setActive(active === index ? -1 : index)
                 }
-                className="w-full flex justify-between items-center px-8 py-6 font-semibold text-left"
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
               >
-                {faq.question}
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {faq.question}
+                </h3>
 
-                {open === index ? <FaMinus /> : <FaPlus />}
+                <ChevronDown
+                  className={`transition ${
+                    active === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ${
-                  open === index
-                    ? "max-h-60"
-                    : "max-h-0"
+                className={`grid transition-all duration-300 ${
+                  active === index
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
                 }`}
               >
-                <p className="px-8 pb-6 text-slate-600 leading-8">
-                  {faq.answer}
-                </p>
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 leading-7 text-slate-600">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

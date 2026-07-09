@@ -1,4 +1,6 @@
 import {appPortfolio} from "../Projects.js";
+import Staypass from "../../assets/Projects/Styapass_vertical.png"
+import Livestrike from "../../assets/Services/Livestrike_phone.jpg"
 
 export const appHeroContent = {
     badge: {
@@ -29,12 +31,12 @@ export const appHeroContent = {
     phones: {
         left: {
         gradient: "from-violet-500 to-cyan-400",
-        img: "", // Add image path here, or leave empty for gradient
+        img: Staypass, // Add image path here, or leave empty for gradient
         alt: "Left Phone Mockup",
         },
         right: {
         gradient: "from-cyan-500 to-blue-500",
-        img: "", // Add image path here, or leave empty for gradient
+        img: Livestrike, // Add image path here, or leave empty for gradient
         alt: "Right Phone Mockup",
         },
     },

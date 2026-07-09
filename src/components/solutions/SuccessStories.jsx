@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import { successStoriesContent } from "../../constants/OurSolutions.js";
 
@@ -19,10 +20,10 @@ export default function SuccessStories() {
             </h2>
           </div>
 
-          <button className="flex items-center gap-3 text-blue-600 font-semibold">
+          <Link to="/portfolio" className="flex items-center gap-3 text-blue-600 font-semibold">
             {viewAllButton.text}
             <FaArrowRight />
-          </button>
+          </Link>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mt-16">
@@ -31,7 +32,15 @@ export default function SuccessStories() {
               key={index}
               className="rounded-3xl overflow-hidden shadow hover:shadow-2xl transition"
             >
-              <div className={`h-64 bg-gradient-to-br ${story.gradient}`}></div>
+              {story.img ? (
+                <img
+                  src={story.img}
+                  alt={story.title}
+                  className=" w-full object-cover"
+                />
+              ) : (
+                <div className={`h-64 bg-gradient-to-br ${story.gradient}`}></div>
+              )}
 
               <div className="p-8">
                 <span className="text-blue-600 text-sm uppercase font-semibold">

@@ -6,7 +6,7 @@ export default function FeaturedProjects() {
   const { badge, heading, projects, viewButton } = featuredProjectsContent;
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" id="projects">
       <div className="max-w-7xl mx-auto px-5 md:px-10">
         <div className="flex justify-between items-end flex-wrap gap-5">
           <div>
@@ -30,7 +30,7 @@ export default function FeaturedProjects() {
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="h-64 w-full object-cover"
+                  className=" w-full object-cover"
                 />
               ) : (
                 <div className={`h-64 bg-gradient-to-br ${project.gradient}`}></div>
@@ -45,10 +45,14 @@ export default function FeaturedProjects() {
                   {project.title}
                 </h3>
 
-                <button className="mt-8 flex items-center gap-3 font-semibold text-blue-600 hover:gap-5 transition-all">
+                <p className="mt-3 text-slate-600">
+                  {project.description}
+                </p>
+
+                {/* <button className="mt-8 flex items-center gap-3 font-semibold text-blue-600 hover:gap-5 transition-all">
                   {viewButton.text}
                   <FaArrowRight />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

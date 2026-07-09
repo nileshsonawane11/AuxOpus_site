@@ -7,7 +7,7 @@ export const heroContent = {
             line1: "Empowering Businesses Through",
             highlightedText: "Technology & Innovation",
         },
-        description: "Delivering innovative software solutions...",
+        description: "AuxOpus empowers businesses with scalable software, intelligent automation, cloud technologies, and AI-driven solutions that accelerate innovation, improve efficiency, and drive sustainable growth.",
         badge: {
             text: "Technology • Innovation • Growth",
         },
@@ -30,13 +30,13 @@ export const heroContent = {
         statsCards: [
             {
                 label: "Active Projects",
-                value: "48",
-                progress: 80,
+                value: "20+",
+                progress: 20,
             },
             {
                 label: "AI Solutions",
-                value: "25+",
-                progress: 75,
+                value: "10+",
+                progress: 10,
             },
         ],
         satisfactionCard: {
@@ -50,9 +50,9 @@ export const heroContent = {
             icon: "FaBrain",
             },
             {
-            title: "Cloud Ready",
-            subtitle: "Secure Infrastructure",
-            icon: "FaCloud",
+                title: "Digital Transformation",
+                subtitle: "Modern Technology",
+                icon: "FaRocket",
             },
             {
             title: "Enterprise Security",
@@ -97,7 +97,7 @@ export const missionVisionContent = {
     mission: {
         icon: "FaBullseye", // icon name for mapping
         title: "Our Mission",
-        description: "To empower businesses through innovative, scalable, and reliable technology solutions while building long-lasting partnerships based on trust, quality, and continuous innovation.",
+        description: "To empower businesses with innovative, scalable, and future-ready technology solutions that drive growth, inspire innovation, and create lasting value through trusted partnerships.",
         cardStyle: "bg-white" // light card
     },
     vision: {
@@ -127,8 +127,8 @@ export const whyChooseContent = {
         },
         {
         icon: "FaPuzzlePiece",
-        title: "Tailored Solutions",
-        desc: "Every organization is unique. Our solutions are customized to your business challenges and growth objectives.",
+        title: "Security at the Core",
+        desc: "Security, privacy, and reliability are embedded into every stage of development—not treated as an afterthought.",
         },
         {
         icon: "FaLightbulb",
@@ -152,7 +152,7 @@ export const industriesContent = {
     badge: "Industries We Serve",
     heading: "Delivering Solutions Across Industries",
     description:
-        "We empower organizations across diverse industries with innovative, scalable, and future-ready technology solutions tailored to their unique business needs.",
+        "We help organizations across industries accelerate growth through innovative, scalable, and future-ready technology solutions tailored to their unique business goals.",
 
     industries: [
         { icon: "FaRocket", title: "Startups" },

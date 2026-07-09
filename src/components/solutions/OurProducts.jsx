@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa6";
 import * as FaIcons from "react-icons/fa";
 import * as Fa6Icons from "react-icons/fa6";
@@ -57,10 +58,10 @@ export default function OurProducts() {
                     {product.description}
                   </p>
 
-                  <button className="flex items-center gap-2 mt-8 text-blue-600 font-semibold group-hover:gap-4 transition-all">
+                  <Link to="/portfolio" className="flex items-center gap-2 mt-8 text-blue-600 font-semibold hover:gap-4 transition-all">
                     Learn More
                     <FaArrowRight />
-                  </button>
+                  </Link>
                 </div>
               </div>
             );

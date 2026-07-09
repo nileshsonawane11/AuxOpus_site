@@ -25,8 +25,8 @@ export const aboutHeroContent = {
         link: "/services",
         },
         {
-        text: "Watch Overview",
-        icon: "FaPlay",
+        text: "Portfolio",
+        icon: "FaRocket",
         link: "/Portfolio",
         },
     ],
@@ -53,8 +53,8 @@ export const whoWeAreContent = {
         highlightedText: " Digital Success",
     },
     paragraphs: [
-        "AuxOpus is a technology company focused on delivering innovative digital products that help businesses automate, scale, and grow. Our expertise spans web, mobile, cloud, AI, and enterprise software solutions.",
-        "We don't just build applications—we build long-term technology partnerships that enable organizations to stay competitive in an evolving digital landscape.",
+        "AuxOpus is a technology company dedicated to delivering innovations in the form of digital products that help businesses automate, scale, and succeed. Our services include web development, mobile apps, cloud technologies, artificial intelligence, and enterprise software.",
+        "We not only develop applications but also develop technology partnerships for the organizations.",
     ],
     services: [
         {
@@ -79,7 +79,7 @@ export const whoWeAreContent = {
 
 export const companyStatsContent = {
     badge: "Our Journey",
-    heading: "Numbers That Speak",
+    heading: "Company Highlights",
     stats: [
         { value: companyStats.overview[1].value, label: companyStats.overview[1].label },
         { value: companyStats.overview[8].value, label: companyStats.overview[8].label },
@@ -91,122 +91,122 @@ export const companyStatsContent = {
 };
 
 export const coreValuesContent = {
-    badge: "Core Values",
-    heading: "Principles That Drive Us",
+    badge: "Our Core Values",
+    heading: "Built on Values. Driven by Vision.",
     description:
-        "Every decision we make is guided by values that inspire innovation, collaboration, and long-term success.",
+        "Our culture is shaped by principles that foster innovation, accountability, and meaningful partnerships. These values guide every solution we build and every relationship we create.",
+
     values: [
         {
-        icon: "FaLightbulb",
-        title: "Innovation",
-        desc: "We embrace creativity and emerging technologies to build future-ready digital solutions.",
+        icon: "FaRocket",
+        title: "Innovation First",
+        desc: "We constantly explore emerging technologies to build intelligent, future-ready solutions that create lasting business value.",
         },
         {
-        icon: "FaHandshake",
-        title: "Integrity",
-        desc: "Honesty, transparency, and trust are the foundation of every partnership.",
-        },
-        {
-        icon: "FaAward",
-        title: "Excellence",
-        desc: "Delivering exceptional quality through precision, dedication, and continuous improvement.",
-        },
-        {
-        icon: "FaUsers",
-        title: "Customer First",
-        desc: "Understanding our clients enables us to create meaningful business value.",
-        },
-        {
-        icon: "FaArrowTrendUp",
-        title: "Growth",
-        desc: "Helping businesses grow while continuously improving ourselves.",
+        icon: "FaPeopleGroup",
+        title: "Client Partnership",
+        desc: "We work as an extension of your team, focusing on collaboration, transparency, and shared success.",
         },
         {
         icon: "FaShieldHalved",
-        title: "Reliability",
-        desc: "Secure, scalable, and dependable solutions built for long-term success.",
+        title: "Trust & Security",
+        desc: "Every product is designed with security, reliability, and data protection at its core.",
+        },
+        {
+        icon: "FaBolt",
+        title: "Execution Excellence",
+        desc: "We transform ambitious ideas into high-quality digital products through disciplined execution and attention to detail.",
+        },
+        {
+        icon: "FaChartLine",
+        title: "Growth Mindset",
+        desc: "Continuous learning, adaptability, and measurable improvement fuel our progress and our clients' success.",
+        },
+        {
+        icon: "FaEarthAsia",
+        title: "Purposeful Impact",
+        desc: "We create technology that solves real-world challenges and contributes to sustainable business growth.",
         },
     ],
 };
 
 export const whyChooseUsContent = {
-    badge: "Why AuxOpus",
-    heading: "Your Trusted Technology Partner",
+    badge: "Why Choose AuxOpus",
+
+    heading: "Building Technology That Moves Businesses Forward",
+
     description:
-        "We combine innovation, technical expertise, and business understanding to build solutions that accelerate growth and digital transformation.",
+        "At AuxOpus, we combine modern engineering practices, strategic thinking, and a commitment to quality to deliver digital solutions that are scalable, secure, and built for long-term success.",
+
     checklist: [
-        "Agile Development Process",
-        "Experienced Development Team",
-        "Transparent Communication",
-        "Modern Technologies",
-        "Scalable Architecture",
-        "Long-Term Support",
+        "Business-Driven Development",
+        "Modern Tech Stack",
+        "Scalable & Secure Architecture",
+        "Transparent Collaboration",
+        "Agile Delivery Process",
+        "Future-Ready Solutions",
     ],
+
     features: [
         {
-        icon: "FaCode",
-        title: "Custom Software",
-        desc: "Tailor-made applications designed around your business needs.",
+        icon: "FaCompass",
+        title: "Business-Centric Approach",
+        desc: "Every solution begins with understanding your business goals before writing a single line of code.",
         },
         {
-        icon: "FaMobileScreen",
-        title: "Mobile Apps",
-        desc: "High-performance Android and iOS applications.",
+        icon: "FaLayerGroup",
+        title: "Scalable Architecture",
+        desc: "Applications designed to adapt, perform, and grow alongside your business.",
         },
         {
-        icon: "FaCloud",
-        title: "Cloud Solutions",
-        desc: "Secure and scalable cloud infrastructure for modern businesses.",
+        icon: "FaMicrochip",
+        title: "Modern Technologies",
+        desc: "Leveraging AI, cloud, automation, and cutting-edge frameworks to build future-ready products.",
         },
         {
-        icon: "FaBrain",
-        title: "AI Integration",
-        desc: "Intelligent automation powered by Artificial Intelligence.",
-        },
-        {
-        icon: "FaHeadset",
-        title: "24/7 Support",
-        desc: "Dedicated technical assistance whenever you need it.",
+        icon: "FaChartLine",
+        title: "Focused on Long-Term Value",
+        desc: "Our objective is to create solutions that continue delivering measurable business impact well into the future.",
         },
     ],
 };
 
-
 export const developmentProcessContent = {
-    badge: "Our Process",
-    heading: "How We Turn Ideas Into Products",
+    badge: "Development Lifecycle",
+    heading: "From Vision to Digital Excellence",
     description:
-        "Every successful solution begins with a clear process. From idea to deployment, we ensure transparency, quality, and continuous collaboration.",
+        "We follow a structured, collaborative, and agile development approach that transforms ideas into secure, scalable, and high-performing digital products. Every stage is designed to maximize quality, transparency, and business value.",
+
     process: [
         {
-        icon: "FaClipboardList",
-        title: "Discovery",
-        desc: "Understanding your goals, users, and business challenges.",
+        icon: "FaMagnifyingGlass",
+        title: "Discovery & Strategy",
+        desc: "We understand your business, challenges, users, and objectives to define a clear roadmap for success.",
         },
         {
-        icon: "FaPenRuler",
-        title: "Planning & Design",
-        desc: "Creating architecture, wireframes, UI/UX, and project roadmap.",
+        icon: "FaSitemap",
+        title: "Architecture & Planning",
+        desc: "Designing scalable system architecture, project workflows, and technical strategies before development begins.",
         },
         {
-        icon: "FaCode",
+        icon: "FaPalette",
+        title: "UI/UX Design",
+        desc: "Creating intuitive, engaging, and user-centric experiences that align with your brand and business goals.",
+        },
+        {
+        icon: "FaLaptopCode",
         title: "Development",
-        desc: "Building scalable, secure, and high-performance applications.",
+        desc: "Developing secure, scalable, and maintainable applications using modern technologies and best practices.",
         },
         {
-        icon: "FaVialCircleCheck",
-        title: "Testing",
-        desc: "Ensuring quality through functional and performance testing.",
+        icon: "FaShieldHalved",
+        title: "Quality Assurance",
+        desc: "Rigorous testing ensures reliability, security, performance, and a seamless user experience across platforms.",
         },
         {
-        icon: "FaRocket",
-        title: "Deployment",
-        desc: "Launching your product with confidence and reliability.",
-        },
-        {
-        icon: "FaHeadset",
-        title: "Support",
-        desc: "Continuous monitoring, maintenance, and feature improvements.",
+        icon: "FaCloudArrowUp",
+        title: "Deployment & Optimization",
+        desc: "Deploying with confidence, monitoring performance, and continuously optimizing for long-term growth.",
         },
     ],
 };
@@ -219,9 +219,9 @@ export const technologiesContent = {
     technologies: [
         { icon: "FaReact", library: "fa6", name: "React" },
         { icon: "FaNodeJs", library: "fa6", name: "Node.js" },
+        { icon: "FaPython", library: "fa6", name: "Python" },
         { icon: "FaLaravel", library: "fa6", name: "Laravel" },
         { icon: "FaPhp", library: "fa6", name: "PHP" },
-        { icon: "FaPython", library: "fa6", name: "Python" },
         { icon: "FaAws", library: "fa6", name: "AWS" },
         { icon: "FaDocker", library: "fa6", name: "Docker" },
         { icon: "SiMysql", library: "si", name: "MySQL" },
@@ -238,26 +238,31 @@ export const teamContent = {
     badge: "Our Team",
     heading: "Meet The Experts",
     description:
-        "Passionate professionals committed to delivering innovation, excellence, and exceptional customer experiences.",
+        "AuxOpus is led by passionate innovators dedicated to building impactful technology solutions. Our leadership combines strategic thinking, technical expertise, and a commitment to delivering exceptional value to every client.",
     team: [
+        {
+        name: "Yashraj Chavan",
+        role: "Chief Executive Officer",
+        image: Img,
+        },
+        {
+        name: "Guru Bhamare",
+        role: "Chief Technology Officer",
+        image: Img,
+        },
         {
         name: "Nilesh Sonawane",
         role: "Chief Operating Officer",
         image: Img,
         },
         {
-        name: "John Doe",
-        role: "Chief Technology Officer",
+        name: "Kaustubh Patil",
+        role: "Chief Marketing Officer",
         image: Img,
         },
         {
-        name: "Jane Smith",
-        role: "Project Manager",
-        image: Img,
-        },
-        {
-        name: "Alex Johnson",
-        role: "UI/UX Designer",
+        name: "Himanshu Patil",
+        role: "Chief Finance Officer",
         image: Img,
         },
     ],
@@ -266,11 +271,11 @@ export const teamContent = {
 export const ctaContent = {
     badge: "Let's Build Together",
     heading: {
-        line1: "Ready To Transform",
-        line2: "Your Business?",
+        line1: "Turn Your Vision Into",
+        line2: "Digital Reality",
     },
     description:
-        "Whether you're launching a startup, scaling your business, or modernizing enterprise software, AuxOpus is here to turn your ideas into powerful digital solutions.",
+        "Whether you're building a new product, modernizing existing systems, or accelerating digital transformation, AuxOpus partners with you to deliver innovative, scalable, and future-ready technology solutions.",
     contact: [
         {
         icon: "FaPhone",
@@ -284,7 +289,7 @@ export const ctaContent = {
         },
     ],
     button: {
-        text: "Start Your Project",
+        text: "Schedule a Consultation",
         icon: "FaArrowRight",
     },
 };

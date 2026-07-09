@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
+import { ChevronDown } from "lucide-react";
 import { solutionsFAQContent } from "../../constants/OurSolutions.js";
 
 export default function SolutionsFAQ() {
+  const [active, setActive] = useState(0);
   const { heading, faqs } = solutionsFAQContent;
 
   return (
@@ -13,19 +15,42 @@ export default function SolutionsFAQ() {
           </h2>
         </div>
 
-        <div className="mt-16 space-y-6">
+        <div className="mt-16 space-y-5">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow p-8"
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
-              <h3 className="text-xl font-semibold">
-                {faq.q}
-              </h3>
+              <button
+                onClick={() =>
+                  setActive(active === index ? -1 : index)
+                }
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {faq.q}
+                </h3>
 
-              <p className="mt-4 text-slate-600 leading-7">
-                {faq.a}
-              </p>
+                <ChevronDown
+                  className={`transition ${
+                    active === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              <div
+                className={`grid transition-all duration-300 ${
+                  active === index
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 leading-7 text-slate-600">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

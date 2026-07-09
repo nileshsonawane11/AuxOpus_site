@@ -21,7 +21,7 @@ export default function UIUXDesign() {
         <UIUXOffer />
         <UIUXTools />
         <UIUXIndustries />
-        <UIUXPortfolio />
+        {/* <UIUXPortfolio /> */}
         <UIUXCaseStudy />
         <UIUXFAQ />
         <Footer />

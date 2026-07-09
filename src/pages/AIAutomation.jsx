@@ -19,7 +19,7 @@ export default function AIAutomation() {
         <AIOffer />
         <AITechnologies />
         <AIIndustries />
-        <AIPortfolio />
+        {/* <AIPortfolio /> */}
         <AICaseStudy />
         <AIFAQ />
         <Footer />

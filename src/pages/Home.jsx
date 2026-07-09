@@ -38,9 +38,9 @@ export default function Home() {
           <ContactHome />
         </ScrollReveal>
 
-        <ScrollReveal delay={200}>
+        {/* <ScrollReveal delay={200}>
           <Testimonials />
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         <Footer />
     </>

@@ -1,7 +1,7 @@
 export const companyStats = {
   overview: [
     { label: "Years Experience", value: "2+" },
-    { label: "Projects Completed", value: "10+" },
+    { label: "Projects Delivered", value: "10+" },
     { label: "Technologies Domain", value: "10+" },
     { label: "Client Focus Approach", value: "100%" },
     { label: "Client Satisfaction", value: "99%" },

@@ -54,7 +54,7 @@ export default function WebPortfolio() {
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="h-64 w-full object-cover"
+                  className=" w-full object-cover"
                 />
 
                 <div className="p-8">

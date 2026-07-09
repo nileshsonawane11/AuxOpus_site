@@ -1,11 +1,11 @@
 // src/components/services/maintenance-support/MaintenanceSupportFAQ.jsx
 
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { maintenanceSupportFAQContent } from "../../../constants/Services/MaintenanceSupport.js";
 
 export default function MaintenanceSupportFAQ() {
-  const [open, setOpen] = useState(0);
+  const [active, setActive] = useState(0);
   const { heading, faqs } = maintenanceSupportFAQContent;
 
   return (
@@ -17,28 +17,42 @@ export default function MaintenanceSupportFAQ() {
           </h2>
         </div>
 
-        <div className="mt-16 space-y-4">
+        <div className="mt-16 space-y-5">
           {faqs.map((faq, index) => (
             <div
-              key={faq.q}
-              className="rounded-2xl border border-slate-200"
+              key={index}
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
               <button
-                onClick={() => setOpen(open === index ? -1 : index)}
-                className="flex w-full items-center justify-between p-6 text-left"
+                onClick={() =>
+                  setActive(active === index ? -1 : index)
+                }
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
               >
-                <h3 className="text-lg font-semibold">
+                <h3 className="text-lg font-semibold text-slate-900">
                   {faq.q}
                 </h3>
 
-                {open === index ? <Minus /> : <Plus />}
+                <ChevronDown
+                  className={`transition ${
+                    active === index ? "rotate-180" : ""
+                  }`}
+                />
               </button>
 
-              {open === index && (
-                <p className="px-6 pb-6 leading-7 text-slate-600">
-                  {faq.a}
-                </p>
-              )}
+              <div
+                className={`grid transition-all duration-300 ${
+                  active === index
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 leading-7 text-slate-600">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

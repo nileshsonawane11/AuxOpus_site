@@ -53,7 +53,7 @@ export default function AppPortfolio() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-96 w-full object-cover"
+                  className=" w-full object-cover"
                 />
 
                 <div className="p-8">

@@ -21,7 +21,7 @@ export default function MaintenanceSupport() {
         <MaintenanceSupportOffer />
         <MaintenanceSupportTechnologies />
         <MaintenanceSupportIndustries />
-        <MaintenanceSupportPortfolio />
+        {/* <MaintenanceSupportPortfolio /> */}
         <MaintenanceSupportCaseStudy />
         <MaintenanceSupportFAQ />
         <Footer />

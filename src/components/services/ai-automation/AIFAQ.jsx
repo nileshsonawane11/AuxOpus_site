@@ -29,13 +29,13 @@ export default function AIFAQ() {
           {faqs.map((faq, index) => (
             <div
               key={faq.question}
-              className="overflow-hidden rounded-2xl border border-slate-200"
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
               <button
                 onClick={() =>
                   setActive(active === index ? -1 : index)
                 }
-                className="flex w-full items-center justify-between p-6 text-left"
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
               >
                 <h3 className="text-lg font-semibold text-slate-900">
                   {faq.question}

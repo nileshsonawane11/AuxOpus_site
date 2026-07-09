@@ -48,10 +48,10 @@ export default function CaseStudies() {
                 <h4 className="font-semibold">Result</h4>
                 <p className="mt-3 text-slate-600">{study.result}</p>
 
-                <button className="mt-8 flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all">
+                {/* <button className="mt-8 flex items-center gap-2 text-blue-600 font-semibold hover:gap-4 transition-all">
                   {readMoreButton.text}
                   <FaArrowRight />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}

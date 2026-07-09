@@ -1,6 +1,7 @@
 import {companyStats} from "./Stats.js"
 import {featuredProjects} from "./Projects.js";
 import {caseStudies} from "./Projects.js";
+import Web_ERP from "../assets/Services/Web_ERP.png"
 
 export const portfolioHeroContent = {
     badge: {
@@ -30,12 +31,12 @@ export const portfolioHeroContent = {
         title: "Enterprise ERP",
         description: "End-to-end enterprise management platform.",
         gradient: "from-blue-500 to-cyan-400",
-        img: "", // Leave empty or add image path like: "https://example.com/image.jpg"
+        img: Web_ERP, // Leave empty or add image path like: "https://example.com/image.jpg"
     },
     floatingCards: [
         {
         icon: "FaLaptopCode",
-        text: "40+ Projects",
+        text: "20+ Projects",
         color: "text-blue-600",
         position: "top-5 left-0",
         rotation: "rotate-[-12deg]",
@@ -64,33 +65,33 @@ export const portfolioOverviewContent = {
         line2: "Real Business Value",
     },
     paragraphs: [
-        "Our portfolio represents more than completed projects—it reflects our commitment to solving real-world business challenges through technology, innovation, and collaboration.",
-        "From startups to enterprises, we build scalable software, intelligent automation, mobile applications, AI-powered systems, and cloud solutions that empower organizations to achieve sustainable growth.",
+        "Our portfolio showcases our commitment to transforming ideas into impactful digital solutions. Every project reflects our focus on innovation, quality, and delivering measurable business value through technology.",
+        "From startups to enterprises, we develop scalable software, enterprise applications, mobile experiences, cloud solutions, automation, and digital platforms that help organizations innovate, optimize operations, and achieve sustainable growth.",
     ],
     highlights: [
         {
-        icon: "FaLightbulb",
-        title: "Innovation",
-        description:
-            "Every project begins with understanding the client's vision and transforming ideas into practical digital solutions.",
+            icon: "FaLightbulb",
+            title: "Innovation",
+            description:
+                "Transforming ideas into innovative digital solutions.",
         },
         {
-        icon: "FaUsers",
-        title: "Collaboration",
-        description:
-            "We work closely with our clients throughout the development lifecycle to ensure transparency and success.",
+            icon: "FaUsers",
+            title: "Collaboration",
+            description:
+                "Working closely with clients through every stage.",
         },
         {
-        icon: "FaArrowTrendUp",
-        title: "Business Growth",
-        description:
-            "Our solutions are designed to improve efficiency, increase productivity, and accelerate business growth.",
+            icon: "FaArrowTrendUp",
+            title: "Business Growth",
+            description:
+                "Technology that drives efficiency and sustainable growth.",
         },
         {
-        icon: "FaAward",
-        title: "Quality",
-        description:
-            "From planning to deployment, we maintain high standards to deliver reliable and scalable products.",
+            icon: "FaAward",
+            title: "Quality",
+            description:
+                "Delivering reliable, scalable, and high-quality solutions.",
         },
     ],
 };
@@ -148,17 +149,17 @@ export const projectCategoriesContent = {
 };
 
 export const featuredProjectsContent = {
-    badge: "Featured",
-    heading: "Selected Projects",
+    badge: "Featured Projects",
+    heading: "Delivering Digital Excellence",
     projects: featuredProjects,
     viewButton: {
-        text: "View Case Study",
+        text: "Explore Case Study",
     },
 };
 
 export const caseStudiesContent = {
     badge: "Case Studies",
-    heading: "Real Challenges. Real Results.",
+    heading: "Transforming Ideas into Results",
     readMoreButton: {
         text: "Read More",
     },
@@ -197,20 +198,18 @@ export const technologiesUsedContent = {
     heading: "Technologies We Use",
     technologies: [
         "React",
-        "Next.js",
+        "React Native",
+        "Flutter",
         "Node.js",
         "PHP",
         "Laravel",
         "Python",
-        "Java",
-        "Flutter",
         "MongoDB",
         "MySQL",
         "Firebase",
         "AWS",
         "Docker",
         "AI",
-        "TensorFlow",
         "OpenAI",
     ],
 };

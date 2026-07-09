@@ -40,10 +40,6 @@ export default function WebDevelopment() {
               ))}
             </div>
 
-            <button className="mt-10 bg-blue-600 text-white px-7 py-4 rounded-2xl flex items-center gap-3 hover:bg-slate-900 transition">
-              {button.text}
-              <FaArrowRight />
-            </button>
           </div>
 
           {/* Right */}

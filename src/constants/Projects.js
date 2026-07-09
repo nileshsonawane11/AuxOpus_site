@@ -1,29 +1,52 @@
+import LiveStrikeImg from "../assets/Projects/LiveStrike.png";
+import Assign_ProImg from "../assets/Projects/Assign_Pro.png";
+import Barber_ProImg from "../assets/Projects/Barber_Pro.png";
+import Staypass_vertical from "../assets/Projects/Styapass_vertical.png";
+import Staypass_horizantal from "../assets/Projects/Styapass_horizantal.jpeg";
+
 // ============================================
 // PORTFOLIO & PROJECTS DATA
 // ============================================
 
 export const featuredProjects = [
     {
+        title: "StayPass",
+        category: "Education",
+        description: "A smart hostel management system that streamlines student entry, exit, leave approvals, and QR-based gate verification.",
+        gradient: "from-blue-500 via-cyan-400 to-sky-300",
+        img: Staypass_horizantal,
+    },
+    {
         title: "LiveStrike",
         category: "Sports Technology",
+        description: "A comprehensive sports management platform for live scoring, tournament administration, real-time updates, and audience engagement across multiple sports.",
         gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
+        img: LiveStrikeImg,
     },
     {
         title: "Exam Supervision",
         category: "Education",
+        description: "A comprehensive examination management system for faculty duty allocation, attendance tracking, billing, supervision letters, and automated reporting.",
         gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
+        img: Assign_ProImg,
     },
     {
-        title: "Hospital ERP",
-        category: "Healthcare",
+        title: "Barber Pro",
+        category: "Bussiness Platform",
+        description: "Complete ERP for HR, Finance, Inventory, Projects and Operations.",
         gradient: "from-blue-500 via-cyan-400 to-sky-300",
-        img: "",
+        img: Barber_ProImg,
     },
 ];
 
 export const caseStudies = [
+    {
+        title: "StayPass",
+        industry: "Education",
+        challenge: "Manual hostel entry-exit records and leave approvals led to delays, paperwork, and limited visibility into student movements.",
+        solution: "Developed a digital hostel management system with online leave requests, QR-based gate verification, automated approvals, and real-time movement tracking.",
+        result: "Streamlined hostel operations, enhanced student safety, reduced paperwork, and improved administrative efficiency."
+    },
     {
         title: "LiveStrike",
         industry: "Sports Technology",
@@ -31,81 +54,53 @@ export const caseStudies = [
         solution: "Developed a cloud-based real-time cricket scoring ecosystem with analytics and tournament management.",
         result: "40% faster match management and seamless live score delivery.",
     },
-    {
-        title: "Exam Supervision System",
-        industry: "Education",
-        challenge: "Manual supervision allocation caused scheduling conflicts and inefficiencies.",
-        solution: "Created an automated allocation platform with intelligent scheduling and reporting.",
-        result: "Reduced manual effort by over 80% while improving transparency.",
-    },
 ];
 
 export const ourProducts = [
     {
+        icon: "FaUserCheck",
+        library: "fa6",
+        title: "StayPass",
+        category: "Education",
+        description: "An intelligent hostel entry–exit management solution designed to enhance security, efficiency, and operational control.",
+    },
+    {
         icon: "FaBaseballBall",
         library: "fa",
         title: "LiveStrike",
-        category: "Sports Management",
+        category: "Sports Technology",
         description: "Real-time cricket scoring platform with tournaments, analytics, live streaming and player statistics.",
     },
     {
         icon: "FaGraduationCap",
         library: "fa6",
-        title: "Exam Supervision",
+        title: "Assign Pro",
         category: "Education",
         description: "Automated invigilation allocation, duty scheduling and examination management system.",
     },
     {
-        icon: "FaBuilding",
+        icon: "FaScissors",
         library: "fa6",
-        title: "Business ERP",
-        category: "Enterprise",
+        title: "Barber Pro",
+        category: "Bussiness Platform",
         description: "Complete ERP for HR, Finance, Inventory, Projects and Operations.",
-    },
-    {
-        icon: "FaUserCheck",
-        library: "fa6",
-        title: "HRMS",
-        category: "Human Resources",
-        description: "Attendance, payroll, leave management and employee lifecycle automation.",
-    },
-    {
-        icon: "FaHospital",
-        library: "fa6",
-        title: "Hospital Management",
-        category: "Healthcare",
-        description: "Manage appointments, doctors, billing, pharmacy and patient records.",
-    },
-    {
-        icon: "FaCartShopping",
-        library: "fa6",
-        title: "Retail POS",
-        category: "Retail",
-        description: "Billing, inventory, GST, barcode and sales reporting solution.",
     },
 ];
 
 export const successStories = [
     {
-        title: "Digital ERP Platform",
-        industry: "Manufacturing",
-        description: "Complete business transformation with scalable, secure, and intelligent software.",
-        gradient: "from-blue-500 to-cyan-500",
-        img: "",
-    },
-    {
-        title: "Hospital Management",
-        industry: "Healthcare",
-        description: "Complete business transformation with scalable, secure, and intelligent software.",
-        gradient: "from-blue-500 to-cyan-500",
-        img: "",
-    },
-    {
-        title: "Learning Management",
+        title: "StayPass",
         industry: "Education",
-        description: "Complete business transformation with scalable, secure, and intelligent software.",
+        description: "Securely manage hostel entry, exit, and leave requests through a centralized platform.",
         gradient: "from-blue-500 to-cyan-500",
-        img: "",
+        img: Staypass_horizantal,
+    },
+    {
+        title: "LiveStrike",
+        industry: "Sports Technology",
+        description: "Automate tournament operations with live scoring, statistics, and scheduling.",
+        gradient: "from-blue-500 to-cyan-500",
+        img: LiveStrikeImg,
     },
 ];
 
@@ -164,32 +159,25 @@ export const aiPortfolio = [
 
 export const webPortfolio = [
     {
-        name: "Corporate Website",
-        category: "Business Website",
-        image: "https://placehold.co/800x500",
-        desc: "Modern corporate website built with responsive UI and SEO optimization.",
-        tech: ["React", "Laravel", "MySQL"],
+        name: "LiveStrike",
+        category: "Sports Technology",
+        image: LiveStrikeImg,
+        desc: "A comprehensive sports management platform with real-time live scoring and tournament management.",
+        tech: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
     },
     {
-        name: "ERP Management System",
-        category: "Enterprise Software",
-        image: "https://placehold.co/800x500",
-        desc: "Complete ERP platform for inventory, HR, finance and reporting.",
-        tech: ["React", "Node.js", "MongoDB"],
+        name: "Assign Pro",
+        category: "Education",
+        image: Assign_ProImg,
+        desc: "Automate supervision scheduling, billing, and examination report generation.",
+        tech: ["PHP", "HTML", "CSS", "JavaScript", "MySQL"],
     },
     {
-        name: "E-Commerce Platform",
-        category: "Online Store",
-        image: "https://placehold.co/800x500",
-        desc: "High-performance shopping platform with secure payments.",
-        tech: ["React", "Laravel", "MySQL"],
-    },
-    {
-        name: "CRM Dashboard",
-        category: "Business Automation",
-        image: "https://placehold.co/800x500",
-        desc: "Lead management and customer relationship platform.",
-        tech: ["React", "Node.js", "MongoDB"],
+        name: "Barber Pro",
+        category: "Bussiness Platform",
+        image: Barber_ProImg,
+        desc: "Manage customers, services, payments, and invoicing from a single platform.",
+        tech: ["HTML", "Laravel", "MySQL"],
     },
 ];
 
@@ -199,28 +187,10 @@ export const webPortfolio = [
 
 export const appPortfolio = [
     {
-        image: "https://placehold.co/700x900",
-        title: "Healthcare App",
-        description: "Doctor appointment booking, prescriptions, online consultation and patient management.",
-        technologies: ["Flutter", "Firebase", "Node.js"],
-    },
-    {
-        image: "https://placehold.co/700x900",
-        title: "Food Delivery App",
-        description: "Complete delivery ecosystem with customer, delivery partner and admin applications.",
-        technologies: ["React Native", "Laravel", "MySQL"],
-    },
-    {
-        image: "https://placehold.co/700x900",
-        title: "Education Platform",
-        description: "Online learning platform with video lectures, quizzes and progress tracking.",
-        technologies: ["Flutter", "Spring Boot", "MongoDB"],
-    },
-    {
-        image: "https://placehold.co/700x900",
-        title: "Finance Application",
-        description: "Secure fintech application with analytics and digital payment integration.",
-        technologies: ["Flutter", "Node.js", "PostgreSQL"],
+        image: Staypass_horizantal,
+        title: "StayPass",
+        description: "A smart hostel management system for digital leave approvals and QR-based gate verification.",
+        technologies: ["React Native", "Supabase"],
     },
 ];
 
@@ -230,28 +200,10 @@ export const appPortfolio = [
 
 export const corporateTrainingPortfolio = [
     {
-        title: "Enterprise AI Bootcamp",
-        duration: "6 Weeks",
-        participants: "180 Employees",
-        outcome: "AI Adoption Across Teams",
-    },
-    {
-        title: "Full Stack Developer Program",
-        duration: "12 Weeks",
-        participants: "85 Engineers",
+        title: "InterShip Program 2026",
+        duration: "1 Month",
+        participants: "20 Interns",
         outcome: "Production-Ready Developers",
-    },
-    {
-        title: "Cloud Migration Workshop",
-        duration: "5 Days",
-        participants: "120 Professionals",
-        outcome: "AWS Certified Teams",
-    },
-    {
-        title: "Cyber Security Awareness",
-        duration: "3 Days",
-        participants: "600 Employees",
-        outcome: "Reduced Security Risks",
     },
 ];
 

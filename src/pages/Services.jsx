@@ -70,7 +70,7 @@ export default function Services() {
       <ScrollReveal><WhyChooseServices /></ScrollReveal>
 
       {/* Portfolio & Packages */}
-      <ScrollReveal><CaseStudyPreview /></ScrollReveal>
+      {/* <ScrollReveal><CaseStudyPreview /></ScrollReveal> */}
       <ScrollReveal><ServiceComparison /></ScrollReveal>
 
       {/* Company Numbers */}

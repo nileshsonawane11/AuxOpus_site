@@ -30,7 +30,7 @@ class TrackingService {
   track(eventName, data = {}) {
     if (!this.consent) {
       this.queue.push({ eventName, data });
-      console.log('Event queued:', eventName, data);
+      // console.log('Event queued:', eventName, data);
       return;
     }
 
@@ -55,7 +55,7 @@ class TrackingService {
       window.fbq('track', eventName, data);
     }
 
-    console.log('Tracking sent:', eventName, data);
+    // console.log('Tracking sent:', eventName, data);
   }
 
   trackPageView(path) {

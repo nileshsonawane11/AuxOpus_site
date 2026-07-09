@@ -1,3 +1,5 @@
+import {companyStats} from "./Stats.js"
+
 export const servicesHeroContent = {
     badge: {
         text: "Our Services",
@@ -24,10 +26,10 @@ export const servicesHeroContent = {
         },
     ],
     stats: [
-        { value: "10+", label: "Years Experience" },
-        { value: "250+", label: "Projects" },
-        { value: "99%", label: "Client Satisfaction" },
-        { value: "24/7", label: "Support" },
+        { value: companyStats.overview[0].value, label: companyStats.overview[0].label },
+        { value: companyStats.overview[1].value, label: companyStats.overview[1].label },
+        { value: companyStats.overview[4].value, label: companyStats.overview[4].label },
+        { value: companyStats.overview[5].value, label: companyStats.overview[5].label },
     ],
     trustedCompanies: {
         label: "Trusted by leading companies",

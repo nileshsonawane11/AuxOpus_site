@@ -1,8 +1,9 @@
-import React from "react";
+import React,{useState} from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import { contactFAQContent } from "../../constants/Contact.js";
 
 export default function ContactFAQ() {
+  const [active, setActive] = useState(0);
   const { heading, description, faqs } = contactFAQContent;
 
   return (
@@ -18,24 +19,43 @@ export default function ContactFAQ() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="mt-16 space-y-5">
           {faqs.map((faq, index) => (
-            <details
+            <div
               key={index}
-              className="group rounded-3xl bg-white shadow-md p-8"
+              className={`overflow-hidden rounded-2xl ${active === index ? 'border border-blue-600 bg-blue-50' : 'shadow-md'}`}
             >
-              <summary className="flex justify-between items-center cursor-pointer list-none">
-                <h3 className="text-xl font-semibold">
+              <button
+                onClick={() =>
+                  setActive(active === index ? -1 : index)
+                }
+                className="flex w-full items-center justify-between p-6 text-left cursor-pointer"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">
                   {faq.question}
                 </h3>
 
-                <FaChevronDown className="transition group-open:rotate-180" />
-              </summary>
+                <FaChevronDown
+                  className={`transition ${
+                    active === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
 
-              <p className="mt-6 text-slate-600 leading-8">
-                {faq.answer}
-              </p>
-            </details>
+              <div
+                className={`grid transition-all duration-300 ${
+                  active === index
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
+                }`}
+              >
+                <div className="overflow-hidden">
+                  <p className="px-6 pb-6 leading-7 text-slate-600">
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>

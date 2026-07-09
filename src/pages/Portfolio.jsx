@@ -56,9 +56,9 @@ export default function Portfolio() {
       </ScrollReveal>
       
 
-      <ScrollReveal>
+      {/* <ScrollReveal>
         <ClientTestimonials />
-      </ScrollReveal>
+      </ScrollReveal> */}
       
 
       <Footer />

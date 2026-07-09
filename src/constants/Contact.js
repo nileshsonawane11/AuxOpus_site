@@ -1,3 +1,32 @@
+
+export const contactInfoContent = {
+    heading: "Contact Information",
+    description:
+        "Reach out through any of the following channels. We're always happy to discuss your ideas.",
+    contactMethods: [
+        {
+        icon: "FaLocationDot",
+        title: "Office",
+        value: "Plot 5B, Mahavir Nagar, B/H Bright Eng Med School, Shindkheda, Dhule- 425406, Maharashtra, India",
+        },
+        {
+        icon: "FaPhone",
+        title: "Phone",
+        value: "+917378698790",
+        },
+        {
+        icon: "FaEnvelope",
+        title: "Email",
+        value: "auxopus.team@gmail.com",
+        },
+        {
+        icon: "FaClock",
+        title: "Working Hours",
+        value: "Monday - Saturday | 9:00 AM - 7:00 PM",
+        },
+    ],
+};
+
 export const contactHeroContent = {
     badge: {
         text: "Contact AuxOpus",
@@ -23,7 +52,7 @@ export const contactHeroContent = {
         {
         icon: "FaPhone",
         title: "Call Us",
-        value: "+1 (555) 123-4567",
+        value: contactInfoContent.contactMethods[1].value,
         color: "from-blue-500 to-blue-600",
         bgColor: "bg-blue-50",
         iconBg: "bg-blue-100",
@@ -32,7 +61,7 @@ export const contactHeroContent = {
         {
         icon: "FaMessage",
         title: "Email Us",
-        value: "hello@auxopus.com",
+        value: contactInfoContent.contactMethods[2].value,
         color: "from-purple-500 to-purple-600",
         bgColor: "bg-purple-50",
         iconBg: "bg-purple-100",
@@ -41,7 +70,7 @@ export const contactHeroContent = {
         {
         icon: "FaLocationDot",
         title: "Visit Us",
-        value: "San Francisco, CA",
+        value: contactInfoContent.contactMethods[0].value,
         color: "from-cyan-500 to-cyan-600",
         bgColor: "bg-cyan-50",
         iconBg: "bg-cyan-100",
@@ -58,34 +87,6 @@ export const contactHeroContent = {
         arrow: "→",
         },
     },
-};
-
-export const contactInfoContent = {
-    heading: "Contact Information",
-    description:
-        "Reach out through any of the following channels. We're always happy to discuss your ideas.",
-    contactMethods: [
-        {
-        icon: "FaLocationDot",
-        title: "Office",
-        value: "Office No. XX, Your Business Address, Maharashtra, India",
-        },
-        {
-        icon: "FaPhone",
-        title: "Phone",
-        value: "+91 XXXXX XXXXX",
-        },
-        {
-        icon: "FaEnvelope",
-        title: "Email",
-        value: "info@auxopus.com",
-        },
-        {
-        icon: "FaClock",
-        title: "Working Hours",
-        value: "Monday - Saturday | 9:00 AM - 7:00 PM",
-        },
-    ],
 };
 
 export const contactFormContent = {
@@ -148,24 +149,24 @@ export const contactCardsContent = {
         "We believe every conversation is the beginning of a successful partnership.",
     cards: [
         {
-        icon: "FaBolt",
-        title: "Fast Response",
-        text: "Quick replies and efficient communication throughout your journey.",
+        icon: "FaHandshake",
+        title: "Collaborative Approach",
+        text: "We work closely with you to understand your goals and transform ideas into practical digital solutions.",
         },
         {
-        icon: "FaUsers",
-        title: "Expert Team",
-        text: "Experienced professionals ready to guide your business.",
+        icon: "FaCode",
+        title: "Modern Engineering",
+        text: "Building secure, scalable, and future-ready applications using today's leading technologies and best practices.",
         },
         {
         icon: "FaShieldHalved",
-        title: "Confidential",
-        text: "Every discussion remains secure and completely confidential.",
+        title: "Trust & Transparency",
+        text: "Open communication, clear expectations, and complete confidentiality throughout every engagement.",
         },
         {
-        icon: "FaLightbulb",
-        title: "Innovative Solutions",
-        text: "Tailored technology strategies designed for long-term growth.",
+        icon: "FaRocket",
+        title: "Focused on Growth",
+        text: "Creating technology that helps businesses innovate, scale, and stay ahead in a rapidly evolving digital world.",
         },
     ],
 };
@@ -176,7 +177,7 @@ export const contactMapContent = {
         "We welcome clients, partners, and innovators to connect with us. Schedule a visit and let's discuss your next big idea.",
     map: {
         title: "AuxOpus Location",
-        src: "https://www.google.com/maps?q=Nashik,Maharashtra&output=embed",
+        src: "https://www.google.com/maps?q=21.2688026,74.7368461&output=embed",
         height: "h-[550px]",
         loading: "lazy",
         allowFullScreen: true,
@@ -184,31 +185,43 @@ export const contactMapContent = {
 };
 
 export const contactFAQContent = {
-    heading: "Frequently Asked Questions",
-    description:
-        "Answers to some common questions before you get in touch.",
-    faqs: [
-        {
-        question: "How soon will you respond?",
-        answer:
-            "We usually respond within one business day. Urgent inquiries receive priority attention.",
-        },
-        {
-        question: "Do you work with startups?",
-        answer:
-            "Yes. We work with startups, SMEs, enterprises, educational institutions, and government organizations.",
-        },
-        {
-        question: "Can we schedule an online meeting?",
-        answer:
-            "Absolutely. We offer meetings through Google Meet, Microsoft Teams, or Zoom.",
-        },
-        {
-        question: "Do you sign NDAs?",
-        answer:
-            "Yes. We are happy to sign Non-Disclosure Agreements before discussing confidential projects.",
-        },
-    ],
+  heading: "Frequently Asked Questions",
+
+  description:
+    "Find answers to common questions about our services, engagement process, and how we work with businesses of all sizes.",
+
+  faqs: [
+    {
+      question: "What industries does AuxOpus serve?",
+      answer:
+        "We partner with startups, SMEs, enterprises, educational institutions, healthcare organizations, financial services, manufacturing, retail, and government sectors to deliver tailored digital solutions.",
+    },
+    {
+      question: "What types of projects do you undertake?",
+      answer:
+        "We build custom software, web applications, mobile apps, AI-powered solutions, cloud platforms, enterprise systems, automation tools, and digital transformation initiatives.",
+    },
+    {
+      question: "How does your development process work?",
+      answer:
+        "Our process begins with discovery and planning, followed by solution design, agile development, quality assurance, deployment, and continuous optimization to ensure successful project delivery.",
+    },
+    {
+      question: "Can AuxOpus work with our existing technology stack?",
+      answer:
+        "Yes. We can integrate with your existing systems, modernize legacy applications, and build solutions that complement your current technology ecosystem.",
+    },
+    {
+      question: "How do you ensure security and confidentiality?",
+      answer:
+        "We follow secure development practices, implement industry-standard security measures, and are happy to sign Non-Disclosure Agreements (NDAs) whenever required.",
+    },
+    {
+      question: "Do you provide post-launch support and maintenance?",
+      answer:
+        "Yes. We offer ongoing maintenance, performance monitoring, feature enhancements, and technical support to ensure your solution continues to evolve with your business.",
+    },
+  ],
 };
 
 export const contactSocialContent = {
@@ -219,13 +232,13 @@ export const contactSocialContent = {
         {
         icon: "FaLinkedinIn",
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/company/auxopus-llp",
         color: "hover:bg-blue-600 hover:text-white",
         },
         {
         icon: "FaInstagram",
         name: "Instagram",
-        url: "#",
+        url: "https://www.instagram.com/auxopus",
         color: "hover:bg-pink-600 hover:text-white",
         },
         {
@@ -237,7 +250,7 @@ export const contactSocialContent = {
         {
         icon: "FaXTwitter",
         name: "X",
-        url: "#",
+        url: "https://x.com/AuxOpusLLP",
         color: "hover:bg-black hover:text-white",
         },
     ],

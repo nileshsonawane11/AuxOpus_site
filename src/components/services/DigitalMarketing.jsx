@@ -39,10 +39,6 @@ export default function DigitalMarketing() {
               ))}
             </div>
 
-            <button className="mt-10 flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-2xl hover:bg-slate-900 transition">
-              {button.text}
-              <FaArrowRight />
-            </button>
           </div>
 
           {/* Right */}

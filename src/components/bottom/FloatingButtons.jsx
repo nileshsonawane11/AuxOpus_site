@@ -25,9 +25,38 @@ export default function FloatingButtons() {
 
     <div className="fixed w-screen px-10 bottom-6 z-[9999] flex justify-between items-center gap-4  pointer-events-none">
 
-        {/* AI Assistant */}
+        {/* WhatsApp */}
 
         <div className="">
+            <a
+                href={`https://wa.me/${contactInfoContent.contactMethods[1].value}`}
+                target="_blank"
+                rel="noreferrer"
+                className="
+                cursor-pointer
+                relative
+                flex
+                h-16
+                w-16
+                items-center
+                justify-center
+                rounded-full
+                bg-[#25D366]
+                text-white
+                shadow-[0_12px_35px_rgba(37,211,102,.45)]
+                hover:scale-110
+                hover:-translate-y-1
+                transition-all
+                "
+            >
+                <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
+
+                <FaWhatsapp size={26} className="relative z-10" />
+            </a>
+        </div>
+
+        <div className="flex flex-row-reverse items-center gap-8 pointer-events-auto">
+            {/* AI Assistant */}
             {/* <button
                 className="
                 group
@@ -67,36 +96,7 @@ export default function FloatingButtons() {
 
                 </div>
             </button> */}
-        </div>
-
-        <div className="flex gap-8 pointer-events-auto">
-            {/* WhatsApp */}
-
-            <a
-                href={`https://wa.me/${contactInfoContent.contactMethods[1].value}`}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                cursor-pointer
-                relative
-                flex
-                h-14
-                w-14
-                items-center
-                justify-center
-                rounded-full
-                bg-[#25D366]
-                text-white
-                shadow-[0_12px_35px_rgba(37,211,102,.45)]
-                hover:scale-110
-                hover:-translate-y-1
-                transition-all
-                "
-            >
-                <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
-
-                <FaWhatsapp size={26} className="relative z-10" />
-            </a>
+            
 
             {/* Scroll To Top */}
 
@@ -105,8 +105,8 @@ export default function FloatingButtons() {
                 className={`
                 cursor-pointer
                 flex
-                h-14
-                w-14
+                h-16
+                w-16
                 items-center
                 justify-center
                 rounded-full

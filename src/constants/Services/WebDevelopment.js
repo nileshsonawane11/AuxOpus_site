@@ -1,4 +1,5 @@
 import {webPortfolio} from '../Projects.js';
+import Web_ERP from "../../assets/Services/Web_ERP.png"
 
 export const webHeroContent = {
   badge: {
@@ -24,7 +25,7 @@ export const webHeroContent = {
   ],
   dashboardCard: {
     gradient: "from-blue-600 to-cyan-400",
-    img: "", // Add image path here, or leave empty for gradient
+    img: Web_ERP, // Add image path here, or leave empty for gradient
     alt: "Web Development Dashboard",
   },
   floatingCards: [
