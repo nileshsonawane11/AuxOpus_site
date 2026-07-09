@@ -6,10 +6,10 @@ export const appHeroContent = {
     },
     heading: {
         line1: "Mobile Apps",
-        highlightedText: "Built For Growth",
+        highlightedText: "Engineered For Enterprise",
     },
     description:
-        "Develop beautiful Android, iOS and cross-platform mobile applications that delight users, increase engagement and accelerate business growth.",
+        "AuxOpus builds Android, iOS and cross-platform applications backed by solid engineering — scalable architecture, secure cloud integration and AI-driven automation baked in from day one.",
     buttons: [
         {
         text: "Build My App",
@@ -42,26 +42,26 @@ export const appHeroContent = {
 
 export const appOverviewContent = {
     badge: "Overview",
-    heading: "Mobile Experiences That Users Love",
+    heading: "Mobile Engineering, Built The AuxOpus Way",
     description:
-        "We create intuitive, high-performance mobile applications tailored for startups, enterprises and growing businesses. From idea validation to App Store deployment, we provide complete mobile application development services.",
+        "As a technology and engineering services company, we treat mobile app development as part of a bigger picture — digital transformation, cloud infrastructure and automation working together. Every app we ship is built to integrate cleanly with your existing systems and scale as your business does.",
     cards: [
         {
         title: "What",
         description:
-            "Android, iOS and cross-platform applications for every business.",
+            "Android, iOS and cross-platform apps engineered for real business systems, not just app stores.",
         bgColor: "bg-violet-50",
         },
         {
         title: "Why",
         description:
-            "Improve customer engagement, automate operations, increase sales.",
+            "Turn manual, offline processes into automated mobile-first workflows that cut cost and save time.",
         bgColor: "bg-cyan-50",
         },
         {
         title: "Who",
         description:
-            "Healthcare, Retail, Logistics, Education, Finance, Startups.",
+            "Healthcare, Retail, Logistics, Education, Finance and fast-moving startups.",
         bgColor: "bg-blue-50",
         },
     ],
@@ -73,42 +73,42 @@ export const appOfferContent = {
         {
         icon: "FaAndroid",
         title: "Android Apps",
-        description: "Modern scalable mobile solutions.",
+        description: "Native performance, built to Play Store standards.",
         },
         {
         icon: "FaApple",
         title: "iOS Apps",
-        description: "Modern scalable mobile solutions.",
+        description: "Polished, App Store-ready native experiences.",
         },
         {
         icon: "FaMobileScreen",
         title: "Flutter Apps",
-        description: "Modern scalable mobile solutions.",
+        description: "One codebase, consistent experience across platforms.",
         },
         {
         icon: "FaTabletScreenButton",
         title: "React Native",
-        description: "Modern scalable mobile solutions.",
+        description: "Fast iteration without sacrificing native feel.",
         },
         {
         icon: "FaCode",
         title: "Custom Apps",
-        description: "Modern scalable mobile solutions.",
+        description: "Purpose-built solutions for niche workflows.",
         },
         {
         icon: "FaCloud",
         title: "Cloud Sync",
-        description: "Modern scalable mobile solutions.",
+        description: "Real-time data across devices, teams and locations.",
         },
         {
         icon: "FaBell",
         title: "Push Notifications",
-        description: "Modern scalable mobile solutions.",
+        description: "Timely, targeted alerts that keep users engaged.",
         },
         {
         icon: "FaDatabase",
         title: "Backend APIs",
-        description: "Modern scalable mobile solutions.",
+        description: "Secure, well-documented APIs built to scale.",
         },
     ],
 };
@@ -130,6 +130,7 @@ export const appTechnologiesContent = {
         technologies: [
             { icon: "FaNodeJs", library: "fa6", name: "Node.js", color: "" },
             { icon: "SiFirebase", library: "si", name: "Firebase", color: "" },
+            { icon: "SiSupabase", library: "si", name: "Supabase", color: "" },
         ],
         },
         {
@@ -137,12 +138,15 @@ export const appTechnologiesContent = {
         technologies: [
             { icon: "SiMongodb", library: "si", name: "MongoDB", color: "" },
             { icon: "SiMysql", library: "si", name: "MySQL", color: "" },
+            { icon: "SiPostgresql", library: "si", name: "PostgreSQL", color: "" },
         ],
         },
         {
-        title: "Cloud",
+        title: "Cloud & Automation",
         technologies: [
             { icon: "FaAws", library: "fa6", name: "AWS", color: "" },
+            { icon: "SiVercel", library: "si", name: "Vercel", color: "" },
+            { icon: "SiCloudflare", library: "si", name: "Cloudflare", color: "" },
         ],
         },
     ],
@@ -153,35 +157,31 @@ export const appIndustriesContent = {
     industries: [
         {
         name: "Healthcare",
-        description: "Mobile applications designed for the healthcare industry.",
+        description: "Secure, compliant apps for patient and provider workflows.",
         },
         {
         name: "Education",
-        description: "Mobile applications designed for the education industry.",
+        description: "Apps that connect students, faculty and institutions.",
         },
         {
         name: "Retail",
-        description: "Mobile applications designed for the retail industry.",
+        description: "Seamless shopping experiences from browse to checkout.",
         },
         {
         name: "Finance",
-        description: "Mobile applications designed for the finance industry.",
+        description: "Reliable, secure apps for transactions and reporting.",
         },
         {
         name: "Manufacturing",
-        description: "Mobile applications designed for the manufacturing industry.",
+        description: "Operational apps that bring shop-floor data online.",
         },
         {
         name: "Travel",
-        description: "Mobile applications designed for the travel industry.",
-        },
-        {
-        name: "Food Delivery",
-        description: "Mobile applications designed for the food delivery industry.",
+        description: "Booking and itinerary apps built for real-time use.",
         },
         {
         name: "Startups",
-        description: "Mobile applications designed for the startups industry.",
+        description: "MVPs built fast, engineered to scale later.",
         },
     ],
 };
@@ -216,7 +216,7 @@ export const appCaseStudyContent = {
         iconColor: "text-red-500",
         title: "Challenge",
         description:
-            "Client needed to digitize their offline services and provide a seamless mobile experience.",
+            "Client relied on offline, manual processes and had no mobile presence, leading to slow service and limited visibility into operations.",
         },
         {
         icon: "FaLightbulb",
@@ -224,7 +224,7 @@ export const appCaseStudyContent = {
         iconColor: "text-violet-600",
         title: "Solution",
         description:
-            "Designed Android and iOS applications with cloud synchronization, push notifications and secure APIs.",
+            "AuxOpus designed Android and iOS applications with cloud sync, role-based access, automated notifications and secure APIs tied directly into existing systems.",
         },
         {
         icon: "FaChartLine",
@@ -232,7 +232,7 @@ export const appCaseStudyContent = {
         iconColor: "text-green-600",
         title: "Results",
         description:
-            "75% increase in user engagement, faster service delivery, improved customer retention and reduced manual work.",
+            "75% increase in user engagement, faster service delivery, improved customer retention and significantly reduced manual work.",
         },
     ],
 };
@@ -243,43 +243,43 @@ export const appFAQContent = {
     faqs: [
         {
         question: "Do you develop Android and iOS applications?",
-        answer: "Yes. We develop Android, iOS and cross-platform mobile applications."
+        answer: "Yes. We build Android, iOS and cross-platform mobile applications end-to-end."
         },
         {
         question: "Which framework do you recommend?",
-        answer: "Flutter for most businesses and native development for high-performance applications."
+        answer: "Flutter or React Native for most businesses; native development when performance is critical."
         },
         {
         question: "Can you publish apps on Play Store and App Store?",
-        answer: "Yes, we handle complete deployment."
+        answer: "Yes, we handle the complete deployment and release process."
         },
         {
         question: "Will I receive source code?",
-        answer: "Yes, after successful project completion."
+        answer: "Yes, full source code is handed over after project completion."
         },
         {
         question: "Can existing apps be redesigned?",
-        answer: "Yes, including UI redesign and performance optimization."
+        answer: "Yes — UI/UX redesign, performance optimization, and codebase cleanup are all in scope."
         },
         {
         question: "Do you provide backend APIs?",
-        answer: "Yes, complete backend development is included."
+        answer: "Yes, including cloud infrastructure and automation where it makes sense."
         },
         {
         question: "Can apps work offline?",
-        answer: "Yes, depending on business requirements."
+        answer: "Yes, depending on your workflow and data sync requirements."
         },
         {
         question: "Will my app be secure?",
-        answer: "We implement authentication, encryption and secure APIs."
+        answer: "We implement authentication, encryption, role-based access and secure API design by default."
         },
         {
         question: "Do you provide maintenance?",
-        answer: "Yes, annual maintenance and support plans are available."
+        answer: "Yes, ongoing maintenance and support plans are available after launch."
         },
         {
         question: "How long does development take?",
-        answer: "Generally between 6 and 16 weeks depending on features."
+        answer: "Typically 6 to 16 weeks depending on scope and integrations."
         },
     ],
 };

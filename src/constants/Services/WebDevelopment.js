@@ -82,42 +82,42 @@ export const webOfferContent = {
     {
       icon: "FaBuilding",
       title: "Corporate Websites",
-      description: "Custom solutions designed for your business growth.",
+      description: "Professional sites that establish credibility and trust.",
     },
     {
       icon: "FaBriefcase",
       title: "Business Websites",
-      description: "Custom solutions designed for your business growth.",
+      description: "Lead-generating sites built around your goals.",
     },
     {
       icon: "FaCartShopping",
       title: "E-Commerce",
-      description: "Custom solutions designed for your business growth.",
+      description: "Secure storefronts with smooth checkout flows.",
     },
     {
       icon: "FaGlobe",
       title: "Landing Pages",
-      description: "Custom solutions designed for your business growth.",
+      description: "High-conversion pages for campaigns and launches.",
     },
     {
       icon: "FaCode",
       title: "Web Applications",
-      description: "Custom solutions designed for your business growth.",
+      description: "Custom platforms built around real business logic.",
     },
     {
       icon: "FaDatabase",
       title: "ERP & CRM",
-      description: "Custom solutions designed for your business growth.",
+      description: "Internal tools that streamline day-to-day operations.",
     },
     {
       icon: "FaMobileScreen",
       title: "Progressive Web Apps",
-      description: "Custom solutions designed for your business growth.",
+      description: "App-like experiences that work straight from the browser.",
     },
     {
       icon: "FaServer",
       title: "API Development",
-      description: "Custom solutions designed for your business growth.",
+      description: "Secure, documented APIs that connect your systems.",
     },
   ],
 };
@@ -140,6 +140,7 @@ export const webTechnologiesContent = {
         { icon: "SiPhp", library: "si", name: "PHP", color: "" },
         { icon: "FaLaravel", library: "fa6", name: "Laravel", color: "text-red-500" },
         { icon: "SiSpringboot", library: "si", name: "Spring Boot", color: "text-green-600" },
+        { icon: "SiSupabase", library: "si", name: "Supabase", color: "" },
       ],
     },
     {
@@ -155,6 +156,8 @@ export const webTechnologiesContent = {
       technologies: [
         { icon: "FaAws", library: "fa6", name: "AWS", color: "text-orange-500" },
         { icon: "FaDocker", library: "fa6", name: "Docker", color: "text-blue-500" },
+        { icon: "SiVercel", library: "si", name: "Vercel", color: "" },
+        { icon: "SiCloudflare", library: "si", name: "Cloudflare", color: "" },
       ],
     },
   ],
@@ -165,35 +168,35 @@ export const webIndustriesContent = {
   industries: [
     {
       name: "Healthcare",
-      description: "Customized web solutions tailored for the healthcare industry.",
+      description: "Secure portals and patient-facing web platforms.",
     },
     {
       name: "Education",
-      description: "Customized web solutions tailored for the education industry.",
+      description: "Portals connecting students, faculty and institutions.",
     },
     {
       name: "Finance",
-      description: "Customized web solutions tailored for the finance industry.",
+      description: "Reliable, secure platforms for transactions and reporting.",
     },
     {
       name: "Retail",
-      description: "Customized web solutions tailored for the retail industry.",
+      description: "Storefronts and dashboards built for conversion.",
     },
     {
       name: "Manufacturing",
-      description: "Customized web solutions tailored for the manufacturing industry.",
+      description: "Operational dashboards that bring data online.",
     },
     {
       name: "Real Estate",
-      description: "Customized web solutions tailored for the real estate industry.",
+      description: "Listing platforms and lead-generation websites.",
     },
     {
       name: "Government",
-      description: "Customized web solutions tailored for the government industry.",
+      description: "Compliant, accessible platforms for public services.",
     },
     {
       name: "Startups",
-      description: "Customized web solutions tailored for the startups industry.",
+      description: "Fast, credible websites built to launch and scale.",
     },
   ],
 };
@@ -236,7 +239,7 @@ export const webCaseStudyContent = {
       iconColor: "text-blue-600",
       title: "Solution",
       description:
-        "Built a responsive React platform with CMS, SEO optimization, analytics and cloud hosting.",
+        "AuxOpus built a responsive React platform with a CMS, SEO optimization, analytics and cloud hosting.",
     },
     {
       icon: "FaChartLine",
@@ -275,7 +278,7 @@ export const webFAQContent = {
     },
     {
       q: "Which technologies do you use?",
-      a: "React, Laravel, Node, PHP, Spring Boot and more.",
+      a: "React, Laravel, Node, PHP, Spring Boot, Supabase and more.",
     },
     {
       q: "Do you provide hosting?",
@@ -283,7 +286,7 @@ export const webFAQContent = {
     },
     {
       q: "Will I get source code?",
-      a: "Yes after project completion.",
+      a: "Yes, after project completion.",
     },
     {
       q: "Do you provide maintenance?",

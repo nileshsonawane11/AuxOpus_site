@@ -53,12 +53,13 @@ export default function Services() {
       <ScrollReveal><AIAutomation /></ScrollReveal>
       
       <ScrollReveal><UIUXDesign /></ScrollReveal>
-      
       <ScrollReveal><DigitalMarketing /></ScrollReveal>
+
+      <ScrollReveal><CorporateTraining /></ScrollReveal>
       
+    
       <ScrollReveal><MaintenanceSupport /></ScrollReveal>
       
-      <ScrollReveal><CorporateTraining /></ScrollReveal>
 
       {/* Technologies & Process */}
       <ScrollReveal><TechnologyStack /></ScrollReveal>
