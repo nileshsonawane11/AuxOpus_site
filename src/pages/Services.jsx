@@ -40,26 +40,26 @@ export default function Services() {
       <ScrollReveal>
         <ServiceStats />
       </ScrollReveal>
-      
+
       <ScrollReveal>
         <TrustedBy />
       </ScrollReveal>
 
       {/* Core Services */}
       <ScrollReveal><WebDevelopment /></ScrollReveal>
-      
+
       <ScrollReveal><AppDevelopment /></ScrollReveal>
-      
+
       <ScrollReveal><AIAutomation /></ScrollReveal>
-      
+
       <ScrollReveal><UIUXDesign /></ScrollReveal>
+
       <ScrollReveal><DigitalMarketing /></ScrollReveal>
 
-      <ScrollReveal><CorporateTraining /></ScrollReveal>
-      
-    
       <ScrollReveal><MaintenanceSupport /></ScrollReveal>
-      
+
+      <ScrollReveal><CorporateTraining /></ScrollReveal>
+
 
       {/* Technologies & Process */}
       <ScrollReveal><TechnologyStack /></ScrollReveal>
