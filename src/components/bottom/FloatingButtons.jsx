@@ -41,7 +41,7 @@ export default function FloatingButtons() {
                 items-center
                 justify-center
                 rounded-full
-                bg-[#25D366]
+                bg-[#75e9a0]
                 text-white
                 shadow-[0_12px_35px_rgba(37,211,102,.45)]
                 hover:scale-110
@@ -49,7 +49,6 @@ export default function FloatingButtons() {
                 transition-all
                 "
             >
-                <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
 
                 <FaWhatsapp size={26} className="relative z-10" />
             </a>
