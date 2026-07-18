@@ -28,6 +28,7 @@ import UIUXDesign from "./pages/UIUXDesign.jsx";
 import DigitalMarketing from "./pages/DigitalMarketing.jsx";
 import MaintenanceSupport from "./pages/MaintenanceSupport.jsx";
 import CorporateTraining from "./pages/CorporateTraining.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 
 // Router Tracker Component - Tracks page views
 function RouterTracker() {
@@ -125,6 +126,7 @@ function AppContent() {
         
         <Route path="/Our-Solutions" element={<Solutions />} />
         <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
       
