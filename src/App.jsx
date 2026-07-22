@@ -29,7 +29,7 @@ import DigitalMarketing from "./pages/DigitalMarketing.jsx";
 import MaintenanceSupport from "./pages/MaintenanceSupport.jsx";
 import CorporateTraining from "./pages/CorporateTraining.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
-import TermsAndConditions from './pages/TermsandConditions.jsx';
+import TermsAndConditions from './pages/TermsAndConditions.jsx';
 import RefundPolicy from "./pages/RefundPolicy.jsx";
 
 // Router Tracker Component - Tracks page views
