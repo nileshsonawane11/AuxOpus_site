@@ -148,7 +148,7 @@ export default function ContactForm() {
           disabled={loading}
           className="rounded-2xl bg-blue-600 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-slate-900 disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {loading ? "Sending..." : button.text}
+          {loading ? "Sending.." : button.text}
         </button>
       </form>
     </div>
