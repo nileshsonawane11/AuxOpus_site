@@ -29,12 +29,14 @@ import DigitalMarketing from "./pages/DigitalMarketing.jsx";
 import MaintenanceSupport from "./pages/MaintenanceSupport.jsx";
 import CorporateTraining from "./pages/CorporateTraining.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsAndConditions from './pages/TermsandConditions.jsx';
+import RefundPolicy from "./pages/RefundPolicy.jsx";
 
 // Router Tracker Component - Tracks page views
 function RouterTracker() {
   const location = useLocation();
   const { hasConsent } = useConsent();
-  
+
   useEffect(() => {
     if (hasConsent('analytics')) {
       if (window.gtag) {
@@ -42,21 +44,21 @@ function RouterTracker() {
           page_path: location.pathname + location.search,
         });
       }
-      
+
       if (window.clarity) {
         window.clarity('event', 'page_view', {
           page: location.pathname + location.search,
         });
       }
-      
+
       if (window.fbq) {
         window.fbq('track', 'PageView');
       }
-      
+
       trackingService.trackPageView(location.pathname + location.search);
     }
   }, [location, hasConsent]);
-  
+
   return null;
 }
 
@@ -74,13 +76,13 @@ function AppContent() {
       // Use import.meta.env for Vite instead of process.env
       const gaId = import.meta.env.VITE_GA_MEASUREMENT_ID;
       if (gaId) analyticsService.initialize(gaId);
-      
+
       const gtmId = import.meta.env.VITE_GTM_CONTAINER_ID;
       if (gtmId) {
         gtmService.initialize(gtmId);
         gtmService.load(consent);
       }
-      
+
       const clarityId = import.meta.env.VITE_CLARITY_PROJECT_ID;
       if (clarityId) {
         clarityService.initialize(clarityId);
@@ -94,7 +96,7 @@ function AppContent() {
         metaPixelService.initialize(pixelId);
         metaPixelService.load(consent);
       }
-      
+
       const linkedinId = import.meta.env.VITE_LINKEDIN_PARTNER_ID;
       if (linkedinId) {
         linkedinService.initialize(linkedinId);
@@ -107,13 +109,13 @@ function AppContent() {
     <>
       <RouterTracker />
       <ScrollToTop />
-      
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/AboutUs" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Services" element={<Services />} />
-        
+
         <Route path="/Services">
           <Route path="Web-Development" element={<WebDevelopment />} />
           <Route path="App-Development" element={<AppDevelopment />} />
@@ -123,13 +125,15 @@ function AppContent() {
           <Route path="Maintenance-support" element={<MaintenanceSupport />} />
           <Route path="Training" element={<CorporateTraining />} />
         </Route>
-        
+
         <Route path="/Our-Solutions" element={<Solutions />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions/>}/>
+        <Route path="/Refund-Policy" element={<RefundPolicy/>}/>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-      
+
       <CookieBanner />
       <CookieSettingsModal />
     </>
